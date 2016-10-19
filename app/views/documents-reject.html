@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  ACME Rockets - Document check complete
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="bold-large">Application rejected</h1>
+        <p>
+          <strong class="heading-medium">Overseas Lawyers Co.</strong>
+          <br>
+          SPL603600002Y
+        </p>
+        <p>
+          The application was missing a required document and has been rejected. <br>This will be checked by your manager.
+        </p>
+      </div>
+
+      <p><a href="/cases">Back to case list</a></p>
+
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

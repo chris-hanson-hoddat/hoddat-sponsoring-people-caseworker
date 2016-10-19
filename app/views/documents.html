@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Pre-caseworker checks
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+
+    <div class="column-full">
+      <a onclick="history.go(-1); return false;" href="#0" class="link-back">Back</a>
+    </div>
+
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge" style="margin-bottom: 0;">
+        Pre-caseworker checks
+      </h1>
+    </div>
+
+    <div class="column-two-thirds">
+      <div class="panel panel-border-wide">
+        <h2 class="heading-medium" style="margin-top: 0">
+          Overseas Lawyers Co.
+          <br>
+          <small>SPL603600002Y</small>
+        </h2>
+      </div>
+    </div>
+
+<!--     <div class="column-third">
+      <div class="panel panel-border-wide">
+        <ul class="list">
+          <li>Date submitted: 07/07/2016</li>
+          <li>Tier(s): 2</li>
+          <li>Category: 2Gen</li>
+          <li>Application type: New sponsor application</li>
+        </ul>
+      </div>
+    </div> -->
+
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/documents-reject" method="get" class="form">
+
+        <h2 class="heading-large">
+          Documents required <small>by 01/12/2016</small>
+        </h2>
+
+        <div class="form-group">
+          <fieldset>
+            <legend class="visuallyhidden">Documents required by 01/12/2016</legend>
+
+            <label for="doc1" class="block-label selection-button-checkbox">
+              <input type="checkbox" name="doc1" value="doc1" id="doc1">
+              Employers liability insurance certificate
+            </label>
+
+            <label for="doc2" class="block-label selection-button-checkbox">
+              <input type="checkbox" name="doc2" value="doc2" id="doc2">
+              Proof of business premises / fixed assets or lease of business premises
+            </label>
+
+            <label for="doc3" class="block-label selection-button-checkbox">
+              <input type="checkbox" name="doc3" value="doc3" id="doc3">
+              HMRC reg - PAYE reference number &amp; accounts office reference number
+              <!-- <br>
+              <span class="tag">Checked online</span> -->
+            </label>
+
+            <label for="doc4" class="block-label selection-button-checkbox">
+              <input type="checkbox" name="doc4" value="doc4" id="doc4">
+              Corporate/business back statement or letter from bank
+            </label>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="extraDocs">Please list any additional documents submitted</label>
+          <textarea type="text" class="form-control" id="extraDocs" name="extraDocs" rows="6"></textarea>
+        </div>
+
+        <!-- <h2 class="heading-medium">
+          Fee check
+        </h2>
+
+        <table style="margin-bottom: 30px">
+          <caption style="text-align: left">Submitted values</caption>
+          <tr>
+            <th>Fee paid</th>
+            <td>&pound;536.00</td>
+          </tr>
+          <tr>
+            <th>Members of staff</th>
+            <td>42</td>
+          </tr>
+          <tr>
+            <th>Balance sheet</th>
+            <td>&pound;2.14 million</td>
+          </tr>
+          <tr>
+            <th>Turnover</th>
+            <td>&pound;5.36 million</td>
+          </tr>
+          <tr>
+            <th>Charitable status</th>
+            <td>No</td>
+          </tr>
+          <tr>
+            <th>Excluded from small companies' regime</th>
+            <td>No</td>
+          </tr>
+        </table>
+
+        <h3 class="heading-small">
+          Is the fee correct?
+        </h3>
+
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="visuallyhidden">Is the fee correct?</legend>
+
+            <label for="feeCorrectTrue" class="block-label">
+              <input type="radio" name="feeCorrect" value="true" id="feeCorrectTrue">
+              Yes
+            </label>
+
+            <label for="feeCorrectFalse" class="block-label" data-target="fee-incorrect">
+              <input type="radio" name="feeCorrect" value="false" id="feeCorrectFalse">
+              No
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="fee-incorrect">
+              <div class="form-group">
+                <label class="form-label-bold" for="feeIncorrect">Why is the fee incorrect?</label>
+                <textarea type="text" class="form-control" id="feeIncorrect" name="feeIncorrect" rows="6"></textarea>
+              </div>
+            </div>
+
+          </fieldset>
+        </div> -->
+
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

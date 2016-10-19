@@ -1,0 +1,355 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Caseworking
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+
+    <div class="column-full">
+      <a onclick="history.go(-1); return false;" href="#0" class="link-back">Back</a>
+    </div>
+
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge" style="margin-bottom: 0;">
+        Caseworking
+      </h1>
+    </div>
+
+    <div class="column-two-thirds">
+      <div class="panel panel-border-wide">
+        <h2 class="heading-medium" style="margin-top: 0;">
+          ACME Corporation
+          <br>
+          <small>SPL603600002A</small>
+        </h2>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="grid-row">
+
+    <div class="column-one-third">
+      <ul class="tab">
+        <li>
+          <a href="#ao-details-section" class="tablinks active" onclick="tabs(event, 'ao-details')">AO details</a>
+        </li>
+        <li>
+          <a href="#other-user-section" class="tablinks" onclick="tabs(event, 'other-user')">Other user details</a>
+        </li>
+        <!-- <li>
+          <a href="#rep-details-section" class="tablinks" onclick="tabs(event, 'rep-details')">Rep details<span class="tag tag--risk">Risk</span></a>
+        </li> -->
+        <li>
+          <a href="#business-details-section" class="tablinks" onclick="tabs(event, 'business-details')">Business details</a>
+        </li>
+        <!-- <li>
+          <a href="#vacancy-details-section" class="tablinks" onclick="tabs(event, 'vacancy-details')">Vacancy details</a>
+        </li> -->
+      </ul>
+    </div> <!-- /Tab menu -->
+
+    <div class="column-two-thirds">
+
+      <div id="ao-details" class="tabcontent" style="display: block;">
+
+        <form action="#0" method="get" class="form">
+
+          <h2 class="heading-large" style="margin-top: 0">
+            AO details
+          </h2>
+
+          <table style="margin-bottom: 30px">
+            <caption style="text-align: left">
+              AO&rsquo;s submitted details
+            </caption>
+            <tr>
+              <th>AO name</th>
+              <td>Joe Bloggs</td>
+            </tr>
+            <tr>
+              <th>DOB</th>
+              <td>31/07/1987</td>
+            </tr>
+            <tr>
+              <th>Nationality</th>
+              <td>British</td>
+            </tr>
+          </table>
+
+          <h4 class="heading-small">
+            Does the AO have any PNC convictions?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the AO have any PNC convictions?</legend>
+
+              <label for="pncYes" class="block-label" data-target="pnc-details">
+                <input type="radio" name="pnc" value="true" id="pncYes">
+                Yes
+              </label>
+
+              <label for="pncNo" class="block-label">
+                <input type="radio" name="pnc" value="false" id="pncNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="pnc-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="pncDetails">Details</label>
+                  <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Does the AO have any sponsorship history issues?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the AO have any sponsorship history issues?</legend>
+
+              <label for="historyYes" class="block-label" data-target="history-details">
+                <input type="radio" name="history" value="true" id="historyYes">
+                Yes
+              </label>
+
+              <label for="historyNo" class="block-label">
+                <input type="radio" name="history" value="false" id="historyNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="history-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="pncDetails">Details</label>
+                  <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <input type="submit" class="button" value="Submit">
+          </div>
+
+        </form>
+
+      </div> <!-- /AO details -->
+
+      <div id="other-user" class="tabcontent">
+
+        <form action="#0" method="get" class="form">
+
+          <h2 class="heading-large" style="margin-top: 0">
+            Other user details
+          </h2>
+
+          <table style="margin-bottom: 30px">
+            <caption style="text-align: left">
+              Other user&rsquo;s submitted details
+            </caption>
+            <tr>
+              <th>User name</th>
+              <td>Jane Doe</td>
+            </tr>
+            <tr>
+              <th>DOB</th>
+              <td>17/09/1987</td>
+            </tr>
+            <tr>
+              <th>Nationality</th>
+              <td>British</td>
+            </tr>
+          </table>
+
+          <h4 class="heading-small">
+            Does the user have any PNC convictions?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the user have any PNC convictions?</legend>
+
+              <label for="pncYes" class="block-label" data-target="pnc-details">
+                <input type="radio" name="pnc" value="true" id="pncYes">
+                Yes
+              </label>
+
+              <label for="pncNo" class="block-label">
+                <input type="radio" name="pnc" value="false" id="pncNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="pnc-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="pncDetails">Details</label>
+                  <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Does the AO have any sponsorship history issues?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the AO have any sponsorship history issues?</legend>
+
+              <label for="historyYes" class="block-label" data-target="history-details">
+                <input type="radio" name="history" value="true" id="historyYes">
+                Yes
+              </label>
+
+              <label for="historyNo" class="block-label">
+                <input type="radio" name="history" value="false" id="historyNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="history-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="pncDetails">Details</label>
+                  <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <input type="submit" class="button" value="Submit">
+          </div>
+
+        </form>
+
+      </div> <!-- /Other user -->
+
+      <div id="rep-details" class="tabcontent">
+        <h2 class="heading-large" style="margin-top: 0">
+          Representative details
+        </h2>
+      </div> <!-- /Rep details -->
+
+      <div id="business-details" class="tabcontent">
+
+        <form action="#0" method="get" class="form">
+
+          <h2 class="heading-large" style="margin-top: 0">
+            Business details
+          </h2>
+
+          <table style="margin-bottom: 30px">
+            <caption style="text-align: left">
+              Business details submitted
+            </caption>
+            <tr>
+              <th>Company name</th>
+              <td>ACME Corporation</td>
+            </tr>
+            <tr>
+              <th>Company number</th>
+              <td>123456789</td>
+            </tr>
+            <tr>
+              <th>Company address</th>
+              <td>20 West Street<br>Sheffield<br>S44 6YP</td>
+            </tr>
+            <tr>
+              <th>Company director</th>
+              <td>Rod Runner</td>
+            </tr>
+            <tr>
+              <th>Company type</th>
+              <td>Private limited company</td>
+            </tr>
+          </table>
+
+          <h4 class="heading-small">
+            Insufficient evidence of trading?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Insufficient evidence of trading?</legend>
+
+              <label for="companyYes" class="block-label" data-target="company-details">
+                <input type="radio" name="company" value="true" id="companyYes">
+                Yes
+              </label>
+
+              <label for="companyNo" class="block-label">
+                <input type="radio" name="company" value="false" id="companyNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="company-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="companyDetails">Details</label>
+                  <textarea type="text" class="form-control" id="companyDetails" name="companyDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <!-- <h4 class="heading-small">
+            Does the AO have any sponsorship history issues?
+          </h4> -->
+
+          <!-- <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the AO have any sponsorship history issues?</legend>
+
+              <label for="historyYes" class="block-label" data-target="history-details">
+                <input type="radio" name="history" value="true" id="historyYes">
+                Yes
+              </label>
+
+              <label for="historyNo" class="block-label">
+                <input type="radio" name="history" value="false" id="historyNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="history-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="pncDetails">Details</label>
+                  <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div> -->
+
+          <div class="form-group">
+            <input type="submit" class="button" value="Submit">
+          </div>
+
+        </form>
+
+      </div> <!-- /Business details -->
+
+      <div id="vacancy-details" class="tabcontent">
+        <h2 class="heading-large" style="margin-top: 0">
+          Vacancy details
+        </h2>
+      </div> <!-- /Vacancy details -->
+
+    </div> <!-- /Tab content - col-2/3 -->
+
+  </div>
+
+</main>
+
+{% endblock %}

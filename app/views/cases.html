@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Cases
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+
+    <div class="column-full">
+      <a onclick="history.go(-1); return false;" href="#0" class="link-back">Back</a>
+    </div>
+
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">
+        Current cases
+      </h1>
+
+      <h2 class="heading-large">
+        Find a case
+      </h2>
+
+      <form action="#0" method="get" class="form">
+
+        <div class="form-group">
+          <label for="case-search" class="visuallyhidden">Search for a case</label>
+          <p class="form-hint">SPL or Company name</p>
+          <input type="text" class="form-control js-case-search-query" id="case-search" name="case-search">
+          <input class="button js-case-search" type="submit" value="Search">
+        </div>
+
+      </form>
+    </div>
+
+  </div> <!-- /grid-row -->
+
+  <h2 class="heading-large">
+    Cases
+  </h2>
+
+  <table class="cases">
+    <thead>
+      <tr>
+        <th>SPL</th>
+        <th>Company name</th>
+        <th>SLA</th>
+        <th>Status</th>
+        <th>Owner</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="#0">603600002A</a></td>
+        <td>ACME Corporation</td>
+        <td>6 weeks</td>
+        <td>Ready</td>
+        <td></td>
+        <td><a class="button" href="/caseworker" role="button">Assign to me</a></td>
+      </tr>
+      <tr>
+        <td><a href="#0">603600002B</a></td>
+        <td>Hooli</td>
+        <td>7 weeks</td>
+        <td>Ready</td>
+        <td></td>
+        <td><a class="button" href="#" role="button">Assign to me</a></td>
+      </tr>
+      <tr>
+        <td><a href="#0">603600002C</a></td>
+        <td>Vehement Capital Partners</td>
+        <td>7 weeks</td>
+        <td>Ready</td>
+        <td></td>
+        <td><a class="button" href="#" role="button">Assign to me</a></td>
+      </tr>
+      <tr>
+        <td><a href="#0">603600002H</a></td>
+        <td>Soylent Corp</td>
+        <td>5 weeks</td>
+        <td>In progress</td>
+        <td>Joe Bloggs</td>
+        <td><!-- <a class="button" href="#" role="button">Assign to me</a> --></td>
+      </tr>
+      <tr>
+        <td><a href="#0">603600002I</a></td>
+        <td>Initech</td>
+        <td>3 weeks</td>
+        <td>On hold</td>
+        <td>Joe Bloggs</td>
+        <td><!-- <a class="button" href="#" role="button">Assign to me</a> --></td>
+      </tr>
+      <tr>
+        <td><a href="#0">603600002J</a></td>
+        <td>Umbrella Corporation</td>
+        <td>3 weeks</td>
+        <td>Out for visit</td>
+        <td>Joe Bloggs</td>
+        <td><!-- <a class="button" href="#" role="button">Assign to me</a> --></td>
+      </tr>
+      <tr>
+        <td><a href="#0">603600002Y</a></td>
+        <td>Overseas Lawyers Co.</td>
+        <td>8 weeks</td>
+        <td>Waiting for documents</td>
+        <td></td>
+        <td><a class="button" href="/documents" role="button">Process</a></td>
+      </tr>
+      <tr>
+        <td><a href="#0">603600002Z</a></td>
+        <td>Globex Corporation</td>
+        <td>10 weeks</td>
+        <td>Waiting for documents</td>
+        <td></td>
+        <td><a class="button" href="/documents" role="button">Process</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</main>
+
+{% endblock %}
