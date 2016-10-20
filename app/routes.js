@@ -22,7 +22,27 @@ router.get('/documents-reject', function (req, res) {
   }
 })
 
+// Fee check
+router.get('/documents-confirm', function (req, res) {
+  var fee = req.query.fee
 
+  if (fee == 'false') {
+    res.redirect('/fee-reject')
+  } else {
+    res.render('documents-confirm')
+  }
+})
+
+// Caseworker - company details
+// router.get('/caseworker', function (req, res) {
+//   var company = req.query.company
+
+//   if (company == 'true') {
+//     res.redirect('/caseworker-refusal')
+//   } else {
+//     res.render('caseworker')
+//   }
+// })
 
 module.exports = router
 
