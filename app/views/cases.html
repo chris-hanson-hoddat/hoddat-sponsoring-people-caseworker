@@ -37,88 +37,286 @@
 
   </div> <!-- /grid-row -->
 
-  <h2 class="heading-large">
-    Cases
-  </h2>
+  <div class="grid-row">
 
-  <table class="cases">
-    <thead>
-      <tr>
-        <th>SPL</th>
-        <th>Company name</th>
-        <th>SLA</th>
-        <th>Status</th>
-        <th>Owner</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a href="#0">603600002A</a></td>
-        <td>ACME Corporation</td>
-        <td>6 weeks</td>
-        <td>Ready</td>
-        <td></td>
-        <td><a class="button" href="/caseworker" role="button">Assign to me</a></td>
-      </tr>
-      <tr>
-        <td><a href="#0">603600002B</a></td>
-        <td>Hooli</td>
-        <td>7 weeks</td>
-        <td>Ready</td>
-        <td></td>
-        <td><a class="button" href="#" role="button">Assign to me</a></td>
-      </tr>
-      <tr>
-        <td><a href="#0">603600002C</a></td>
-        <td>Vehement Capital Partners</td>
-        <td>7 weeks</td>
-        <td>Ready</td>
-        <td></td>
-        <td><a class="button" href="#" role="button">Assign to me</a></td>
-      </tr>
-      <tr>
-        <td><a href="#0">603600002H</a></td>
-        <td>Soylent Corp</td>
-        <td>5 weeks</td>
-        <td>In progress</td>
-        <td>Joe Bloggs</td>
-        <td><!-- <a class="button" href="#" role="button">Assign to me</a> --></td>
-      </tr>
-      <tr>
-        <td><a href="#0">603600002I</a></td>
-        <td>Initech</td>
-        <td>3 weeks</td>
-        <td>On hold</td>
-        <td>Joe Bloggs</td>
-        <td><!-- <a class="button" href="#" role="button">Assign to me</a> --></td>
-      </tr>
-      <tr>
-        <td><a href="#0">603600002J</a></td>
-        <td>Umbrella Corporation</td>
-        <td>3 weeks</td>
-        <td>Out for visit</td>
-        <td>Joe Bloggs</td>
-        <td><!-- <a class="button" href="#" role="button">Assign to me</a> --></td>
-      </tr>
-      <tr>
-        <td><a href="#0">603600002Y</a></td>
-        <td>Overseas Lawyers Co.</td>
-        <td>8 weeks</td>
-        <td>Waiting for documents</td>
-        <td></td>
-        <td><a class="button" href="/documents" role="button">Process</a></td>
-      </tr>
-      <tr>
-        <td><a href="#0">603600002Z</a></td>
-        <td>Globex Corporation</td>
-        <td>10 weeks</td>
-        <td>Waiting for documents</td>
-        <td></td>
-        <td><a class="button" href="/documents" role="button">Process</a></td>
-      </tr>
-    </tbody>
-  </table>
+    <div class="column-third">
+      <h2 class="heading-large">
+        Cases
+      </h2>
+    </div>
+
+    <div class="column-two-thirds">
+      <div class="tab-container">
+        <a href="#my-cases" class="tab js-my-cases">
+            My cases
+        </a>
+        <a href="#all-cases" class="tab tab--active js-all-cases">
+          All cases
+        </a>
+      </div>
+    </div>
+
+    <div class="column-full">
+      <table class="cases">
+        <thead>
+          <tr>
+            <th>SPL</th>
+            <th>Company name</th>
+            <th>Date submitted</th>
+            <th>SLA</th>
+            <th>Status</th>
+            <th>Owner</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#0">603600002A</a></td>
+            <td>ACME Corporation</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="/caseworker" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002B</a></td>
+            <td>Hooli</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002C</a></td>
+            <td>Vehement Capital Partners</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002B</a></td>
+            <td>Wonka Industries</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002C</a></td>
+            <td>Stark Industries</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002B</a></td>
+            <td>Ollivander&rsquo;s Wand Shop</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002C</a></td>
+            <td>Gekko &amp; Co</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002B</a></td>
+            <td>Wayne Enterprises</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002C</a></td>
+            <td>Cyberdyne Systems</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002B</a></td>
+            <td>Genco Pura Olive Oil Company</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002C</a></td>
+            <td>Duff Beer</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002B</a></td>
+            <td>Bubba Gump</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002C</a></td>
+            <td>Sterling Cooper</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002B</a></td>
+            <td>CHOAM</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002C</a></td>
+            <td>Sirius Cybernetics Corp.</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002B</a></td>
+            <td>MomCorp</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002C</a></td>
+            <td>Tyrell Corp.</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002B</a></td>
+            <td>Nakatomi Trading Corp.</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002C</a></td>
+            <td>Spacely Space Sprockets</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002B</a></td>
+            <td>Oceanic Airlines</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002C</a></td>
+            <td>Buy n Large</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Ready</td>
+            <td></td>
+            <td><a class="button" href="#" role="button">Assign to me</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002H</a></td>
+            <td>Soylent Corp</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>In progress</td>
+            <td>Joe Bloggs</td>
+            <td><!-- <a class="button" href="#" role="button">Assign to me</a> --></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002I</a></td>
+            <td>Initech</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>On hold: internal</td>
+            <td>Joe Bloggs</td>
+            <td><!-- <a class="button" href="#" role="button">Assign to me</a> --></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002I</a></td>
+            <td>Weyland-Yutani Corporation</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>On hold: external</td>
+            <td>Joe Bloggs</td>
+            <td><!-- <a class="button" href="#" role="button">Assign to me</a> --></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002J</a></td>
+            <td>Umbrella Corporation</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Out for visit</td>
+            <td>Joe Bloggs</td>
+            <td><!-- <a class="button" href="#" role="button">Assign to me</a> --></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002Y</a></td>
+            <td>Overseas Lawyers Co.</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Application recieved</td>
+            <td></td>
+            <td><a class="button" href="/documents" role="button">Process</a></td>
+          </tr>
+          <tr>
+            <td><a href="#0">603600002Z</a></td>
+            <td>Globex Corporation</td>
+            <td>01/01/2016</td>
+            <td>01/03/2016</td>
+            <td>Application recieved</td>
+            <td></td>
+            <td><a class="button" href="/documents" role="button">Process</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
 </main>
 
