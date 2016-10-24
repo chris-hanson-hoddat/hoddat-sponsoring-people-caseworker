@@ -27,6 +27,9 @@ $(document).ready(function () {
   showHideContent.init()
 })
 
+
+
+
 // Make jQuery :contains Case-Insensitive
 // https://css-tricks.com/snippets/jquery/make-jquery-contains-case-insensitive/
 // NEW selector
@@ -41,7 +44,10 @@ jQuery.expr[':'].contains = function(a, i, m) {
       .indexOf(m[3].toUpperCase()) >= 0;
 };
 
-// cases search function
+
+
+
+// Cases search function
 $('.js-case-search').click(function(e) {
   e.preventDefault();
   var search = $('.js-case-search-query').val();
@@ -53,22 +59,61 @@ $('.js-case-search').click(function(e) {
   $('.cases tbody tr td:contains("' + search + '")')
     .parent('tr')
     .show();
-
 });
+
+
+
+
+// Cases search function
+$('.js-my-cases').click(function(e) {
+  e.preventDefault();
+  $(this).siblings('.tab--active').removeClass('tab--active');
+  $(this).addClass('tab--active');
+
+  var search = 'Joe Bloggs';
+
+  $('.cases tbody tr').each(function() {
+    $(this).hide();
+  });
+
+  $('.cases tbody tr td:contains("' + search + '")')
+    .parent('tr')
+    .show();
+});
+$('.js-all-cases').click(function(e) {
+  e.preventDefault();
+  $(this).siblings('.tab--active').removeClass('tab--active');
+  $(this).addClass('tab--active');
+
+  var search = '603';
+
+  $('.cases tbody tr').each(function() {
+    $(this).hide();
+  });
+
+  $('.cases tbody tr td:contains("' + search + '")')
+    .parent('tr')
+    .show();
+});
+
+
+
 
 // Tabs
 // Left hand tab navigation, e.g. caseworker screen
 
-function tabs(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+function leftNav(evt, tabName) {
+    var i, leftnavcontent, leftnavlinks;
+    leftnavcontent = document.getElementsByClassName("leftnavcontent");
+    for (i = 0; i < leftnavcontent.length; i++) {
+        leftnavcontent[i].style.display = "none";
     }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    leftnavlinks = document.getElementsByClassName("leftnavlinks");
+    for (i = 0; i < leftnavlinks.length; i++) {
+        leftnavlinks[i].className = leftnavlinks[i].className.replace(" active", "");
     }
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+
