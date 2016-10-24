@@ -48,9 +48,15 @@ table tr:hover {
   float: right;
 }
 
+.tag--complete {
+  background: $turquoise;
+  float: right;
+}
 
-// Tabs
-ul.tab {
+
+// Left Nav
+// e.g. Used on caseworker screen
+ul.leftnav {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -79,12 +85,12 @@ ul.tab {
     }
 }
 /* Change background color of links on hover */
-ul.tab li a:focus, .active, ul.tab li a.active:hover {
+ul.leftnav li a:focus, .active, ul.leftnav li a.active:hover {
     background-color: #005EA5;
     color: #fff !important;
     outline: 0;
 }
-.tabcontent {
+.leftnavcontent {
     display: none;
     float: left;
     width: 100%;
@@ -115,5 +121,30 @@ details {
 
   summary {
     display: block;
+  }
+}
+
+.tab-container {
+  border-bottom: 1px solid $border-colour;
+  text-align: right;
+  margin-top: 45px;
+  padding: 10px 0 9px;
+}
+
+.tab {
+  padding: 10px 20px;
+}
+
+.tab--active {
+  border: 1px solid $border-colour;
+  background: white;
+  border-bottom: 0;
+}
+
+.tab--active {
+  &, &:hover, &:visited {
+    color: $text-colour;
+    text-decoration: none;
+    pointer-events: none;
   }
 }
