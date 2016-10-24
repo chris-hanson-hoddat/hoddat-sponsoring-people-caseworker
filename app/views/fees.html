@@ -18,9 +18,7 @@
       <h1 class="heading-xlarge" style="margin-bottom: 0;">
         Pre-caseworker checks
       </h1>
-    </div>
 
-    <div class="column-two-thirds">
       <div class="panel panel-border-wide">
         <h2 class="heading-medium" style="margin-top: 0">
           Overseas Lawyers Co.
@@ -28,23 +26,6 @@
           <small>SPL603600002Y</small>
         </h2>
       </div>
-    </div>
-
-<!--     <div class="column-third">
-      <div class="panel panel-border-wide">
-        <ul class="list">
-          <li>Date submitted: 07/07/2016</li>
-          <li>Tier(s): 2</li>
-          <li>Category: 2Gen</li>
-          <li>Application type: New sponsor application</li>
-        </ul>
-      </div>
-    </div> -->
-
-  </div>
-
-  <div class="grid-row">
-    <div class="column-two-thirds">
 
       <form action="/documents-confirm" method="get" class="form">
 
@@ -59,7 +40,7 @@
             <td>&pound;536.00</td>
           </tr>
           <tr>
-            <th>Members of staff</th>
+            <th>Number of staff</th>
             <td>42
               <!-- <br><span class="tag">Checked online</span> -->
             </td>
@@ -115,11 +96,12 @@
             <div class="panel panel-border-narrow js-hidden" id="fee-underpaid">
               <div class="form-group">
                 <label class="form-label-bold" for="feeIncorrect">Reason for underpayment</label>
+                <p class="form-hint">For example, number of staff is actually 55 and balance sheet is £4m.</p>
                 <textarea type="text" class="form-control" id="feeIncorrect" name="feeIncorrect" rows="6"></textarea>
               </div>
             </div>
 
-            <label for="overpaid" class="block-label" data-target="fee-overpaid">
+            <!-- <label for="overpaid" class="block-label" data-target="fee-overpaid">
               <input type="radio" name="fee" value="true" id="overpaid">
               No, they've overpaid
             </label>
@@ -129,7 +111,7 @@
                 <label class="form-label-bold" for="fee-over-reasons">Reason for overpayment</label>
                 <textarea type="text" class="form-control" id="fee-over-reasons" name="fee-over-reasons" rows="6"></textarea>
               </div>
-            </div>
+            </div> -->
 
           </fieldset>
         </div>
@@ -142,6 +124,35 @@
       </form>
 
     </div>
+
+    <div class="column-third">
+      <aside class="govuk-related-items" role="complementary">
+
+        <h2 class="heading-medium" id="subsection-title">
+          Fee rules
+        </h2>
+
+        <p>Small organisation's must meet two out of the following three criteria</p>
+
+        <table style="margin-bottom: 30px">
+          <caption class="visuallyhidden">Rules for small fee</caption>
+          <tr>
+            <th>Maximum number of staff</th>
+            <td>50</td>
+          </tr>
+          <tr>
+            <th>Maximum balance sheet</th>
+            <td>&pound;3.26 million</td>
+          </tr>
+          <tr>
+            <th>Maximum turnover</th>
+            <td>&pound;6.5 million</td>
+          </tr>
+
+        </table>
+      </aside>
+    </div>
+
   </div>
 
 </main>
