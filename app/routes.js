@@ -14,8 +14,9 @@ router.get('/documents-reject', function (req, res) {
   var doc2 = req.query.doc2
   var doc3 = req.query.doc3
   var doc4 = req.query.doc4
+  var doc5 = req.query.doc5
 
-  if (doc1 == 'doc1' && doc2 == 'doc2' && doc3 == 'doc3' && doc4 == 'doc4') {
+  if (doc1 == 'doc1' && doc2 == 'doc2' && doc3 == 'doc3' && doc4 == 'doc4' && doc5 == 'doc5') {
     res.redirect('/fees')
   } else {
     res.render('documents-reject')
