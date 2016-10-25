@@ -26,9 +26,9 @@
       <form action="#0" method="get" class="form">
 
         <div class="form-group">
-          <label for="case-search" class="visuallyhidden">Search cases using SPL or Company name</label>
-          <!-- <p class="form-hint">SPL or Company name</p> -->
-          <input type="text" class="form-control js-case-search-query" id="case-search" name="case-search" placeholder="Search cases using SPL or Company name" style="height: 40px; padding: 6px 10px; width: 80%;">
+          <label for="case-search" class="visuallyhidden">Search cases using UAN or Company name</label>
+          <!-- <p class="form-hint">UAN or Company name</p> -->
+          <input type="text" class="form-control js-case-search-query" id="case-search" name="case-search" placeholder="Search cases using UAN or Company name" style="height: 40px; padding: 6px 10px; width: 80%;">
           <input class="button js-case-search" type="submit" value="Search">
         </div>
 
@@ -60,7 +60,7 @@
       <table class="cases">
         <thead>
           <tr>
-            <th>SPL</th>
+            <th>UAN</th>
             <th>Company name</th>
             <th>Date submitted</th>
             <th>SLA</th>
@@ -77,7 +77,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=ACME Corporation&uan=603600002A" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
@@ -86,7 +86,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Hooli&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
@@ -95,7 +95,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=603600002C&uan=603600002C" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
@@ -104,7 +104,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Wonka Industries&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
@@ -113,7 +113,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Stark Industries&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
@@ -122,7 +122,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Ollivanders Wand Shop&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
@@ -131,7 +131,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Gekko and Co&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
@@ -140,7 +140,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Wayne Enterprises&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
@@ -149,7 +149,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Cyberdyne Systems&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
@@ -158,7 +158,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Genco Pura Olive Oil Company&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
@@ -167,7 +167,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Duff Beer&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
@@ -176,7 +176,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Bubba Gump&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
@@ -185,7 +185,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Sterling Cooper&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
@@ -194,7 +194,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=CHOAM&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
@@ -203,7 +203,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Sirius Cybernetics Corp&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
@@ -212,7 +212,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=MomCorp&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
@@ -221,7 +221,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Tyrell Corp&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
@@ -230,7 +230,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Nakatomi Trading Corp&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
@@ -239,7 +239,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Spacely Space Sprockets&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
@@ -248,7 +248,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Oceanic Airlines&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
@@ -257,7 +257,7 @@
             <td>01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="#" role="button">Casework</a></td>
+            <td><a class="button" href="/caseworker?compName=Buy n Large&uan=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002H</a></td>
@@ -266,7 +266,7 @@
             <td>01/03/2016</td>
             <td>In progress</td>
             <td>Joe Bloggs</td>
-            <td><!-- <a class="button" href="#" role="button">Casework</a> --></td>
+            <td><!-- <a class="button" href="/caseworker?compName=Soylent Corp&uan=603600002B" role="button">Casework</a> --></td>
           </tr>
           <tr>
             <td><a href="#0">603600002I</a></td>
@@ -275,7 +275,7 @@
             <td>01/03/2016</td>
             <td>On hold: internal</td>
             <td>Joe Bloggs</td>
-            <td><!-- <a class="button" href="#" role="button">Casework</a> --></td>
+            <td><!-- <a class="button" href="/caseworker?compName=Initech&uan=603600002B" role="button">Casework</a> --></td>
           </tr>
           <tr>
             <td><a href="#0">603600002I</a></td>
@@ -284,7 +284,7 @@
             <td>01/03/2016</td>
             <td>On hold: external</td>
             <td>Joe Bloggs</td>
-            <td><!-- <a class="button" href="#" role="button">Casework</a> --></td>
+            <td><!-- <a class="button" href="/caseworker?compName=Weyland-Yutani Corporation&uan=603600002B" role="button">Casework</a> --></td>
           </tr>
           <tr>
             <td><a href="#0">603600002J</a></td>
@@ -293,7 +293,7 @@
             <td>01/03/2016</td>
             <td>Out for visit</td>
             <td>Joe Bloggs</td>
-            <td><!-- <a class="button" href="#" role="button">Casework</a> --></td>
+            <td><!-- <a class="button" href="/caseworker?compName=Umbrella Corporation&uan=603600002B" role="button">Casework</a> --></td>
           </tr>
           <tr>
             <td><a href="#0">603600002Y</a></td>
