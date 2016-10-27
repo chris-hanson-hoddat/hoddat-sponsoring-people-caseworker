@@ -64,11 +64,12 @@ $('.js-case-search').click(function(e) {
 
 
 
-// Cases search function
+// Cases tabs function
 $('.js-my-cases').click(function(e) {
   e.preventDefault();
   $(this).siblings('.tab--active').removeClass('tab--active');
   $(this).addClass('tab--active');
+  $('.all-cases-view').hide();
 
   var search = 'Joe Bloggs';
 
@@ -84,6 +85,7 @@ $('.js-all-cases').click(function(e) {
   e.preventDefault();
   $(this).siblings('.tab--active').removeClass('tab--active');
   $(this).addClass('tab--active');
+  $('.all-cases-view').show();
 
   var search = '603';
 
@@ -101,19 +103,30 @@ $('.js-all-cases').click(function(e) {
 
 // Tabs
 // Left hand tab navigation, e.g. caseworker screen
+$('.leftnavlinks').click(function(e) {
+  e.preventDefault();
+  var target = $(this).data('target');
 
-function leftNav(evt, tabName) {
-    var i, leftnavcontent, leftnavlinks;
-    leftnavcontent = document.getElementsByClassName("leftnavcontent");
-    for (i = 0; i < leftnavcontent.length; i++) {
-        leftnavcontent[i].style.display = "none";
-    }
-    leftnavlinks = document.getElementsByClassName("leftnavlinks");
-    for (i = 0; i < leftnavlinks.length; i++) {
-        leftnavlinks[i].className = leftnavlinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+  $('.leftnavcontent').hide();
+  $('#'+target).show();
+  $('.leftnavlinks').removeClass('active');
+  $('.'+target).addClass('active');
+
+  if ( $(this).hasClass('button') ) {
+    $('html,body').scrollTop(0);
+    $('.'+target).parent().prev().find('.tag--complete').show();
+  }
+});
+
+// Set dates dynamically so they stay useful throughout prototyping
+$('.date').each(function() {
+  var days = $(this).data('days');
+  var currentTime = new Date();
+  currentTime.setDate(currentTime.getDate()+days);
+  var month = currentTime.getMonth();
+  var day = currentTime.getDate();
+  var year = currentTime.getFullYear();
+  $(this).text(day + "/" + month + "/" + year);
+});
 
 

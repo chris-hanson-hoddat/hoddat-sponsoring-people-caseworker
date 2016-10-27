@@ -25,7 +25,7 @@
         <h2 class="heading-medium" style="margin-top: 0;">
           {{ compName }}
           <br>
-          <small>UAN{{ uan }}</small>
+          <small>URN{{ urn }}</small>
         </h2>
       </div>
     </div>
@@ -37,677 +37,694 @@
     <div class="column-one-third">
       <ul class="leftnav">
         <li>
-          <a href="#ao-details-section" class="leftnavlinks active" onclick="leftNav(event, 'ao-details')">AO details</a>
+          <a href="#0" class="leftnavlinks business-details active" data-target="business-details">
+            Business details
+            <span class="tag tag--complete" style="display: none;">Complete</span>
+          </a>
         </li>
         <li>
-          <a href="#other-user-section" class="leftnavlinks" onclick="leftNav(event, 'other-user')">Other user details<span class="tag tag--complete">Complete</span></a>
+          <a href="#0" class="leftnavlinks ao-details" data-target="ao-details">
+            AO details
+            <span class="tag tag--complete" style="display: none;">Complete</span>
+          </a>
         </li>
         <li>
-          <a href="#rep-details-section" class="leftnavlinks" onclick="leftNav(event, 'rep-details')">Rep details<!-- <span class="tag tag--risk">Risk</span> --></a>
+          <a href="#0" class="leftnavlinks other-user" data-target="other-user">
+            Other user details
+            <span class="tag tag--complete" style="display: none;">Complete</span>
+          </a>
         </li>
         <li>
-          <a href="#business-details-section" class="leftnavlinks" onclick="leftNav(event, 'business-details')">Business details</a>
+          <a href="#0" class="leftnavlinks rep-details" data-target="rep-details">
+            Rep details
+            <!-- <span class="tag tag--risk">Risk</span> -->
+            <span class="tag tag--complete" style="display: none;">Complete</span>
+          </a>
         </li>
         <li>
-          <a href="#vacancy-details-section" class="leftnavlinks" onclick="leftNav(event, 'vacancy-details')">Vacancy details</a>
+          <a href="#0" class="leftnavlinks vacancy-details" data-target="vacancy-details">
+            Vacancy details
+            <span class="tag tag--complete" style="display: none;">Complete</span>
+          </a>
         </li>
         <li>
-          <a href="#vacancy-details-section" class="leftnavlinks" onclick="leftNav(event, 'application-decision')">Application decision</a>
+          <a href="#0" class="leftnavlinks application-decision" data-target="application-decision">
+            Application decision
+            <span class="tag tag--complete" style="display: none;">Complete</span>
+          </a>
         </li>
       </ul>
     </div> <!-- /Tab menu -->
 
     <div class="column-two-thirds">
 
-      <div id="ao-details" class="leftnavcontent" style="display: block;">
+      <div id="business-details" class="leftnavcontent" style="display: block">
 
-        <form action="#0" method="get" class="form">
+        <h2 class="heading-large" style="margin-top: 0">
+          Business details
+        </h2>
 
-          <h2 class="heading-large" style="margin-top: 0">
-            AO details
-          </h2>
+        <table style="margin-bottom: 30px">
+          <caption style="text-align: left">
+            Business details submitted
+          </caption>
+          <tr>
+            <th>Company name</th>
+            <td>{{ compName }}</td>
+          </tr>
+          <tr>
+            <th>Company number</th>
+            <td>
+              <a href="https://beta.companieshouse.gov.uk/company/06232576" title="Search on Companies House" target="_blank" rel="external">06232576</a>
+            </td>
+          </tr>
+          <tr>
+            <th>Company address</th>
+            <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" title="Search on Google Maps" target="_blank" rel="external">123 West Street<br>Sheffield<br>S1 2AB</a></td>
+          </tr>
+          <tr>
+            <th>Company director</th>
+            <td>Rod Runner</td>
+          </tr>
+          <tr>
+            <th>Second company director</th>
+            <td>William E. Coyote</td>
+          </tr>
+          <tr>
+            <th>Company type</th>
+            <td>Private limited company</td>
+          </tr>
+          <tr>
+            <th>Date of incorporation</th>
+            <td>03/11/2014</td>
+          </tr>
+        </table>
 
-          <table style="margin-bottom: 30px">
-            <caption style="text-align: left">
-              AO&rsquo;s submitted details
-            </caption>
-            <tr>
-              <th>Full name</th>
-              <td>Delice Junco</td>
-            </tr>
-            <tr>
-              <th>DOB</th>
-              <td>18/09/1942</td>
-            </tr>
-            <tr>
-              <th>Nationality</th>
-              <td>British</td>
-            </tr>
-            <tr>
-              <th>NI number</th>
-              <td>EL271653B</td>
-            </tr>
-            <tr>
-              <th>Passport number</th>
-              <td>152505696</td>
-            </tr>
-            <tr>
-              <th>Address</th>
-              <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" target="_blank" rel="external">123 West Street<br>Sheffield<br>S1 2AB</a></td>
-            </tr>
-            <tr>
-              <th>Contact number</th>
-              <td>0114 2301234</td>
-            </tr>
-            <tr>
-              <th>Email address</th>
-              <td><a href="mailto:djunco@acme.com">djunco@acme.com</a></td>
-            </tr>
-          </table>
+        <details role="group">
 
-          <h4 class="heading-small">
-            Does the AO have any PNC convictions?
-          </h4>
+          <summary role="button" aria-controls="details-content-0" aria-expanded="false">
+            <span class="summary">Previous applications</span>
+          </summary>
 
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Does the AO have any PNC convictions?</legend>
+          <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+            <h3 class="heading-medium">ACME Corporation</h3>
+            <table>
+              <tr>
+                <th>URN</th>
+                <td><a href="#0">436092851J</a></td>
+              </tr>
+              <tr>
+                <th>Outcome</th>
+                <td>Rejected</td>
+              </tr>
+              <tr>
+                <th>Rejection reason</th>
+                <td>Required document not provided, application rejected and refunded.</td>
+              </tr>
+              <tr>
+                <th>Rejection date</th>
+                <td>12/10/2015.</td>
+              </tr>
+            </table>
+          </div>
 
-              <label for="pncYes" class="block-label" data-target="pnc-details">
-                <input type="radio" name="pnc" value="true" id="pncYes">
-                Yes
-              </label>
+        </details>
 
-              <label for="pncNo" class="block-label">
-                <input type="radio" name="pnc" value="false" id="pncNo">
-                No
-              </label>
+        <details role="group">
 
-              <div class="panel panel-border-narrow js-hidden" id="pnc-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="pncDetails">Details</label>
-                  <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
-                </div>
+          <summary role="button" aria-controls="details-content-0" aria-expanded="false">
+            <span class="summary">Potential previous applications</span>
+          </summary>
+
+          <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+            <h3 class="heading-medium">ACME Inc.</h3>
+            <table>
+              <tr>
+                <th>URN</th>
+                <td><a href="#0">128889351B</a></td>
+              </tr>
+              <tr>
+                <th>Outcome</th>
+                <td>Refused</td>
+              </tr>
+              <tr>
+                <th>Refusal reason</th>
+                <td>Failed visit due to insufficient processes in place to monitor sponsored applicant.</td>
+
+              </tr>
+              <tr>
+                <th>Refusal date</th>
+                <td>12/08/2015.</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+            <h3 class="heading-medium">Smith and Co.</h3>
+            <table>
+              <tr>
+                <th>URN</th>
+                <td><a href="#0">238834351Z</a></td>
+              </tr>
+              <tr>
+                <th>Outcome</th>
+                <td>Refused</td>
+              </tr>
+              <tr>
+                <th>Refusal reason</th>
+                <td>Insufficient evidence of company trading, address listed did not appear to be a valid company.</td>
+              </tr>
+              <tr>
+                <th>Refusal date</th>
+                <td>12/08/2012.</td>
+              </tr>
+            </table>
+          </div>
+
+        </details>
+
+        <details role="group">
+
+          <summary role="button" aria-controls="details-content-0" aria-expanded="false">
+            <span class="summary">Other applications from the same postcode</span>
+          </summary>
+
+          <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+            <h3 class="heading-medium">Bob&rsquo;s Bits</h3>
+            <table>
+              <tr>
+                <th>URN</th>
+                <td><a href="#0">288715309R</a></td>
+              </tr>
+              <tr>
+                <th>Outcome</th>
+                <td>Rejected</td>
+              </tr>
+              <tr>
+                <th>Rejection reason</th>
+                <td>Fee underpaid.</td>
+
+              </tr>
+              <tr>
+                <th>Rejection date</th>
+                <td>31/07/2015.</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+            <h3 class="heading-medium">Flying Pizza</h3>
+            <table>
+              <tr>
+                <th>URN</th>
+                <td><a href="#0">238834351Z</a></td>
+              </tr>
+              <tr>
+                <th>Outcome</th>
+                <td>Approved</td>
+              </tr>
+              <tr>
+                <th>Approval date</th>
+                <td>15/04/2010.</td>
+              </tr>
+            </table>
+          </div>
+
+        </details>
+
+        <h4 class="heading-small">
+          Approve business details?
+        </h4>
+
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="visuallyhidden">Approve business details?</legend>
+
+            <label for="companyYes" class="block-label">
+              <input type="radio" name="company" value="true" id="companyYes">
+              Yes
+            </label>
+
+            <label for="companyNo" class="block-label" data-target="company-details">
+              <input type="radio" name="company" value="false" id="companyNo">
+              No
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="company-details">
+              <div class="form-group">
+                <label class="form-label-bold" for="companyDetails">Details</label>
+                <textarea type="text" class="form-control" id="companyDetails" name="companyDetails" rows="6"></textarea>
               </div>
+            </div>
 
-            </fieldset>
-          </div>
+          </fieldset>
+        </div>
 
-          <h4 class="heading-small">
-            Does the AO have any sponsorship history issues?
-          </h4>
+        <!-- <h4 class="heading-small">
+          Does the AO have any sponsorship history issues?
+        </h4> -->
 
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Does the AO have any sponsorship history issues?</legend>
+        <!-- <div class="form-group">
+          <fieldset class="inline">
+            <legend class="visuallyhidden">Does the AO have any sponsorship history issues?</legend>
 
-              <label for="historyYes" class="block-label" data-target="history-details">
-                <input type="radio" name="history" value="true" id="historyYes">
-                Yes
-              </label>
+            <label for="historyYes" class="block-label" data-target="history-details">
+              <input type="radio" name="history" value="true" id="historyYes">
+              Yes
+            </label>
 
-              <label for="historyNo" class="block-label">
-                <input type="radio" name="history" value="false" id="historyNo">
-                No
-              </label>
+            <label for="historyNo" class="block-label">
+              <input type="radio" name="history" value="false" id="historyNo">
+              No
+            </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="history-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="pncDetails">Details</label>
-                  <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
-                </div>
+            <div class="panel panel-border-narrow js-hidden" id="history-details">
+              <div class="form-group">
+                <label class="form-label-bold" for="pncDetails">Details</label>
+                <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
               </div>
+            </div>
 
-            </fieldset>
-          </div>
+          </fieldset>
+        </div> -->
 
-          <div class="form-group">
-            <input type="submit" class="button" value="Submit">
-          </div>
+        <div class="form-group">
+          <a href="#0" class="button leftnavlinks" data-target="ao-details">
+            Continue
+          </a>
+        </div>
 
-        </form>
+      </div> <!-- /Business details -->
+
+      <div id="ao-details" class="leftnavcontent">
+
+        <h2 class="heading-large" style="margin-top: 0">
+          AO details
+        </h2>
+
+        <table style="margin-bottom: 30px">
+          <caption style="text-align: left">
+            AO&rsquo;s submitted details
+          </caption>
+          <tr>
+            <th>Full name</th>
+            <td>Delice Junco</td>
+          </tr>
+          <tr>
+            <th>DOB</th>
+            <td>18/09/1942</td>
+          </tr>
+          <tr>
+            <th>Nationality</th>
+            <td>British</td>
+          </tr>
+          <!-- <tr>
+            <th>NI number</th>
+            <td>EL271653B</td>
+          </tr> -->
+          <tr>
+            <th>Passport number</th>
+            <td>152505696</td>
+          </tr>
+          <tr>
+            <th>Address</th>
+            <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" target="_blank" rel="external">123 West Street<br>Sheffield<br>S1 2AB</a></td>
+          </tr>
+          <tr>
+            <th>Contact number</th>
+            <td>0114 2301234</td>
+          </tr>
+          <tr>
+            <th>Email address</th>
+            <td><a href="mailto:djunco@acme.com">djunco@acme.com</a></td>
+          </tr>
+        </table>
+
+        <h4 class="heading-small">
+          Does the AO have any PNC convictions?
+        </h4>
+
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="visuallyhidden">Does the AO have any PNC convictions?</legend>
+
+            <label for="pncYes" class="block-label" data-target="pnc-details">
+              <input type="radio" name="pnc" value="true" id="pncYes">
+              Yes
+            </label>
+
+            <label for="pncNo" class="block-label">
+              <input type="radio" name="pnc" value="false" id="pncNo">
+              No
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="pnc-details">
+              <div class="form-group">
+                <label class="form-label-bold" for="pncDetails">Details</label>
+                <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <h4 class="heading-small">
+          Does the AO have any sponsorship history issues?
+        </h4>
+
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="visuallyhidden">Does the AO have any sponsorship history issues?</legend>
+
+            <label for="historyYes" class="block-label" data-target="history-details">
+              <input type="radio" name="history" value="true" id="historyYes">
+              Yes
+            </label>
+
+            <label for="historyNo" class="block-label">
+              <input type="radio" name="history" value="false" id="historyNo">
+              No
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="history-details">
+              <div class="form-group">
+                <label class="form-label-bold" for="pncDetails">Details</label>
+                <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <a href="#0" class="button leftnavlinks" data-target="other-user">
+            Continue
+          </a>
+        </div>
 
       </div> <!-- /AO details -->
 
       <div id="other-user" class="leftnavcontent">
 
-        <form action="#0" method="get" class="form">
+        <h2 class="heading-large" style="margin-top: 0">
+          Other user details
+        </h2>
 
-          <h2 class="heading-large" style="margin-top: 0">
-            Other user details
-          </h2>
+        <table style="margin-bottom: 30px">
+          <caption style="text-align: left">
+            Other user&rsquo;s submitted details
+          </caption>
+          <tr>
+            <th>Full name</th>
+            <td>Gwendolyn Kensy</td>
+          </tr>
+          <tr>
+            <th>DOB</th>
+            <td>03/03/1982</td>
+          </tr>
+          <tr>
+            <th>Nationality</th>
+            <td>British</td>
+          </tr>
+          <tr>
+            <th>NI number</th>
+            <td>KY191130C</td>
+          </tr>
+          <tr>
+            <th>Passport number</th>
+            <td>838602872</td>
+          </tr>
+          <tr>
+            <th>Address</th>
+            <td><a href="http://maps.google.com/?q=1176 Nelson Street Bamber Bridge PR5 6FY" target="_blank" rel="external">1176 Nelson Street<br>Bamber Bridge<br>PR5 6FY</a></td>
+          </tr>
+          <tr>
+            <th>Contact number</th>
+            <td>07413836999</td>
+          </tr>
+          <tr>
+            <th>Email address</th>
+            <td><a href="mailto:gkensy@acme.com">gkensy@acme.com</a></td>
+          </tr>
+        </table>
 
-          <table style="margin-bottom: 30px">
-            <caption style="text-align: left">
-              Other user&rsquo;s submitted details
-            </caption>
-            <tr>
-              <th>Full name</th>
-              <td>Gwendolyn Kensy</td>
-            </tr>
-            <tr>
-              <th>DOB</th>
-              <td>03/03/1982</td>
-            </tr>
-            <tr>
-              <th>Nationality</th>
-              <td>British</td>
-            </tr>
-            <tr>
-              <th>NI number</th>
-              <td>KY191130C</td>
-            </tr>
-            <tr>
-              <th>Passport number</th>
-              <td>838602872</td>
-            </tr>
-            <tr>
-              <th>Address</th>
-              <td><a href="http://maps.google.com/?q=1176 Nelson Street Bamber Bridge PR5 6FY" target="_blank" rel="external">1176 Nelson Street<br>Bamber Bridge<br>PR5 6FY</a></td>
-            </tr>
-            <tr>
-              <th>Contact number</th>
-              <td>07413836999</td>
-            </tr>
-            <tr>
-              <th>Email address</th>
-              <td><a href="mailto:gkensy@acme.com">gkensy@acme.com</a></td>
-            </tr>
-          </table>
+        <h4 class="heading-small">
+          Does the user have any PNC convictions?
+        </h4>
 
-          <h4 class="heading-small">
-            Does the user have any PNC convictions?
-          </h4>
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="visuallyhidden">Does the user have any PNC convictions?</legend>
 
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Does the user have any PNC convictions?</legend>
+            <label for="pncYes" class="block-label" data-target="pnc-details">
+              <input type="radio" name="pnc" value="true" id="pncYes">
+              Yes
+            </label>
 
-              <label for="pncYes" class="block-label" data-target="pnc-details">
-                <input type="radio" name="pnc" value="true" id="pncYes">
-                Yes
-              </label>
+            <label for="pncNo" class="block-label">
+              <input type="radio" name="pnc" value="false" id="pncNo" checked="">
+              No
+            </label>
 
-              <label for="pncNo" class="block-label">
-                <input type="radio" name="pnc" value="false" id="pncNo" checked="">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="pnc-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="pncDetails">Details</label>
-                  <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
-                </div>
+            <div class="panel panel-border-narrow js-hidden" id="pnc-details">
+              <div class="form-group">
+                <label class="form-label-bold" for="pncDetails">Details</label>
+                <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
               </div>
+            </div>
 
-            </fieldset>
-          </div>
+          </fieldset>
+        </div>
 
-          <h4 class="heading-small">
-            Does the user have any sponsorship history issues?
-          </h4>
+        <h4 class="heading-small">
+          Does the user have any sponsorship history issues?
+        </h4>
 
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Does the AO have any sponsorship history issues?</legend>
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="visuallyhidden">Does the AO have any sponsorship history issues?</legend>
 
-              <label for="historyYes" class="block-label" data-target="history-details">
-                <input type="radio" name="history" value="true" id="historyYes">
-                Yes
-              </label>
+            <label for="historyYes" class="block-label" data-target="history-details">
+              <input type="radio" name="history" value="true" id="historyYes">
+              Yes
+            </label>
 
-              <label for="historyNo" class="block-label">
-                <input type="radio" name="history" value="false" id="historyNo" checked="">
-                No
-              </label>
+            <label for="historyNo" class="block-label">
+              <input type="radio" name="history" value="false" id="historyNo" checked="">
+              No
+            </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="history-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="pncDetails">Details</label>
-                  <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
-                </div>
+            <div class="panel panel-border-narrow js-hidden" id="history-details">
+              <div class="form-group">
+                <label class="form-label-bold" for="pncDetails">Details</label>
+                <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
               </div>
+            </div>
 
-            </fieldset>
-          </div>
+          </fieldset>
+        </div>
 
-          <div class="form-group">
-            <input type="submit" class="button" value="Submit">
-          </div>
-
-        </form>
+        <div class="form-group">
+          <a href="#0" class="button leftnavlinks" data-target="rep-details">
+            Continue
+          </a>
+        </div>
 
       </div> <!-- /Other user -->
 
       <div id="rep-details" class="leftnavcontent">
-        <form action="#0" method="get" class="form">
-          <h2 class="heading-large" style="margin-top: 0">
-            Representative details
-          </h2>
 
-          <table style="margin-bottom: 30px">
-            <caption style="text-align: left">
-              Representative&rsquo;s submitted details
-            </caption>
-            <tr>
-              <th>OISC number</th>
-              <td>123456789</td>
-            </tr>
-            <tr>
-              <th>Full name</th>
-              <td>Ford Pensinger</td>
-            </tr>
-            <tr>
-              <th>DOB</th>
-              <td>23/08/1950</td>
-            </tr>
-            <tr>
-              <th>Nationality</th>
-              <td>British</td>
-            </tr>
-            <tr>
-              <th>NI number</th>
-              <td>PC548323A</td>
-            </tr>
-            <tr>
-              <th>Passport number</th>
-              <td>958366300</td>
-            </tr>
-            <tr>
-              <th>Company name</th>
-              <td>Reps r us</td>
-            </tr>
-            <tr>
-              <th>Company address</th>
-              <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" target="_blank" rel="external">1195 Longwood Gate<br>Longwood<br>HD3 4US</a></td>
-            </tr>
-            <tr>
-              <th>Contact number</th>
-              <td>045 9474 1658</td>
-            </tr>
-            <tr>
-              <th>Email address</th>
-              <td><a href="mailto:djunco@acme.com">f.pensinger@reps.com</a></td>
-            </tr>
-          </table>
+        <h2 class="heading-large" style="margin-top: 0">
+          Representative details
+        </h2>
 
-          <details role="group">
+        <table style="margin-bottom: 30px">
+          <caption style="text-align: left">
+            Representative&rsquo;s submitted details
+          </caption>
+          <tr>
+            <th>OISC number</th>
+            <td>123456789</td>
+          </tr>
+          <tr>
+            <th>Full name</th>
+            <td>Ford Pensinger</td>
+          </tr>
+          <tr>
+            <th>DOB</th>
+            <td>23/08/1950</td>
+          </tr>
+          <tr>
+            <th>Nationality</th>
+            <td>British</td>
+          </tr>
+          <tr>
+            <th>NI number</th>
+            <td>PC548323A</td>
+          </tr>
+          <tr>
+            <th>Passport number</th>
+            <td>958366300</td>
+          </tr>
+          <tr>
+            <th>Company name</th>
+            <td>Reps r us</td>
+          </tr>
+          <tr>
+            <th>Company address</th>
+            <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" target="_blank" rel="external">1195 Longwood Gate<br>Longwood<br>HD3 4US</a></td>
+          </tr>
+          <tr>
+            <th>Contact number</th>
+            <td>045 9474 1658</td>
+          </tr>
+          <tr>
+            <th>Email address</th>
+            <td><a href="mailto:djunco@acme.com">f.pensinger@reps.com</a></td>
+          </tr>
+        </table>
 
-            <summary role="button" aria-controls="details-content-0" aria-expanded="false">
-              <span class="summary">Previous representations</span>
-            </summary>
+        <details role="group">
 
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">Foo Bars ltd</h3>
-              <table>
-                <tr>
-                  <th>UAN</th>
-                  <td><a href="#0">436092851J</a></td>
-                </tr>
-                <tr>
-                  <th>Company name</th>
-                  <td>Foo Bars ltd</td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Approved</td>
-                </tr>
-              </table>
-            </div>
+          <summary role="button" aria-controls="details-content-0" aria-expanded="false">
+            <span class="summary">Previous representations</span>
+          </summary>
 
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">Smith and Co.</h3>
-              <table>
-                <tr>
-                  <th>UAN</th>
-                  <td><a href="#0">509972207F</a></td>
-                </tr>
-                <tr>
-                  <th>Company name</th>
-                  <td>Smith and Co.</td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Rejected</td>
-                </tr>
-                <tr>
-                  <th>Rejection reason</th>
-                  <td>Vacancy was deemed unnecessary.</td>
-                </tr>
-              </table>
-            </div>
+          <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+            <h3 class="heading-medium">Foo Bars ltd</h3>
+            <table>
+              <tr>
+                <th>URN</th>
+                <td><a href="#0">436092851J</a></td>
+              </tr>
+              <tr>
+                <th>Company name</th>
+                <td>Foo Bars ltd</td>
+              </tr>
+              <tr>
+                <th>Outcome</th>
+                <td>Approved</td>
+              </tr>
+            </table>
+          </div>
 
-          </details>
+          <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+            <h3 class="heading-medium">Smith and Co.</h3>
+            <table>
+              <tr>
+                <th>URN</th>
+                <td><a href="#0">509972207F</a></td>
+              </tr>
+              <tr>
+                <th>Company name</th>
+                <td>Smith and Co.</td>
+              </tr>
+              <tr>
+                <th>Outcome</th>
+                <td>Rejected</td>
+              </tr>
+              <tr>
+                <th>Rejection reason</th>
+                <td>Vacancy was deemed unnecessary.</td>
+              </tr>
+            </table>
+          </div>
 
-          <h4 class="heading-small">
-            Approve representative?
-          </h4>
+        </details>
 
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Approve representative?</legend>
+        <h4 class="heading-small">
+          Approve representative?
+        </h4>
 
-              <label for="repYes" class="block-label">
-                <input type="radio" name="repapprove" value="true" id="repYes">
-                Yes
-              </label>
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="visuallyhidden">Approve representative?</legend>
 
-              <label for="repNo" class="block-label" data-target="repapprove-details">
-                <input type="radio" name="repapprove" value="false" id="repNo">
-                No
-              </label>
+            <label for="repYes" class="block-label">
+              <input type="radio" name="repapprove" value="true" id="repYes">
+              Yes
+            </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="repapprove-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="repDetails">Details</label>
-                  <textarea type="text" class="form-control" id="repDetails" name="repDetails" rows="6"></textarea>
-                </div>
+            <label for="repNo" class="block-label" data-target="repapprove-details">
+              <input type="radio" name="repapprove" value="false" id="repNo">
+              No
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="repapprove-details">
+              <div class="form-group">
+                <label class="form-label-bold" for="repDetails">Details</label>
+                <textarea type="text" class="form-control" id="repDetails" name="repDetails" rows="6"></textarea>
               </div>
+            </div>
 
-            </fieldset>
-          </div>
+          </fieldset>
+        </div>
 
-          <div class="form-group">
-            <input type="submit" class="button" value="Submit">
-          </div>
-        </form>
+        <div class="form-group">
+          <a href="#0" class="button leftnavlinks" data-target="vacancy-details">
+            Continue
+          </a>
+        </div>
+
       </div> <!-- /Rep details -->
 
-      <div id="business-details" class="leftnavcontent">
+      <div id="vacancy-details" class="leftnavcontent">
 
-        <form action="/caseworker" method="get" class="form">
+        <h2 class="heading-large" style="margin-top: 0">
+          Vacancy details
+        </h2>
 
-          <h2 class="heading-large" style="margin-top: 0">
-            Business details
-          </h2>
-
-          <table style="margin-bottom: 30px">
-            <caption style="text-align: left">
-              Business details submitted
-            </caption>
-            <tr>
-              <th>Company name</th>
-              <td>{{ compName }}</td>
-            </tr>
-            <tr>
-              <th>Company number</th>
-              <td>123456789</td>
-            </tr>
-            <tr>
-              <th>Company address</th>
-              <td>20 West Street<br>Sheffield<br>S44 6YP</td>
-            </tr>
-            <tr>
-              <th>Company director</th>
-              <td>Rod Runner</td>
-            </tr>
-            <tr>
-              <th>Second company director</th>
-              <td>William E. Coyote</td>
-            </tr>
-            <tr>
-              <th>Company type</th>
-              <td>Private limited company</td>
-            </tr>
-            <tr>
-              <th>Date of incorporation</th>
-              <td>03/11/2014</td>
-            </tr>
-          </table>
-
-          <details role="group">
-
-            <summary role="button" aria-controls="details-content-0" aria-expanded="false">
-              <span class="summary">Previous applications</span>
-            </summary>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">ACME Corporation</h3>
-              <table>
-                <tr>
-                  <th>UAN</th>
-                  <td><a href="#0">436092851J</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Rejected</td>
-                </tr>
-                <tr>
-                  <th>Rejection reason</th>
-                  <td>Required document not provided, application rejected and refunded.</td>
-                </tr>
-                <tr>
-                  <th>Rejection date</th>
-                  <td>12/10/2015.</td>
-                </tr>
-              </table>
-            </div>
-
-          </details>
-
-          <details role="group">
-
-            <summary role="button" aria-controls="details-content-0" aria-expanded="false">
-              <span class="summary">Potential previous applications</span>
-            </summary>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">ACME Inc.</h3>
-              <table>
-                <tr>
-                  <th>UAN</th>
-                  <td><a href="#0">128889351B</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Refused</td>
-                </tr>
-                <tr>
-                  <th>Refusal reason</th>
-                  <td>Failed visit due to insufficient processes in place to monitor sponsored applicant.</td>
-
-                </tr>
-                <tr>
-                  <th>Refusal date</th>
-                  <td>12/08/2015.</td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">Smith and Co.</h3>
-              <table>
-                <tr>
-                  <th>UAN</th>
-                  <td><a href="#0">238834351Z</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Refused</td>
-                </tr>
-                <tr>
-                  <th>Refusal reason</th>
-                  <td>Insufficient evidence of company trading, address listed did not appear to be a valid company.</td>
-                </tr>
-                <tr>
-                  <th>Refusal date</th>
-                  <td>12/08/2012.</td>
-                </tr>
-              </table>
-            </div>
-
-          </details>
-
-          <details role="group">
-
-            <summary role="button" aria-controls="details-content-0" aria-expanded="false">
-              <span class="summary">Other applications from the same postcode</span>
-            </summary>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">Bob&rsquo;s Bits</h3>
-              <table>
-                <tr>
-                  <th>UAN</th>
-                  <td><a href="#0">288715309R</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Rejected</td>
-                </tr>
-                <tr>
-                  <th>Rejection reason</th>
-                  <td>Fee underpaid.</td>
-
-                </tr>
-                <tr>
-                  <th>Rejection date</th>
-                  <td>31/07/2015.</td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">Flying Pizza</h3>
-              <table>
-                <tr>
-                  <th>UAN</th>
-                  <td><a href="#0">238834351Z</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Approved</td>
-                </tr>
-                <tr>
-                  <th>Approval date</th>
-                  <td>15/04/2010.</td>
-                </tr>
-              </table>
-            </div>
-
-          </details>
+        <table style="margin-bottom: 30px">
+          <caption style="text-align: left">
+            Vacancy details submitted
+          </caption>
+          <tr>
+            <th>Job title</th>
+            <td>Interaction designer</td>
+          </tr>
+          <tr>
+            <th>Job description</th>
+            <td>Refine and shape user journeys and help remove complexity where it isn’t needed.  Design for diverse users and platforms and ensure usability and accessibility of the service. Help identify gaps in product understanding, help plan user research and analytics and help inform the design of user journeys.</td>
+          </tr>
+          <tr>
+            <th>Salary</th>
+            <td>&pound;30,000</td>
+          </tr>
+        </table>
 
           <h4 class="heading-small">
-            Approve business details?
+            Approve vacancy?
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Approve business details?</legend>
+              <legend class="visuallyhidden">Approve vacancy?</legend>
 
-              <label for="companyYes" class="block-label">
-                <input type="radio" name="company" value="true" id="companyYes">
+              <label for="vacancyYes" class="block-label">
+                <input type="radio" name="vacancyapprove" value="true" id="vacancyYes">
                 Yes
               </label>
 
-              <label for="companyNo" class="block-label" data-target="company-details">
-                <input type="radio" name="company" value="false" id="companyNo">
+              <label for="vacancyNo" class="block-label" data-target="vacancyapprove-details">
+                <input type="radio" name="vacancyapprove" value="false" id="vacancyNo">
                 No
               </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="company-details">
+              <div class="panel panel-border-narrow js-hidden" id="vacancyapprove-details">
                 <div class="form-group">
-                  <label class="form-label-bold" for="companyDetails">Details</label>
-                  <textarea type="text" class="form-control" id="companyDetails" name="companyDetails" rows="6"></textarea>
+                  <label class="form-label-bold" for="vacancyDetails">Details</label>
+                  <textarea type="text" class="form-control" id="vacancyDetails" name="vacancyDetails" rows="6"></textarea>
                 </div>
               </div>
 
             </fieldset>
           </div>
-
-          <!-- <h4 class="heading-small">
-            Does the AO have any sponsorship history issues?
-          </h4> -->
-
-          <!-- <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Does the AO have any sponsorship history issues?</legend>
-
-              <label for="historyYes" class="block-label" data-target="history-details">
-                <input type="radio" name="history" value="true" id="historyYes">
-                Yes
-              </label>
-
-              <label for="historyNo" class="block-label">
-                <input type="radio" name="history" value="false" id="historyNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="history-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="pncDetails">Details</label>
-                  <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div> -->
 
           <div class="form-group">
-            <input type="submit" class="button" value="Submit">
+            <a href="#0" class="button leftnavlinks" data-target="application-decision">
+              Continue
+            </a>
           </div>
-
-        </form>
-
-      </div> <!-- /Business details -->
-
-      <div id="vacancy-details" class="leftnavcontent">
-        <form action="#0" method="get" class="form">
-
-          <h2 class="heading-large" style="margin-top: 0">
-            Vacancy details
-          </h2>
-
-          <table style="margin-bottom: 30px">
-            <caption style="text-align: left">
-              Vacancy details submitted
-            </caption>
-            <tr>
-              <th>Job title</th>
-              <td>Interaction designer</td>
-            </tr>
-            <tr>
-              <th>Job description</th>
-              <td>Refine and shape user journeys and help remove complexity where it isn’t needed.  Design for diverse users and platforms and ensure usability and accessibility of the service. Help identify gaps in product understanding, help plan user research and analytics and help inform the design of user journeys.</td>
-            </tr>
-            <tr>
-              <th>Salary</th>
-              <td>&pound;30,000</td>
-            </tr>
-          </table>
-
-            <h4 class="heading-small">
-              Approve vacancy?
-            </h4>
-
-            <div class="form-group">
-              <fieldset class="inline">
-                <legend class="visuallyhidden">Approve vacancy?</legend>
-
-                <label for="vacancyYes" class="block-label">
-                  <input type="radio" name="vacancyapprove" value="true" id="vacancyYes">
-                  Yes
-                </label>
-
-                <label for="vacancyNo" class="block-label" data-target="vacancyapprove-details">
-                  <input type="radio" name="vacancyapprove" value="false" id="vacancyNo">
-                  No
-                </label>
-
-                <div class="panel panel-border-narrow js-hidden" id="vacancyapprove-details">
-                  <div class="form-group">
-                    <label class="form-label-bold" for="vacancyDetails">Details</label>
-                    <textarea type="text" class="form-control" id="vacancyDetails" name="vacancyDetails" rows="6"></textarea>
-                  </div>
-                </div>
-
-              </fieldset>
-            </div>
-
-            <div class="form-group">
-              <input type="submit" class="button" value="Submit">
-            </div>
-          </form>
 
       </div> <!-- /Vacancy details -->
 
