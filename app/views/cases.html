@@ -19,16 +19,12 @@
         Current cases
       </h1>
 
-      <h2 class="heading-large" style="margin-top: 0">
-        Find a case
-      </h2>
-
       <form action="#0" method="get" class="form">
 
         <div class="form-group">
-          <label for="case-search" class="visuallyhidden">Search cases using UAN or Company name</label>
-          <!-- <p class="form-hint">UAN or Company name</p> -->
-          <input type="text" class="form-control js-case-search-query" id="case-search" name="case-search" placeholder="Search cases using UAN or Company name" style="height: 40px; padding: 6px 10px; width: 80%;">
+          <label for="case-search" class="heading-medium">Search cases using URN</label>
+          <!-- <p class="form-hint">URN or Company name</p> -->
+          <input type="text" class="form-control js-case-search-query" id="case-search" name="case-search" style="height: 40px; padding: 6px 10px; width: 80%;">
           <input class="button js-case-search" type="submit" value="Search">
         </div>
 
@@ -60,258 +56,258 @@
       <table class="cases">
         <thead>
           <tr>
-            <th>UAN</th>
-            <th>Company name</th>
-            <th>Date submitted</th>
+            <th>URN</th>
+            <!-- <th>Company name</th> -->
+            <!-- <th>Date submitted</th> -->
             <th>SLA</th>
             <th>Status</th>
             <th>Owner</th>
-            <th>Action</th>
+            <th class="all-cases-view">Action</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><a href="#0">603600002A</a></td>
-            <td>ACME Corporation</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>ACME Corporation</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="54">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=ACME Corporation&uan=603600002A" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=ACME Corporation&urn=603600002A" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
-            <td>Hooli</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Hooli</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="56">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Hooli&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Hooli&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
-            <td>Vehement Capital Partners</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Vehement Capital Partners</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="40">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=603600002C&uan=603600002C" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=603600002C&urn=603600002C" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
-            <td>Wonka Industries</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Wonka Industries</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="40">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Wonka Industries&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Wonka Industries&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
-            <td>Stark Industries</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Stark Industries</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="41">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Stark Industries&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Stark Industries&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
-            <td>Ollivander&rsquo;s Wand Shop</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Ollivander&rsquo;s Wand Shop</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="42">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Ollivanders Wand Shop&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Ollivanders Wand Shop&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
-            <td>Gekko &amp; Co</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Gekko &amp; Co</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="42">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Gekko and Co&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Gekko and Co&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
-            <td>Wayne Enterprises</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Wayne Enterprises</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="42">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Wayne Enterprises&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Wayne Enterprises&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
-            <td>Cyberdyne Systems</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Cyberdyne Systems</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="44">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Cyberdyne Systems&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Cyberdyne Systems&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
-            <td>Genco Pura Olive Oil Company</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Genco Pura Olive Oil Company</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="45">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Genco Pura Olive Oil Company&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Genco Pura Olive Oil Company&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
-            <td>Duff Beer</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Duff Beer</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="45">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Duff Beer&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Duff Beer&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
-            <td>Bubba Gump</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Bubba Gump</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="46">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Bubba Gump&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Bubba Gump&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
-            <td>Sterling Cooper</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Sterling Cooper</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="46">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Sterling Cooper&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Sterling Cooper&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
-            <td>CHOAM</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>CHOAM</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="47">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=CHOAM&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=CHOAM&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
-            <td>Sirius Cybernetics Corp.</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Sirius Cybernetics Corp.</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="47">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Sirius Cybernetics Corp&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Sirius Cybernetics Corp&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
-            <td>MomCorp</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>MomCorp</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="47">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=MomCorp&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=MomCorp&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
-            <td>Tyrell Corp.</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Tyrell Corp.</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="48">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Tyrell Corp&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Tyrell Corp&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
-            <td>Nakatomi Trading Corp.</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Nakatomi Trading Corp.</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="48">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Nakatomi Trading Corp&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Nakatomi Trading Corp&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
-            <td>Spacely Space Sprockets</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Spacely Space Sprockets</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="48">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Spacely Space Sprockets&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Spacely Space Sprockets&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002B</a></td>
-            <td>Oceanic Airlines</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Oceanic Airlines</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="48">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Oceanic Airlines&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Oceanic Airlines&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002C</a></td>
-            <td>Buy n Large</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Buy n Large</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="48">01/03/2016</td>
             <td>Ready</td>
             <td></td>
-            <td><a class="button" href="/caseworker?compName=Buy n Large&uan=603600002B" role="button">Casework</a></td>
+            <td class="all-cases-view"><a class="button" href="/caseworker?compName=Buy n Large&urn=603600002B" role="button">Casework</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002H</a></td>
-            <td>Soylent Corp</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Soylent Corp</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="34">01/03/2016</td>
             <td>In progress</td>
             <td>Joe Bloggs</td>
-            <td><!-- <a class="button" href="/caseworker?compName=Soylent Corp&uan=603600002B" role="button">Casework</a> --></td>
+            <td class="all-cases-view"><!-- <a class="button" href="/caseworker?compName=Soylent Corp&urn=603600002B" role="button">Casework</a> --></td>
           </tr>
           <tr>
             <td><a href="#0">603600002I</a></td>
-            <td>Initech</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Initech</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="15">01/03/2016</td>
             <td>On hold: internal</td>
             <td>Joe Bloggs</td>
-            <td><!-- <a class="button" href="/caseworker?compName=Initech&uan=603600002B" role="button">Casework</a> --></td>
+            <td class="all-cases-view"><!-- <a class="button" href="/caseworker?compName=Initech&urn=603600002B" role="button">Casework</a> --></td>
           </tr>
           <tr>
             <td><a href="#0">603600002I</a></td>
-            <td>Weyland-Yutani Corporation</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Weyland-Yutani Corporation</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="20">01/03/2016</td>
             <td>On hold: external</td>
             <td>Joe Bloggs</td>
-            <td><!-- <a class="button" href="/caseworker?compName=Weyland-Yutani Corporation&uan=603600002B" role="button">Casework</a> --></td>
+            <td class="all-cases-view"><!-- <a class="button" href="/caseworker?compName=Weyland-Yutani Corporation&urn=603600002B" role="button">Casework</a> --></td>
           </tr>
           <tr>
             <td><a href="#0">603600002J</a></td>
-            <td>Umbrella Corporation</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Umbrella Corporation</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="20">01/03/2016</td>
             <td>Out for visit</td>
             <td>Joe Bloggs</td>
-            <td><!-- <a class="button" href="/caseworker?compName=Umbrella Corporation&uan=603600002B" role="button">Casework</a> --></td>
+            <td class="all-cases-view"><!-- <a class="button" href="/caseworker?compName=Umbrella Corporation&urn=603600002B" role="button">Casework</a> --></td>
           </tr>
           <tr>
             <td><a href="#0">603600002Y</a></td>
-            <td>Overseas Lawyers Co.</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Overseas Lawyers Co.</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="56">01/03/2016</td>
             <td>Awaiting validation</td>
             <td></td>
-            <td><a class="button" href="/documents" role="button">Validate</a></td>
+            <td class="all-cases-view"><a class="button" href="/documents" role="button">Validate</a></td>
           </tr>
           <tr>
             <td><a href="#0">603600002Z</a></td>
-            <td>Globex Corporation</td>
-            <td>01/01/2016</td>
-            <td>01/03/2016</td>
+            <!-- <td>Globex Corporation</td> -->
+            <!-- <td>01/01/2016</td> -->
+            <td class="date" data-days="56">01/03/2016</td>
             <td>Awaiting validation</td>
             <td></td>
-            <td><a class="button" href="/documents" role="button">Validate</a></td>
+            <td class="all-cases-view"><a class="button" href="/documents" role="button">Validate</a></td>
           </tr>
         </tbody>
       </table>
