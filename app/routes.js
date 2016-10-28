@@ -13,9 +13,9 @@ router.get('/', function (req, res) {
 
 router.get('/caseworker', function (req, res) {
   var compName = req.query.compName
-  var uan = req.query.uan
+  var urn = req.query.urn
 
-  res.render('caseworker', { 'compName': compName ,  'uan': uan })
+  res.render('caseworker', { 'compName': compName ,  'urn': urn })
 })
 
 // add your routes here
