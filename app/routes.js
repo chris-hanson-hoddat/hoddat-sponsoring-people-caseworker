@@ -14,8 +14,16 @@ router.get('/', function (req, res) {
 router.get('/caseworker', function (req, res) {
   var compName = req.query.compName
   var urn = req.query.urn
+  var overview = req.query.overview
 
   res.render('caseworker', { 'compName': compName ,  'urn': urn })
+})
+
+router.get('/caseworker-action', function (req, res) {
+  var compName = req.query.compName
+  var urn = req.query.urn
+
+  res.render('caseworker-action', { 'compName': compName ,  'urn': urn })
 })
 
 // add your routes here
