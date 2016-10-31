@@ -70,6 +70,7 @@ $('.js-my-cases').click(function(e) {
   $(this).siblings('.tab--active').removeClass('tab--active');
   $(this).addClass('tab--active');
   $('.all-cases-view').hide();
+  $('.my-cases-view').show();
 
   var search = 'Joe Bloggs';
 
@@ -86,6 +87,7 @@ $('.js-all-cases').click(function(e) {
   $(this).siblings('.tab--active').removeClass('tab--active');
   $(this).addClass('tab--active');
   $('.all-cases-view').show();
+  $('.my-cases-view').hide();
 
   var search = '603';
 
@@ -128,5 +130,19 @@ $('.date').each(function() {
   var year = currentTime.getFullYear();
   $(this).text(day + "/" + month + "/" + year);
 });
+
+
+
+if ( document.location.href.indexOf('overview') > -1 ) {
+    $('.overview')
+      .show()
+      .click(function(e) {
+        e.preventDefault();
+        document.location.href=location.href.replace(/&?overview/, "");
+      });
+} else {
+  $('.action').show();
+}
+
 
 
