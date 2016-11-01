@@ -10,9 +10,9 @@
 
   <div class="grid-row">
 
-    <div class="column-full">
+    <!-- <div class="column-full">
       <a onclick="history.go(-1); return false;" href="#0" class="link-back">Back</a>
-    </div>
+    </div> -->
 
     <div class="column-full">
       <h1 class="heading-xlarge" style="margin-bottom: 0;">
@@ -105,12 +105,43 @@
             <tr>
               <th>Companies House number</th>
               <td>
-                <a href="https://beta.companieshouse.gov.uk/company/06232576" title="Search on Companies House" target="_blank" rel="external">06232576</a>
+                <a href="https://beta.companieshouse.gov.uk/company/06232576" title="View on Companies House" target="_blank" rel="external">06232576</a>
               </td>
             </tr>
             <tr>
-              <th>Company address</th>
+              <th>Primary address</th>
               <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" title="Search on Google Maps" target="_blank" rel="external">123 West Street<br>Sheffield<br>S1 2AB</a></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <details role="group" style="margin: 0; padding: 0; border: 0; ">
+
+                  <summary role="button" aria-controls="details-content-address" aria-expanded="false">
+                    <span class="summary">Additional address</span>
+                  </summary>
+
+                  <div class="panel panel-border-narrow" id="details-content-address" aria-hidden="true">
+                    <table>
+                      <tr>
+                        <td>
+                          <a href="http://maps.google.com/?q=164 Timperley Court Timperley Gardens Redhill RH1 2AU" title="Search on Google Maps" target="_blank" rel="external">164 Timperley Court<br>Redhill<br>RH1 2AU</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="http://maps.google.com/?q=1107 Arnside Road Nottingham NG5 5HH" title="Search on Google Maps" target="_blank" rel="external">1107 Arnside Road<br>Nottingham<br>NG5 5HH</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="http://maps.google.com/?q=1170 Armscroft Place Gloucester GL2 0SP" title="Search on Google Maps" target="_blank" rel="external">1170 Armscroft Place<br>Gloucester<br>GL2 0SP</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                </details>
+              </td>
             </tr>
             <!-- <tr>
               <th>Company director</th>
@@ -449,12 +480,12 @@
           </div>
 
           <h4 class="heading-small">
-            Does the AO have any sponsorship history issues?
+            Is there any evidence of previous non-compliance in the last 5 years?
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Does the AO have any sponsorship history issues?</legend>
+              <legend class="visuallyhidden">Is there any evidence of previous non-compliance in the last 5 years?</legend>
 
               <label for="historyYes" class="block-label" data-target="history-details">
                 <input type="radio" name="history" value="true" id="historyYes">
@@ -549,7 +580,7 @@
             </tr>
             <tr>
               <th>Job title</th>
-              <td>somethig</td>
+              <td>HR manager</td>
             </tr>
             <tr>
               <th>Work address</th>
@@ -619,7 +650,7 @@
               </label>
 
               <label for="pncNo" class="block-label">
-                <input type="radio" name="pnc" value="false" id="pncNo" checked="">
+                <input type="radio" name="pnc" value="false" id="pncNo">
                 No
               </label>
 
@@ -647,7 +678,7 @@
               </label>
 
               <label for="historyNo" class="block-label">
-                <input type="radio" name="history" value="false" id="historyNo" checked="">
+                <input type="radio" name="history" value="false" id="historyNo">
                 No
               </label>
 
@@ -829,7 +860,7 @@
             </tr>
             <tr>
               <th>SOC code</th>
-              <td>ABC123</td>
+              <td>2135 - IT business analysts, architects and systems designers</td>
             </tr>
             <tr>
               <th>Advertisement status</th>
