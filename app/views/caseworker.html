@@ -7,7 +7,7 @@
 {% block content %}
 
 <main id="content" role="main">
-
+  {% include "includes/phase_banner_alpha.html" %}
   <div class="grid-row">
 
     <!-- <div class="column-full">
@@ -440,10 +440,10 @@
                 </tr>
                 <tr>
                   <th>Outcome</th>
-                  <td>Rejected</td>
+                  <td>Refused</td>
                 </tr>
                 <tr>
-                  <th>Rejection reason</th>
+                  <th>Refusal reason</th>
                   <td>Vacancy was deemed unnecessary.</td>
                 </tr>
               </table>
@@ -625,10 +625,10 @@
                 </tr>
                 <tr>
                   <th>Outcome</th>
-                  <td>Rejected</td>
+                  <td>Refused</td>
                 </tr>
                 <tr>
-                  <th>Rejection reason</th>
+                  <th>Refusal reason</th>
                   <td>Vacancy was deemed unnecessary.</td>
                 </tr>
               </table>
@@ -783,10 +783,10 @@
                 </tr>
                 <tr>
                   <th>Outcome</th>
-                  <td>Rejected</td>
+                  <td>Refused</td>
                 </tr>
                 <tr>
-                  <th>Rejection reason</th>
+                  <th>Refusal reason</th>
                   <td>Vacancy was deemed unnecessary.</td>
                 </tr>
               </table>
@@ -868,39 +868,75 @@
             </tr>
           </table>
 
-            <h4 class="heading-small">
-              Approve vacancy?
-            </h4>
+          <h4 class="heading-small">
+            Approve COS allocation?
+          </h4>
 
-            <div class="form-group">
-              <fieldset class="inline">
-                <legend class="visuallyhidden">Approve vacancy?</legend>
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Approve COS allocation?</legend>
 
-                <label for="vacancyYes" class="block-label">
-                  <input type="radio" name="vacancyapprove" value="true" id="vacancyYes">
-                  Yes
-                </label>
+              <label for="cosYes" class="block-label">
+                <input type="radio" name="cosapprove" value="true" id="cosYes">
+                Yes
+              </label>
 
-                <label for="vacancyNo" class="block-label" data-target="vacancyapprove-details">
-                  <input type="radio" name="vacancyapprove" value="false" id="vacancyNo">
-                  No
-                </label>
+              <label for="cosNo" class="block-label" data-target="cosapprove-details">
+                <input type="radio" name="cosapprove" value="false" id="cosNo">
+                No
+              </label>
 
-                <div class="panel panel-border-narrow js-hidden" id="vacancyapprove-details">
-                  <div class="form-group">
-                    <label class="form-label-bold" for="vacancyDetails">Details</label>
-                    <textarea type="text" class="form-control" id="vacancyDetails" name="vacancyDetails" rows="6"></textarea>
+              <div class="panel panel-border-narrow js-hidden" id="cosapprove-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="cosNumber">New COS allocation</label>
+                  <div class="form-date">
+                    <div class="form-group form-group-year">
+                      <input class="form-control" id="cosNumber" name="cosNumber" type="number" pattern="[0-9]*" min="0">
+                    </div>
                   </div>
                 </div>
+                <div class="form-group">
+                  <label class="form-label-bold" for="cosDetails">Reason for change</label>
+                  <textarea type="text" class="form-control" id="cosDetails" name="cosDetails" rows="6"></textarea>
+                </div>
+              </div>
 
-              </fieldset>
-            </div>
+            </fieldset>
+          </div>
 
-            <div class="form-group">
-              <a href="#0" class="button leftnavlinks" data-target="application-decision">
-                Continue
-              </a>
-            </div>
+          <h4 class="heading-small">
+            Approve vacancy?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Approve vacancy?</legend>
+
+              <label for="vacancyYes" class="block-label">
+                <input type="radio" name="vacancyapprove" value="true" id="vacancyYes">
+                Yes
+              </label>
+
+              <label for="vacancyNo" class="block-label" data-target="vacancyapprove-details">
+                <input type="radio" name="vacancyapprove" value="false" id="vacancyNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="vacancyapprove-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="vacancyDetails">Details</label>
+                  <textarea type="text" class="form-control" id="vacancyDetails" name="vacancyDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <a href="#0" class="button leftnavlinks" data-target="application-decision">
+              Continue
+            </a>
+          </div>
 
         </form>
       </div> <!-- /Vacancy details -->
