@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Reject application
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+
+    <div class="column-full">
+      <a onclick="history.go(-1); return false;" href="#0" class="link-back">Back</a>
+    </div>
+
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge" style="margin-bottom: 0;">
+        Reject application
+      </h1>
+      <p>The application was missing a required document and will be rejected.</p>
+
+      <a class="button" href="/application-reject">Reject application</a>
+      <a onclick="history.go(-1); return false;" class="button-secondary" href="#0">Cancel</a>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

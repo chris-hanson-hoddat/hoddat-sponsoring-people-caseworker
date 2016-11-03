@@ -7,23 +7,23 @@
 {% block content %}
 
 <main id="content" role="main">
-
+  {% include "includes/phase_banner_alpha.html" %}
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <div class="govuk-box-highlight">
+      <div class="govuk-box-highlight-secondary">
         <h1 class="bold-large">Application rejected</h1>
         <p>
           <strong class="heading-medium">Overseas Lawyers Co.</strong>
           <br>
           UAN603600002Y
         </p>
-        <p>
+        <!-- <p>
           The application was missing a required document and has been rejected. <br>This will be checked by your manager.
-        </p>
+        </p> -->
       </div>
 
-      <p><a onclick="history.go(-1); return false;" href="#0">Undo</a></p>
+      <a class="button" href="/cases">Return to current cases</a>
 
     </div>
   </div>

@@ -7,7 +7,7 @@
 {% block content %}
 
 <main id="content" role="main">
-
+  {% include "includes/phase_banner_alpha.html" %}
   <div class="grid-row">
 
     <div class="column-full">
@@ -27,7 +27,7 @@
         </h2>
       </div>
 
-      <form action="/documents-confirm" method="get" class="form">
+      <form action="/application-precheck-confirm" method="get" class="form">
 
         <h2 class="heading-large">
           Fee check
@@ -50,7 +50,7 @@
             <td>No</td>
           </tr>
           <tr>
-            <th>Turnover less than &pound;6.5m</th>
+            <th>Turnover under &pound;6.5m</th>
             <td>No</td>
           </tr>
           <tr>

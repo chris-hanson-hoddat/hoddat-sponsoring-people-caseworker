@@ -29,6 +29,52 @@ $path: "/public/images/";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+@media (min-width: 769px) {
+  #global-header.with-proposition .header-wrapper .header-global,
+  #global-header.with-proposition .header-wrapper .header-proposition {
+      float: left;
+      width: 100%;
+  }
+
+  #global-header.with-proposition .header-wrapper {
+      position: relative
+  }
+
+  .logout {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+.govuk-box-highlight-secondary {
+  margin: 1em 0;
+  padding: 2em 0 1em;
+  //color: $white;
+  background: $grey-3;
+  text-align: center;
+}
+
+  // #proposition-links {
+  //   text-align: right;
+  // }
+
+  // #global-header .header-proposition #proposition-links li {
+  //     display: inline-block;
+  //     float: initial;
+  // }
+}
+
+.button-secondary {
+  @include button ($grey-3);
+  @include box-sizing (border-box);
+  vertical-align: top;
+
+  @include media (mobile) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 // Hover style on table rows
 table tr:hover {
   background-color: #f8f8f8;
