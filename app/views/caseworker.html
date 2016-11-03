@@ -646,20 +646,20 @@
             <fieldset class="inline">
               <legend class="visuallyhidden">Does the user have any PNC convictions?</legend>
 
-              <label for="pncYes" class="block-label" data-target="pnc-details">
-                <input type="radio" name="pnc" value="true" id="pncYes">
+              <label for="ou-pncYes" class="block-label" data-target="ou-pnc-details">
+                <input type="radio" name="ou-pnc" value="true" id="ou-pncYes">
                 Yes
               </label>
 
-              <label for="pncNo" class="block-label">
-                <input type="radio" name="pnc" value="false" id="pncNo">
+              <label for="ou-pncNo" class="block-label">
+                <input type="radio" name="ou-pnc" value="false" id="ou-pncNo">
                 No
               </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="pnc-details">
+              <div class="panel panel-border-narrow js-hidden" id="ou-pnc-details">
                 <div class="form-group">
-                  <label class="form-label-bold" for="pncDetails">Details</label>
-                  <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
+                  <label class="form-label-bold" for="ou-pncDetails">Details</label>
+                  <textarea type="text" class="form-control" id="ou-pncDetails" name="ou-pncDetails" rows="6"></textarea>
                 </div>
               </div>
 
@@ -667,27 +667,27 @@
           </div>
 
           <h4 class="heading-small">
-            Does the user have any sponsorship history issues?
+            Is there any evidence of previous non-compliance in the last 5 years?
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Does the AO have any sponsorship history issues?</legend>
+              <legend class="visuallyhidden">Is there any evidence of previous non-compliance in the last 5 years?</legend>
 
-              <label for="historyYes" class="block-label" data-target="history-details">
-                <input type="radio" name="history" value="true" id="historyYes">
+              <label for="ou-historyYes" class="block-label" data-target="ou-history-details">
+                <input type="radio" name="ou-history" value="true" id="ou-historyYes">
                 Yes
               </label>
 
-              <label for="historyNo" class="block-label">
-                <input type="radio" name="history" value="false" id="historyNo">
+              <label for="ou-historyNo" class="block-label">
+                <input type="radio" name="ou-history" value="false" id="ou-historyNo">
                 No
               </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="history-details">
+              <div class="panel panel-border-narrow js-hidden" id="ou-history-details">
                 <div class="form-group">
-                  <label class="form-label-bold" for="pncDetails">Details</label>
-                  <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
+                  <label class="form-label-bold" for="ou-historyDetails">Details</label>
+                  <textarea type="text" class="form-control" id="ou-historyDetails" name="ou-historyDetails" rows="6"></textarea>
                 </div>
               </div>
 
@@ -715,8 +715,8 @@
               Representative&rsquo;s submitted details
             </caption> -->
             <tr>
-              <th>Representative type</th>
-              <td>Advisor</td>
+              <th>Access level</th>
+              <td>System user</td>
             </tr>
             <tr>
               <th>OISC number</th>
