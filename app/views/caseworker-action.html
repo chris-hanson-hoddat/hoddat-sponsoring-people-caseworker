@@ -16,17 +16,19 @@
 
     <div class="column-two-thirds">
       <h1 class="heading-xlarge" style="margin-bottom: 0;">
-        Action case
+        {{ compName }}
       </h1>
     </div>
 
     <div class="column-two-thirds">
       <div class="panel panel-border-wide">
-        <h2 class="heading-medium" style="margin-top: 0;">
+        <!-- <h2 class="heading-medium" style="margin-top: 0;">
           {{ compName }}
-          <br>
-          <small>URN{{ urn }}</small>
-        </h2>
+        </h2> -->
+        <ul class="list">
+          <li>URN: {{ urn }}</li>
+          <li>Status: {{ status }}</li>
+        </ul>
       </div>
     </div>
 

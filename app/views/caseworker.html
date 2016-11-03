@@ -16,18 +16,20 @@
 
     <div class="column-full">
       <h1 class="heading-xlarge" style="margin-bottom: 0;">
-        Caseworking
+        {{ compName }}
       </h1>
 
       <div class="panel panel-border-wide">
 
         <div class="grid-row">
           <div class="column-two-thirds">
-            <h2 class="heading-medium" style="margin-top: 0;">
+            <!-- <h2 class="heading-medium" style="margin: 0;">
               {{ compName }}
-              <br>
-              <small>URN{{ urn }}</small>
-            </h2>
+            </h2> -->
+            <ul class="list">
+              <li>URN: {{ urn }}</li>
+              <li>Status: {{ status }}</li>
+            </ul>
           </div>
           <div class="column-one-third" style="text-align: right;">
             <a class="button overview" href="#0" style="display: none">Casework</a>
@@ -65,7 +67,7 @@
         </li>
         <li>
           <a href="#0" class="leftnavlinks rep-details" data-target="rep-details">
-            Rep details
+            Representative details
             <!-- <span class="tag tag--risk">Risk</span> -->
             <span class="tag tag--complete" style="display: none;">Complete</span>
           </a>
@@ -95,9 +97,9 @@
           </h2>
 
           <table style="margin-bottom: 30px">
-            <caption style="text-align: left">
+            <!-- <caption style="text-align: left">
               Business details submitted
-            </caption>
+            </caption> -->
             <tr>
               <th>Company name</th>
               <td>{{ compName }}</td>
@@ -370,9 +372,9 @@
           </h2>
 
           <table style="margin-bottom: 30px">
-            <caption style="text-align: left">
+            <!-- <caption style="text-align: left">
               AO&rsquo;s submitted details
-            </caption>
+            </caption> -->
             <tr>
               <th>Full name</th>
               <td>Delice Junco</td>
@@ -555,9 +557,9 @@
           </h2>
 
           <table style="margin-bottom: 30px">
-            <caption style="text-align: left">
+            <!-- <caption style="text-align: left">
               Other user&rsquo;s submitted details
-            </caption>
+            </caption> -->
             <tr>
               <th>Full name</th>
               <td>Gwendolyn Kensy</td>
@@ -709,9 +711,13 @@
           </h2>
 
           <table style="margin-bottom: 30px">
-            <caption style="text-align: left">
+            <!-- <caption style="text-align: left">
               Representative&rsquo;s submitted details
-            </caption>
+            </caption> -->
+            <tr>
+              <th>Representative type</th>
+              <td>Advisor</td>
+            </tr>
             <tr>
               <th>OISC number</th>
               <td>123456789</td>
@@ -839,9 +845,9 @@
           </h2>
 
           <table style="margin-bottom: 30px">
-            <caption style="text-align: left">
+            <!-- <caption style="text-align: left">
               Vacancy details submitted
-            </caption>
+            </caption> -->
             <tr>
               <th>COS request</th>
               <td>1</td>
@@ -949,9 +955,9 @@
           </h2>
 
           <table style="margin-bottom: 30px">
-            <caption style="text-align: left">
+            <!-- <caption style="text-align: left">
               Areas marked for concern
-            </caption>
+            </caption> -->
             <tr>
               <th>AO PNC convictions</th>
               <td>Found evidence of PNC convictions</td>
