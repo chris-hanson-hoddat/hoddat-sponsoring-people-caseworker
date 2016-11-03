@@ -29,28 +29,29 @@ router.get('/caseworker-action', function (req, res) {
 // add your routes here
 
 // Documents check
-router.get('/documents-reject', function (req, res) {
+router.get('/documents-check', function (req, res) {
   var doc1 = req.query.doc1
   var doc2 = req.query.doc2
   var doc3 = req.query.doc3
-  var doc4 = req.query.doc4
-  var doc5 = req.query.doc5
+  // var doc4 = req.query.doc4
+  // var doc5 = req.query.doc5
 
-  if (doc1 == 'doc1' && doc2 == 'doc2' && doc3 == 'doc3' && doc4 == 'doc4' && doc5 == 'doc5') {
+  if (doc1 == 'doc1' && doc2 == 'doc2' && doc3 == 'doc3') {
+  // && doc4 == 'doc4' && doc5 == 'doc5')
     res.redirect('/fees')
   } else {
-    res.render('documents-reject')
+    res.render('documents-check')
   }
 })
 
 // Fee check
-router.get('/documents-confirm', function (req, res) {
+router.get('/application-precheck-confirm', function (req, res) {
   var fee = req.query.fee
 
   if (fee == 'false') {
-    res.redirect('/fee-reject')
+    res.redirect('/fee-check')
   } else {
-    res.render('documents-confirm')
+    res.render('application-precheck-confirm')
   }
 })
 

@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  ACME Rockets - Document check complete
+  Pre-casework check complete
 {% endblock %}
 
 {% block content %}
 
 <main id="content" role="main">
-
+  {% include "includes/phase_banner_alpha.html" %}
   <div class="grid-row">
     <div class="column-two-thirds">
 
@@ -22,9 +22,6 @@
           This case will now appear as 'Ready' in the case list.
         </p>
       </div>
-
-      <p><a href="/cases">Back to case list</a></p>
-
 
     </div>
   </div>
