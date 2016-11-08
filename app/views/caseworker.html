@@ -165,6 +165,10 @@
               <th>Nature of business (SIC)</th>
               <td>Manufacture of medical and dental instruments and supplies <small>(32500)</small></td>
             </tr>
+            <tr>
+              <th>Charitable status</th>
+              <td>Registered charity</td>
+            </tr>
           </table>
 
           <details role="group">
@@ -300,12 +304,13 @@
           </details>
 
           <h4 class="heading-small">
-            Approve business details?
+            Are the details listed correct according to Companies House?
+            <span class="form-hint">Company is active, date of incorporation, turnover, and AO is listed.</span>
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Approve business details?</legend>
+              <legend class="visuallyhidden">Are the details listed correct according to Companies House?</legend>
 
               <label for="companyYes" class="block-label">
                 <input type="radio" name="company" value="true" id="companyYes">
@@ -327,33 +332,201 @@
             </fieldset>
           </div>
 
-          <!-- <h4 class="heading-small">
-            Does the AO have any sponsorship history issues?
-          </h4> -->
+          <h4 class="heading-small">
+            Are there any issues in Athena?
+          </h4>
 
-          <!-- <div class="form-group">
+          <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Does the AO have any sponsorship history issues?</legend>
+              <legend class="visuallyhidden">Are there any issues in Athena?</legend>
 
-              <label for="historyYes" class="block-label" data-target="history-details">
-                <input type="radio" name="history" value="true" id="historyYes">
+              <label for="athenaYes" class="block-label" data-target="athena-details">
+                <input type="radio" name="athena" value="true" id="athenaYes">
                 Yes
               </label>
 
-              <label for="historyNo" class="block-label">
-                <input type="radio" name="history" value="false" id="historyNo">
+              <label for="athenaNo" class="block-label">
+                <input type="radio" name="athena" value="false" id="athenaNo">
                 No
               </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="history-details">
+              <div class="panel panel-border-narrow js-hidden" id="athena-details">
                 <div class="form-group">
-                  <label class="form-label-bold" for="pncDetails">Details</label>
-                  <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
+                  <label class="form-label-bold" for="athenaDetails">Details</label>
+                  <textarea type="text" class="form-control" id="athenaDetails" name="athenaDetails" rows="6"></textarea>
                 </div>
               </div>
 
             </fieldset>
-          </div> -->
+          </div>
+
+          <h4 class="heading-small">
+            Sector registration?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Sector registration?</legend>
+
+              <label for="sector_regYes" class="block-label">
+                <input type="radio" name="sector_reg" value="true" id="sector_regYes">
+                Yes
+              </label>
+
+              <label for="sector_regNo" class="block-label" data-target="sector_reg-details">
+                <input type="radio" name="sector_reg" value="false" id="sector_regNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="sector_reg-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="sector_regDetails">Details</label>
+                  <textarea type="text" class="form-control" id="sector_regDetails" name="sector_regDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Is the charitable status correct?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Is the charitable status correct?</legend>
+
+              <label for="charityYes" class="block-label">
+                <input type="radio" name="charity" value="true" id="charityYes">
+                Yes
+              </label>
+
+              <label for="charityNo" class="block-label" data-target="charity-details">
+                <input type="radio" name="charity" value="false" id="charityNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="charity-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="charityDetails">Details</label>
+                  <textarea type="text" class="form-control" id="charityDetails" name="charityDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Civil penalties?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Civil penalties?</legend>
+
+              <label for="civil_penaltyYes" class="block-label">
+                <input type="radio" name="civil_penalty" value="true" id="civil_penaltyYes">
+                Yes
+              </label>
+
+              <label for="civil_penaltyNo" class="block-label" data-target="civil_penalty-details">
+                <input type="radio" name="civil_penalty" value="false" id="civil_penaltyNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="civil_penalty-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="civil_penaltyDetails">Details</label>
+                  <textarea type="text" class="form-control" id="civil_penaltyDetails" name="civil_penaltyDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Google searches?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Google searches?</legend>
+
+              <label for="googleYes" class="block-label">
+                <input type="radio" name="google" value="true" id="googleYes">
+                Yes
+              </label>
+
+              <label for="googleNo" class="block-label" data-target="google-details">
+                <input type="radio" name="google" value="false" id="googleNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="google-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="googleDetails">Details</label>
+                  <textarea type="text" class="form-control" id="googleDetails" name="googleDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Prior sponsorship history?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Prior sponsorship history?</legend>
+
+              <label for="spon_histYes" class="block-label">
+                <input type="radio" name="spon_hist" value="true" id="spon_histYes">
+                Yes
+              </label>
+
+              <label for="spon_histNo" class="block-label" data-target="spon_hist-details">
+                <input type="radio" name="spon_hist" value="false" id="spon_histNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="spon_hist-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="spon_histDetails">Details</label>
+                  <textarea type="text" class="form-control" id="spon_histDetails" name="spon_histDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Does the company hit an internal risk profiles?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the company hit an internal risk profiles?</legend>
+
+              <label for="risk_profileYes" class="block-label" data-target="risk_profile-details">
+                <input type="radio" name="risk_profile" value="true" id="risk_profileYes">
+                Yes
+              </label>
+
+              <label for="risk_profileNo" class="block-label">
+                <input type="radio" name="risk_profile" value="false" id="risk_profileNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="risk_profile-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="risk_profileDetails">Details</label>
+                  <textarea type="text" class="form-control" id="risk_profileDetails" name="risk_profileDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
 
           <div class="form-group">
             <a href="#0" class="button leftnavlinks" data-target="ao-details">
@@ -380,12 +553,12 @@
               <td>Delice Junco</td>
             </tr>
             <tr>
-              <th>DOB</th>
-              <td>18/09/1942</td>
+              <th>Nationality</th>
+              <td>Indian</td>
             </tr>
             <tr>
-              <th>Nationality</th>
-              <td>British</td>
+              <th>DOB</th>
+              <td>18/09/1942</td>
             </tr>
             <!-- <tr>
               <th>NI number</th>
@@ -399,10 +572,10 @@
               <th>Job title</th>
               <td>Company director</td>
             </tr>
-            <tr>
+            <!-- <tr>
               <th>Work address</th>
               <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" title="Search on Google Maps" target="_blank" rel="external">123 West Street<br>Sheffield<br>S1 2AB</a></td>
-            </tr>
+            </tr> -->
             <tr>
               <th>Contact number</th>
               <td>0114 2301234</td>
@@ -454,12 +627,12 @@
           </details>
 
           <h4 class="heading-small">
-            Does the AO have any PNC convictions?
+            Any PNC convictions?
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Does the AO have any PNC convictions?</legend>
+              <legend class="visuallyhidden">Any PNC convictions?</legend>
 
               <label for="pncYes" class="block-label" data-target="pnc-details">
                 <input type="radio" name="pnc" value="true" id="pncYes">
@@ -475,6 +648,34 @@
                 <div class="form-group">
                   <label class="form-label-bold" for="pncDetails">Details</label>
                   <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            WI?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">WI?</legend>
+
+              <label for="wiYes" class="block-label" data-target="wi-details">
+                <input type="radio" name="wi" value="true" id="wiYes">
+                Yes
+              </label>
+
+              <label for="wiNo" class="block-label">
+                <input type="radio" name="wi" value="false" id="wiNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="wi-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="wiDetails">Details</label>
+                  <textarea type="text" class="form-control" id="wiDetails" name="wiDetails" rows="6"></textarea>
                 </div>
               </div>
 
@@ -501,8 +702,8 @@
 
               <div class="panel panel-border-narrow js-hidden" id="history-details">
                 <div class="form-group">
-                  <label class="form-label-bold" for="pncDetails">Details</label>
-                  <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
+                  <label class="form-label-bold" for="historyDetails">Details</label>
+                  <textarea type="text" class="form-control" id="historyDetails" name="historyDetails" rows="6"></textarea>
                 </div>
               </div>
 
@@ -540,6 +741,90 @@
             </fieldset>
           </div>
 
+          <h4 class="heading-small">
+            Banned user?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Banned user?</legend>
+
+              <label for="banned_aoYes" class="block-label" data-target="banned_ao-details">
+                <input type="radio" name="banned_ao" value="true" id="banned_aoYes">
+                Yes
+              </label>
+
+              <label for="banned_aoNo" class="block-label">
+                <input type="radio" name="banned_ao" value="false" id="banned_aoNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="banned_ao-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="banned_aoDetails">Details</label>
+                  <textarea type="text" class="form-control" id="banned_aoDetails" name="banned_aoDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Disqualified director?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Disqualified director?</legend>
+
+              <label for="disqual_directorYes" class="block-label" data-target="disqual_director-details">
+                <input type="radio" name="disqual_director" value="true" id="disqual_directorYes">
+                Yes
+              </label>
+
+              <label for="disqual_directorNo" class="block-label">
+                <input type="radio" name="disqual_director" value="false" id="disqual_directorNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="disqual_director-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="disqual_directorDetails">Details</label>
+                  <textarea type="text" class="form-control" id="disqual_directorDetails" name="disqual_directorDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Secure email and phone number?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Secure email and phone number?</legend>
+
+              <label for="secure_contactYes" class="block-label" data-target="secure_contact-details">
+                <input type="radio" name="secure_contact" value="true" id="secure_contactYes">
+                Yes
+              </label>
+
+              <label for="secure_contactNo" class="block-label">
+                <input type="radio" name="secure_contact" value="false" id="secure_contactNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="secure_contact-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="secure_contactDetails">Details</label>
+                  <textarea type="text" class="form-control" id="secure_contactDetails" name="secure_contactDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
           <div class="form-group">
             <a href="#0" class="button leftnavlinks" data-target="other-user">
               Continue
@@ -564,10 +849,10 @@
               <th>Full name</th>
               <td>Gwendolyn Kensy</td>
             </tr>
-            <tr>
+            <!-- <tr>
               <th>DOB</th>
               <td>03/03/1982</td>
-            </tr>
+            </tr> -->
             <tr>
               <th>Nationality</th>
               <td>British</td>
@@ -576,16 +861,16 @@
               <th>NI number</th>
               <td>KY191130C</td>
             </tr> -->
-            <tr>
+            <!-- <tr>
               <th>Passport number</th>
               <td>838602872</td>
-            </tr>
+            </tr> -->
             <tr>
               <th>Job title</th>
               <td>HR manager</td>
             </tr>
             <tr>
-              <th>Work address</th>
+              <th>Workplace address</th>
               <td><a href="http://maps.google.com/?q=1176 Nelson Street Bamber Bridge PR5 6FY" target="_blank" rel="external">1176 Nelson Street<br>Bamber Bridge<br>PR5 6FY</a></td>
             </tr>
             <tr>
@@ -639,27 +924,55 @@
           </details>
 
           <h4 class="heading-small">
-            Does the user have any PNC convictions?
+            Any PNC convictions?
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Does the user have any PNC convictions?</legend>
+              <legend class="visuallyhidden">Any PNC convictions?</legend>
 
-              <label for="ou-pncYes" class="block-label" data-target="ou-pnc-details">
-                <input type="radio" name="ou-pnc" value="true" id="ou-pncYes">
+              <label for="other_pncYes" class="block-label" data-target="other_pnc-details">
+                <input type="radio" name="other_pnc" value="true" id="other_pncYes">
                 Yes
               </label>
 
-              <label for="ou-pncNo" class="block-label">
-                <input type="radio" name="ou-pnc" value="false" id="ou-pncNo">
+              <label for="other_pncNo" class="block-label">
+                <input type="radio" name="other_pnc" value="false" id="other_pncNo">
                 No
               </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="ou-pnc-details">
+              <div class="panel panel-border-narrow js-hidden" id="other_pnc-details">
                 <div class="form-group">
-                  <label class="form-label-bold" for="ou-pncDetails">Details</label>
-                  <textarea type="text" class="form-control" id="ou-pncDetails" name="ou-pncDetails" rows="6"></textarea>
+                  <label class="form-label-bold" for="other_pncDetails">Details</label>
+                  <textarea type="text" class="form-control" id="other_pncDetails" name="other_pncDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            WI?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">WI?</legend>
+
+              <label for="other_wiYes" class="block-label" data-target="other_wi-details">
+                <input type="radio" name="other_wi" value="true" id="other_wiYes">
+                Yes
+              </label>
+
+              <label for="other_wiNo" class="block-label">
+                <input type="radio" name="other_wi" value="false" id="other_wiNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="other_wi-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="other_wiDetails">Details</label>
+                  <textarea type="text" class="form-control" id="other_wiDetails" name="other_wiDetails" rows="6"></textarea>
                 </div>
               </div>
 
@@ -674,20 +987,135 @@
             <fieldset class="inline">
               <legend class="visuallyhidden">Is there any evidence of previous non-compliance in the last 5 years?</legend>
 
-              <label for="ou-historyYes" class="block-label" data-target="ou-history-details">
-                <input type="radio" name="ou-history" value="true" id="ou-historyYes">
+              <label for="other_historyYes" class="block-label" data-target="other_history-details">
+                <input type="radio" name="other_history" value="true" id="other_historyYes">
                 Yes
               </label>
 
-              <label for="ou-historyNo" class="block-label">
-                <input type="radio" name="ou-history" value="false" id="ou-historyNo">
+              <label for="other_historyNo" class="block-label">
+                <input type="radio" name="other_history" value="false" id="other_historyNo">
                 No
               </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="ou-history-details">
+              <div class="panel panel-border-narrow js-hidden" id="other_history-details">
                 <div class="form-group">
-                  <label class="form-label-bold" for="ou-historyDetails">Details</label>
-                  <textarea type="text" class="form-control" id="ou-historyDetails" name="ou-historyDetails" rows="6"></textarea>
+                  <label class="form-label-bold" for="other_historyDetails">Details</label>
+                  <textarea type="text" class="form-control" id="other_historyDetails" name="other_historyDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Does the AO have any insolvency issues?
+            <small>
+              <a href="https://www.insolvencydirect.bis.gov.uk/eiir/" target="_blank" rel="external">Search the IIR</a>
+            </small>
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the AO have any insolvency issues?</legend>
+
+              <label for="other_insolvencyYes" class="block-label" data-target="other_insolvency-details">
+                <input type="radio" name="other_insolvency" value="true" id="other_insolvencyYes">
+                Yes
+              </label>
+
+              <label for="other_insolvencyNo" class="block-label">
+                <input type="radio" name="other_insolvency" value="false" id="other_insolvencyNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="other_insolvency-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="other_insolvencyDetails">Details</label>
+                  <textarea type="text" class="form-control" id="other_insolvencyDetails" name="other_insolvencyDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Banned user?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Banned user?</legend>
+
+              <label for="banned_otherYes" class="block-label" data-target="banned_other-details">
+                <input type="radio" name="banned_other" value="true" id="banned_otherYes">
+                Yes
+              </label>
+
+              <label for="banned_otherNo" class="block-label">
+                <input type="radio" name="banned_other" value="false" id="banned_otherNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="banned_other-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="banned_otherDetails">Details</label>
+                  <textarea type="text" class="form-control" id="banned_otherDetails" name="banned_otherDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Disqualified director?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Disqualified director?</legend>
+
+              <label for="other_disqual_directorYes" class="block-label" data-target="other_disqual_director-details">
+                <input type="radio" name="other_disqual_director" value="true" id="other_disqual_directorYes">
+                Yes
+              </label>
+
+              <label for="other_disqual_directorNo" class="block-label">
+                <input type="radio" name="other_disqual_director" value="false" id="other_disqual_directorNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="other_disqual_director-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="other_disqual_directorDetails">Details</label>
+                  <textarea type="text" class="form-control" id="other_disqual_directorDetails" name="other_disqual_directorDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Secure email and phone number?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Secure email and phone number?</legend>
+
+              <label for="other_secure_contactYes" class="block-label" data-target="other_secure_contact-details">
+                <input type="radio" name="other_secure_contact" value="true" id="other_secure_contactYes">
+                Yes
+              </label>
+
+              <label for="other_secure_contactNo" class="block-label">
+                <input type="radio" name="other_secure_contact" value="false" id="other_secure_contactNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="other_secure_contact-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="other_secure_contactDetails">Details</label>
+                  <textarea type="text" class="form-control" id="other_secure_contactDetails" name="other_secure_contactDetails" rows="6"></textarea>
                 </div>
               </div>
 
@@ -801,27 +1229,254 @@
           </details>
 
           <h4 class="heading-small">
-            Approve representative?
+            OISC/Law society registered?
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Approve representative?</legend>
+              <legend class="visuallyhidden">OISC/Law society registered?</legend>
 
-              <label for="repYes" class="block-label">
-                <input type="radio" name="repapprove" value="true" id="repYes">
+              <label for="rep_oiscYes" class="block-label" data-target="rep_oisc-details">
+                <input type="radio" name="rep_oisc" value="true" id="rep_oiscYes">
                 Yes
               </label>
 
-              <label for="repNo" class="block-label" data-target="repapprove-details">
-                <input type="radio" name="repapprove" value="false" id="repNo">
+              <label for="rep_oiscNo" class="block-label">
+                <input type="radio" name="rep_oisc" value="false" id="rep_oiscNo">
                 No
               </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="repapprove-details">
+              <div class="panel panel-border-narrow js-hidden" id="rep_oisc-details">
                 <div class="form-group">
-                  <label class="form-label-bold" for="repDetails">Details</label>
-                  <textarea type="text" class="form-control" id="repDetails" name="repDetails" rows="6"></textarea>
+                  <label class="form-label-bold" for="rep_oiscDetails">Details</label>
+                  <textarea type="text" class="form-control" id="rep_oiscDetails" name="rep_oiscDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Intel summary package?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Intel summary package?</legend>
+
+              <label for="rep_intelYes" class="block-label" data-target="rep_intel-details">
+                <input type="radio" name="rep_intel" value="true" id="rep_intelYes">
+                Yes
+              </label>
+
+              <label for="rep_intelNo" class="block-label">
+                <input type="radio" name="rep_intel" value="false" id="rep_intelNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="rep_intel-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="rep_intelDetails">Details</label>
+                  <textarea type="text" class="form-control" id="rep_intelDetails" name="rep_intelDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Any PNC convictions?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Any PNC convictions?</legend>
+
+              <label for="rep_pncYes" class="block-label" data-target="rep_pnc-details">
+                <input type="radio" name="rep_pnc" value="true" id="rep_pncYes">
+                Yes
+              </label>
+
+              <label for="rep_pncNo" class="block-label">
+                <input type="radio" name="rep_pnc" value="false" id="rep_pncNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="rep_pnc-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="rep_pncDetails">Details</label>
+                  <textarea type="text" class="form-control" id="rep_pncDetails" name="rep_pncDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            WI?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">WI?</legend>
+
+              <label for="rep_wiYes" class="block-label" data-target="rep_wi-details">
+                <input type="radio" name="rep_wi" value="true" id="rep_wiYes">
+                Yes
+              </label>
+
+              <label for="rep_wiNo" class="block-label">
+                <input type="radio" name="rep_wi" value="false" id="rep_wiNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="rep_wi-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="rep_wiDetails">Details</label>
+                  <textarea type="text" class="form-control" id="rep_wiDetails" name="rep_wiDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Is there any evidence of previous non-compliance in the last 5 years?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Is there any evidence of previous non-compliance in the last 5 years?</legend>
+
+              <label for="rep_historyYes" class="block-label" data-target="rep_history-details">
+                <input type="radio" name="rep_history" value="true" id="rep_historyYes">
+                Yes
+              </label>
+
+              <label for="rep_historyNo" class="block-label">
+                <input type="radio" name="rep_history" value="false" id="rep_historyNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="rep_history-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="rep_historyDetails">Details</label>
+                  <textarea type="text" class="form-control" id="rep_historyDetails" name="rep_historyDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Does the AO have any insolvency issues?
+            <small>
+              <a href="https://www.insolvencydirect.bis.gov.uk/eiir/" target="_blank" rel="external">Search the IIR</a>
+            </small>
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the AO have any insolvency issues?</legend>
+
+              <label for="rep_insolvencyYes" class="block-label" data-target="rep_insolvency-details">
+                <input type="radio" name="rep_insolvency" value="true" id="rep_insolvencyYes">
+                Yes
+              </label>
+
+              <label for="rep_insolvencyNo" class="block-label">
+                <input type="radio" name="rep_insolvency" value="false" id="rep_insolvencyNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="rep_insolvency-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="rep_insolvencyDetails">Details</label>
+                  <textarea type="text" class="form-control" id="rep_insolvencyDetails" name="rep_insolvencyDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Banned user?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Banned user?</legend>
+
+              <label for="banned_repYes" class="block-label" data-target="banned_rep-details">
+                <input type="radio" name="banned_rep" value="true" id="banned_repYes">
+                Yes
+              </label>
+
+              <label for="banned_repNo" class="block-label">
+                <input type="radio" name="banned_rep" value="false" id="banned_repNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="banned_rep-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="banned_repDetails">Details</label>
+                  <textarea type="text" class="form-control" id="banned_repDetails" name="banned_repDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Disqualified director?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Disqualified director?</legend>
+
+              <label for="rep_disqual_directorYes" class="block-label" data-target="rep_disqual_director-details">
+                <input type="radio" name="rep_disqual_director" value="true" id="rep_disqual_directorYes">
+                Yes
+              </label>
+
+              <label for="rep_disqual_directorNo" class="block-label">
+                <input type="radio" name="rep_disqual_director" value="false" id="rep_disqual_directorNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="rep_disqual_director-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="rep_disqual_directorDetails">Details</label>
+                  <textarea type="text" class="form-control" id="rep_disqual_directorDetails" name="rep_disqual_directorDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Secure email and phone number?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Secure email and phone number?</legend>
+
+              <label for="rep_secure_contactYes" class="block-label" data-target="rep_secure_contact-details">
+                <input type="radio" name="rep_secure_contact" value="true" id="rep_secure_contactYes">
+                Yes
+              </label>
+
+              <label for="rep_secure_contactNo" class="block-label">
+                <input type="radio" name="rep_secure_contact" value="false" id="rep_secure_contactNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="rep_secure_contact-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="rep_secure_contactDetails">Details</label>
+                  <textarea type="text" class="form-control" id="rep_secure_contactDetails" name="rep_secure_contactDetails" rows="6"></textarea>
                 </div>
               </div>
 
@@ -850,7 +1505,7 @@
             </caption> -->
             <tr>
               <th>COS request</th>
-              <td>1</td>
+              <td>10</td>
             </tr>
             <tr>
               <th>Job title</th>
@@ -955,26 +1610,50 @@
           </h2>
 
           <table style="margin-bottom: 30px">
-            <!-- <caption style="text-align: left">
-              Areas marked for concern
-            </caption> -->
+            <caption style="text-align: left">
+              Business details
+            </caption>
             <tr>
-              <th>AO PNC convictions</th>
-              <td>Found evidence of PNC convictions</td>
+              <th>Companies House details</th>
+              <td>The company was not active on companies house</td>
             </tr>
             <tr>
-              <th>Evidence of trading</th>
-              <td>Failed visit</td>
+              <th>Sponsorship history</th>
+              <td>Refused under another company name, ACME inc.</td>
+            </tr>
+          </table>
+
+          <table style="margin-bottom: 30px">
+            <caption style="text-align: left">
+              AO details
+            </caption>
+            <tr>
+              <th>Banned user</th>
+              <td>Listed on the banned user list.</td>
+            </tr>
+            <tr>
+              <th>Sponsorship history</th>
+              <td>Refused under another company name, ACME inc.</td>
+            </tr>
+          </table>
+
+          <table style="margin-bottom: 30px">
+            <caption style="text-align: left">
+              Vacancy details
+            </caption>
+            <tr>
+              <th>COS allocation</th>
+              <td>Reduced due to insufficient evidence of requirement</td>
             </tr>
           </table>
 
           <h4 class="heading-small">
-            Is the application successful?
+            Grant application?
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Is the application successful?</legend>
+              <legend class="visuallyhidden">Grant application?</legend>
 
               <label for="appYes" class="block-label">
                 <input type="radio" name="app" value="true" id="appYes">
@@ -988,7 +1667,7 @@
 
               <div class="panel panel-border-narrow js-hidden" id="app-details">
                 <div class="form-group">
-                  <label class="form-label-bold" for="appDetails">Reasons for decision</label>
+                  <label class="form-label-bold" for="appDetails">Reasons for refusal</label>
                   <textarea type="text" class="form-control" id="appDetails" name="appDetails" rows="6"></textarea>
                 </div>
               </div>
