@@ -1,0 +1,387 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Caseworking
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+
+    <!-- <div class="column-full">
+      <a onclick="history.go(-1); return false;" href="#0" class="link-back">Back</a>
+    </div> -->
+
+    <div class="column-full">
+      <h1 class="heading-xlarge" style="margin-bottom: 0;">
+        {{ compName }}
+      </h1>
+
+      <div class="panel panel-border-wide">
+
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <!-- <h2 class="heading-medium" style="margin: 0;">
+              {{ compName }}
+            </h2> -->
+            <ul class="list">
+              <li>URN: {{ urn }}</li>
+              <li>Status: {{ status }}</li>
+            </ul>
+          </div>
+          <div class="column-one-third" style="text-align: right;">
+            <a class="button overview" href="#0" style="display: none">Casework</a>
+            <a class="button action" onclick="window.location='/caseworker-action'+window.location.search;" style="display: none">Action case</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <style type="text/css">
+        .leftnavcontent {display: block!important}
+      </style>
+
+      <div id="business-details" class="leftnavcontent">
+        <form>
+
+          <h2 class="heading-large" style="margin-top: 0">
+            Business details
+          </h2>
+
+          <table style="margin-bottom: 30px">
+            <!-- <caption style="text-align: left">
+              Business details submitted
+            </caption> -->
+            <tr>
+              <th>Company name</th>
+              <td>{{ compName }}</td>
+            </tr>
+            <tr>
+              <th>Companies House number</th>
+              <td>
+                <a href="https://beta.companieshouse.gov.uk/company/06232576" title="View on Companies House" target="_blank" rel="external">06232576</a>
+              </td>
+            </tr>
+            <tr>
+              <th>Primary address</th>
+              <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" title="Search on Google Maps" target="_blank" rel="external">123 West Street<br>Sheffield<br>S1 2AB</a></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <details role="group" style="margin: 0; padding: 0; border: 0; ">
+
+                  <summary role="button" aria-controls="details-content-address" aria-expanded="false">
+                    <span class="summary">Additional address</span>
+                  </summary>
+
+                  <div class="panel panel-border-narrow" id="details-content-address" aria-hidden="true">
+                    <table>
+                      <tr>
+                        <td>
+                          <a href="http://maps.google.com/?q=164 Timperley Court Timperley Gardens Redhill RH1 2AU" title="Search on Google Maps" target="_blank" rel="external">164 Timperley Court<br>Redhill<br>RH1 2AU</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="http://maps.google.com/?q=1107 Arnside Road Nottingham NG5 5HH" title="Search on Google Maps" target="_blank" rel="external">1107 Arnside Road<br>Nottingham<br>NG5 5HH</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="http://maps.google.com/?q=1170 Armscroft Place Gloucester GL2 0SP" title="Search on Google Maps" target="_blank" rel="external">1170 Armscroft Place<br>Gloucester<br>GL2 0SP</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                </details>
+              </td>
+            </tr>
+            <!-- <tr>
+              <th>Company director</th>
+              <td>Rod Runner</td>
+            </tr>
+            <tr>
+              <th>Second company director</th>
+              <td>William E. Coyote</td>
+            </tr> -->
+            <!-- <tr>
+              <th>Company type</th>
+              <td>Private limited company</td>
+            </tr> -->
+            <!-- <tr>
+              <th>Incorporated in the last 18 months</th>
+              <td>No</td>
+            </tr> -->
+            <tr>
+              <th>Nature of business (SIC)</th>
+              <td>Manufacture of medical and dental instruments and supplies <small>(32500)</small></td>
+            </tr>
+            <tr>
+              <th>Regulatory body and registration number</th>
+              <td>Regulator name <small>(123456789)</small></td>
+            </tr>
+            <!-- <tr>
+              <th>Charitable status</th>
+              <td>Registered charity</td>
+            </tr> -->
+          </table>
+
+        </form>
+      </div> <!-- /Business details -->
+
+      <div id="ao-details" class="leftnavcontent">
+        <form>
+
+          <h2 class="heading-large" style="margin-top: 0">
+            AO details
+          </h2>
+
+          <table style="margin-bottom: 30px">
+            <!-- <caption style="text-align: left">
+              AO&rsquo;s submitted details
+            </caption> -->
+            <tr>
+              <th>Full name</th>
+              <td>Delice Junco</td>
+            </tr>
+            <tr>
+              <th>Nationality</th>
+              <td>Indian</td>
+            </tr>
+            <tr>
+              <th>DOB</th>
+              <td>18/09/1942</td>
+            </tr>
+            <!-- <tr>
+              <th>NI number</th>
+              <td>EL271653B</td>
+            </tr> -->
+            <tr>
+              <th>Passport number</th>
+              <td>152505696</td>
+            </tr>
+            <!-- <tr>
+              <th>Job title</th>
+              <td>Company director</td>
+            </tr> -->
+            <!-- <tr>
+              <th>Work address</th>
+              <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" title="Search on Google Maps" target="_blank" rel="external">123 West Street<br>Sheffield<br>S1 2AB</a></td>
+            </tr> -->
+            <tr>
+              <th>Contact number</th>
+              <td>0114 2301234</td>
+            </tr>
+            <tr>
+              <th>Email address</th>
+              <td><a href="mailto:djunco@acme.com">djunco@acme.com</a></td>
+            </tr>
+          </table>
+
+        </form>
+      </div> <!-- /AO details -->
+
+      <div id="other-user" class="leftnavcontent">
+        <form>
+
+          <h2 class="heading-large" style="margin-top: 0">
+            Other user details
+          </h2>
+
+          <table style="margin-bottom: 30px">
+            <!-- <caption style="text-align: left">
+              Other user&rsquo;s submitted details
+            </caption> -->
+            <tr>
+              <th>Full name</th>
+              <td>Gwendolyn Kensy</td>
+            </tr>
+            <tr>
+              <th>Nationality</th>
+              <td>British</td>
+            </tr>
+            <tr>
+              <th>DOB</th>
+              <td>03/03/1982</td>
+            </tr>
+            <!-- <tr>
+              <th>NI number</th>
+              <td>KY191130C</td>
+            </tr> -->
+            <!-- <tr>
+              <th>Passport number</th>
+              <td>838602872</td>
+            </tr> -->
+            <!-- <tr>
+              <th>Job title</th>
+              <td>HR manager</td>
+            </tr> -->
+            <tr>
+              <th>Workplace address</th>
+              <td><a href="http://maps.google.com/?q=1176 Nelson Street Bamber Bridge PR5 6FY" target="_blank" rel="external">1176 Nelson Street<br>Bamber Bridge<br>PR5 6FY</a></td>
+            </tr>
+            <tr>
+              <th>Contact number</th>
+              <td>07413836999</td>
+            </tr>
+            <tr>
+              <th>Email address</th>
+              <td><a href="mailto:gkensy@acme.com">gkensy@acme.com</a></td>
+            </tr>
+          </table>
+
+        </form>
+      </div> <!-- /Other user -->
+
+      <div id="rep-details" class="leftnavcontent">
+        <form>
+
+          <h2 class="heading-large" style="margin-top: 0">
+            Representative details
+          </h2>
+
+          <table style="margin-bottom: 30px">
+            <!-- <caption style="text-align: left">
+              Representative&rsquo;s submitted details
+            </caption> -->
+            <tr>
+              <th>Access level</th>
+              <td>System user</td>
+            </tr>
+            <tr>
+              <th>OISC number</th>
+              <td>123456789</td>
+            </tr>
+            <tr>
+              <th>Full name</th>
+              <td>Ford Pensinger</td>
+            </tr>
+            <tr>
+              <th>Nationality</th>
+              <td>British</td>
+            </tr>
+            <tr>
+              <th>DOB</th>
+              <td>23/08/1950</td>
+            </tr>
+            <tr>
+              <th>Company name</th>
+              <td>Reps r us</td>
+            </tr>
+            <tr>
+              <th>Company address</th>
+              <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" target="_blank" rel="external">1195 Longwood Gate<br>Longwood<br>HD3 4US</a></td>
+            </tr>
+            <tr>
+              <th>Contact number</th>
+              <td>045 9474 1658</td>
+            </tr>
+            <tr>
+              <th>Email address</th>
+              <td><a href="mailto:djunco@acme.com">f.pensinger@reps.com</a></td>
+            </tr>
+          </table>
+
+        </form>
+      </div> <!-- /Rep details -->
+
+      <div id="vacancy-details" class="leftnavcontent">
+        <form>
+
+          <h2 class="heading-large" style="margin-top: 0">
+            Vacancy details
+          </h2>
+
+          <table style="margin-bottom: 30px">
+            <!-- <caption style="text-align: left">
+              Vacancy details submitted
+            </caption> -->
+            <tr>
+              <th>COS request</th>
+              <td>10</td>
+            </tr>
+            <tr>
+              <th>Job title</th>
+              <td>Interaction designer</td>
+            </tr>
+            <tr>
+              <th>Job description</th>
+              <td>Refine and shape user journeys and help remove complexity where it isn’t needed.  Design for diverse users and platforms and ensure usability and accessibility of the service. Help identify gaps in product understanding, help plan user research and analytics and help inform the design of user journeys.</td>
+            </tr>
+            <tr>
+              <th>Salary</th>
+              <td>&pound;30,000</td>
+            </tr>
+            <tr>
+              <th>SOC code</th>
+              <td>2135 - IT business analysts, architects and systems designers</td>
+            </tr>
+            <tr>
+              <th>Advertisement status</th>
+              <td>Exempt</td>
+            </tr>
+          </table>
+
+        </form>
+      </div> <!-- /Vacancy details -->
+
+      <div id="application-decision" class="leftnavcontent">
+        <form action="#0" method="get" class="form">
+
+          <h2 class="heading-large" style="margin-top: 0">
+            Application decision
+          </h2>
+
+          <h4 class="heading-small">
+            Grant application?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Grant application?</legend>
+
+              <label for="appYes" class="block-label">
+                <input type="radio" name="app" value="true" id="appYes">
+                Yes
+              </label>
+
+              <label for="appNo" class="block-label" data-target="app-details">
+                <input type="radio" name="app" value="false" id="appNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="app-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="appDetails">Reasons for refusal</label>
+                  <textarea type="text" class="form-control" id="appDetails" name="appDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <input type="submit" class="button" value="Submit">
+          </div>
+
+        </form>
+      </div> <!-- /Application decision -->
+
+    </div> <!-- /Tab content - col-2/3 -->
+
+  </div>
+
+</main>
+
+{% endblock %}
