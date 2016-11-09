@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Security checks
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+
+    <div class="column-full">
+      <a onclick="history.go(-1); return false;" href="#0" class="link-back">Back</a>
+    </div>
+
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge" style="margin-bottom: 0;">
+        Security checks
+      </h1>
+
+      <div class="panel panel-border-wide">
+        <h2 class="heading-medium" style="margin-top: 0">
+          Overseas Lawyers Co.
+          <br>
+          <small>URN603600002Y</small>
+        </h2>
+      </div>
+
+      <form action="/application-precheck-confirm" method="get" class="form">
+
+        <p>The following users need adding to the PNC and WICU table for checks before continuing.</p>
+
+        <table style="margin-bottom: 30px">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Nationality</th>
+              <th>Date of birth</th>
+              <th>NI number</th>
+              <th>Passport number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Delice Junco</td>
+              <td>Indian</td>
+              <td>18/09/1942</td>
+              <td></td>
+              <td>152505696</td>
+            </tr>
+            <tr>
+              <td>Gwendolyn Kensy</td>
+              <td>British</td>
+              <td>03/03/1982</td>
+              <td>CA306687C</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Ford Pensinger</td>
+              <td>British</td>
+              <td>23/08/1950</td>
+              <td>KY140872C</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}
