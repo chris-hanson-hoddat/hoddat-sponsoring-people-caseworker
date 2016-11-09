@@ -125,7 +125,7 @@ $('.date').each(function() {
   var days = $(this).data('days');
   var currentTime = new Date();
   currentTime.setDate(currentTime.getDate()+days);
-  var month = currentTime.getMonth();
+  var month = currentTime.getMonth()+1;
   var day = currentTime.getDate();
   var year = currentTime.getFullYear();
   $(this).text(day + "/" + month + "/" + year);
