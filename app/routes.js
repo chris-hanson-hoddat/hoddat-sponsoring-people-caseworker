@@ -20,6 +20,15 @@ router.get('/caseworker', function (req, res) {
   res.render('caseworker', { 'compName': compName ,  'urn': urn, 'status': status })
 })
 
+router.get('/caseworker-linear', function (req, res) {
+  var compName = req.query.compName
+  var urn = req.query.urn
+  var overview = req.query.overview
+  var status = req.query.status
+
+  res.render('caseworker-linear', { 'compName': compName ,  'urn': urn, 'status': status })
+})
+
 router.get('/caseworker-action', function (req, res) {
   var compName = req.query.compName
   var urn = req.query.urn
@@ -47,13 +56,13 @@ router.get('/documents-check', function (req, res) {
 })
 
 // Fee check
-router.get('/application-precheck-confirm', function (req, res) {
+router.get('/security-checks', function (req, res) {
   var fee = req.query.fee
 
   if (fee == 'false') {
     res.redirect('/fee-check')
   } else {
-    res.render('application-precheck-confirm')
+    res.render('security-checks')
   }
 })
 
