@@ -48,7 +48,13 @@
     <div class="column-one-third">
       <ul class="leftnav">
         <li>
-          <a href="#0" class="leftnavlinks business-details active" data-target="business-details">
+          <a href="#0" class="leftnavlinks offline-checks active" data-target="offline-checks">
+            Offline checks
+            <span class="tag tag--complete" style="display: none;">Complete</span>
+          </a>
+        </li>
+        <li>
+          <a href="#0" class="leftnavlinks business-details" data-target="business-details">
             Business details
             <span class="tag tag--complete" style="display: none;">Complete</span>
           </a>
@@ -89,7 +95,107 @@
 
     <div class="column-two-thirds">
 
-      <div id="business-details" class="leftnavcontent" style="display: block">
+      <div id="offline-checks" class="leftnavcontent" style="display: block">
+        <form>
+
+          <h2 class="heading-large" style="margin-top: 0">
+            Offline checks
+          </h2>
+
+          <h4 class="heading-small">
+            Are there any issues in Athena?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Are there any issues in Athena?</legend>
+
+              <label for="athenaYes" class="block-label" data-target="athena-details">
+                <input type="radio" name="athena" value="true" id="athenaYes">
+                Yes
+              </label>
+
+              <label for="athenaNo" class="block-label">
+                <input type="radio" name="athena" value="false" id="athenaNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="athena-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="athenaDetails">Details</label>
+                  <textarea type="text" class="form-control" id="athenaDetails" name="athenaDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Are there any civil penalties listed against the company?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Are there any civil penalties listed against the company?</legend>
+
+              <label for="civil_penaltyYes" class="block-label">
+                <input type="radio" name="civil_penalty" value="true" id="civil_penaltyYes">
+                Yes
+              </label>
+
+              <label for="civil_penaltyNo" class="block-label" data-target="civil_penalty-details">
+                <input type="radio" name="civil_penalty" value="false" id="civil_penaltyNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="civil_penalty-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="civil_penaltyDetails">Details</label>
+                  <textarea type="text" class="form-control" id="civil_penaltyDetails" name="civil_penaltyDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Does the company hit an internal risk profiles?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the company hit an internal risk profiles?</legend>
+
+              <label for="risk_profileYes" class="block-label" data-target="risk_profile-details">
+                <input type="radio" name="risk_profile" value="true" id="risk_profileYes">
+                Yes
+              </label>
+
+              <label for="risk_profileNo" class="block-label">
+                <input type="radio" name="risk_profile" value="false" id="risk_profileNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="risk_profile-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="risk_profileDetails">Details</label>
+                  <textarea type="text" class="form-control" id="risk_profileDetails" name="risk_profileDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <a href="#0" class="button leftnavlinks" data-target="ao-details">
+              Continue
+            </a>
+          </div>
+
+        </form>
+      </div>
+
+      <div id="business-details" class="leftnavcontent">
         <form>
 
           <h2 class="heading-large" style="margin-top: 0">
@@ -153,25 +259,29 @@
               <th>Second company director</th>
               <td>William E. Coyote</td>
             </tr> -->
-            <tr>
+            <!-- <tr>
               <th>Company type</th>
               <td>Private limited company</td>
-            </tr>
-            <tr>
-              <th>Date of incorporation</th>
-              <td>03/11/2014</td>
-            </tr>
+            </tr> -->
+            <!-- <tr>
+              <th>Incorporated in the last 18 months</th>
+              <td>No</td>
+            </tr> -->
             <tr>
               <th>Nature of business (SIC)</th>
               <td>Manufacture of medical and dental instruments and supplies <small>(32500)</small></td>
             </tr>
             <tr>
+              <th>Regulatory body and registration number</th>
+              <td>Regulator name <small>(123456789)</small></td>
+            </tr>
+            <!-- <tr>
               <th>Charitable status</th>
               <td>Registered charity</td>
-            </tr>
+            </tr> -->
           </table>
 
-          <details role="group">
+          <!-- <details role="group">
 
             <summary role="button" aria-controls="details-content-0" aria-expanded="false">
               <span class="summary">Previous applications</span>
@@ -199,9 +309,9 @@
               </table>
             </div>
 
-          </details>
+          </details> -->
 
-          <details role="group">
+          <!-- <details role="group">
 
             <summary role="button" aria-controls="details-content-0" aria-expanded="false">
               <span class="summary">Likely previous applications</span>
@@ -252,9 +362,9 @@
               </table>
             </div>
 
-          </details>
+          </details> -->
 
-          <details role="group">
+          <!-- <details role="group">
 
             <summary role="button" aria-controls="details-content-0" aria-expanded="false">
               <span class="summary">Other applications from the same postcode</span>
@@ -301,11 +411,11 @@
               </table>
             </div>
 
-          </details>
+          </details> -->
 
           <h4 class="heading-small">
             Are the details listed correct according to Companies House?
-            <span class="form-hint">Company is active, date of incorporation, turnover, and AO is listed.</span>
+            <span class="form-hint">Company is active, date of incorporation, and AO is listed.</span>
           </h4>
 
           <div class="form-group">
@@ -333,40 +443,13 @@
           </div>
 
           <h4 class="heading-small">
-            Are there any issues in Athena?
+            Is the regulatory registration correct?
+            <span class="form-hint">Provided details are correct and/or any registrations missing.</span>
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Are there any issues in Athena?</legend>
-
-              <label for="athenaYes" class="block-label" data-target="athena-details">
-                <input type="radio" name="athena" value="true" id="athenaYes">
-                Yes
-              </label>
-
-              <label for="athenaNo" class="block-label">
-                <input type="radio" name="athena" value="false" id="athenaNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="athena-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="athenaDetails">Details</label>
-                  <textarea type="text" class="form-control" id="athenaDetails" name="athenaDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Sector registration?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Sector registration?</legend>
+              <legend class="visuallyhidden">Is the regulatory registration correct?</legend>
 
               <label for="sector_regYes" class="block-label">
                 <input type="radio" name="sector_reg" value="true" id="sector_regYes">
@@ -389,103 +472,20 @@
           </div>
 
           <h4 class="heading-small">
-            Is the charitable status correct?
+            Is there any evidence of previous non-compliance in the last 5 years?
+            <span class="form-hint">Against the current company name or any other previous registrations.</span>
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Is the charitable status correct?</legend>
+              <legend class="visuallyhidden">Is there any evidence of previous non-compliance in the last 5 years?</legend>
 
-              <label for="charityYes" class="block-label">
-                <input type="radio" name="charity" value="true" id="charityYes">
-                Yes
-              </label>
-
-              <label for="charityNo" class="block-label" data-target="charity-details">
-                <input type="radio" name="charity" value="false" id="charityNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="charity-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="charityDetails">Details</label>
-                  <textarea type="text" class="form-control" id="charityDetails" name="charityDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Civil penalties?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Civil penalties?</legend>
-
-              <label for="civil_penaltyYes" class="block-label">
-                <input type="radio" name="civil_penalty" value="true" id="civil_penaltyYes">
-                Yes
-              </label>
-
-              <label for="civil_penaltyNo" class="block-label" data-target="civil_penalty-details">
-                <input type="radio" name="civil_penalty" value="false" id="civil_penaltyNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="civil_penalty-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="civil_penaltyDetails">Details</label>
-                  <textarea type="text" class="form-control" id="civil_penaltyDetails" name="civil_penaltyDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Google searches?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Google searches?</legend>
-
-              <label for="googleYes" class="block-label">
-                <input type="radio" name="google" value="true" id="googleYes">
-                Yes
-              </label>
-
-              <label for="googleNo" class="block-label" data-target="google-details">
-                <input type="radio" name="google" value="false" id="googleNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="google-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="googleDetails">Details</label>
-                  <textarea type="text" class="form-control" id="googleDetails" name="googleDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Prior sponsorship history?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Prior sponsorship history?</legend>
-
-              <label for="spon_histYes" class="block-label">
+              <label for="spon_histYes" class="block-label" data-target="spon_hist-details">
                 <input type="radio" name="spon_hist" value="true" id="spon_histYes">
                 Yes
               </label>
 
-              <label for="spon_histNo" class="block-label" data-target="spon_hist-details">
+              <label for="spon_histNo" class="block-label">
                 <input type="radio" name="spon_hist" value="false" id="spon_histNo">
                 No
               </label>
@@ -494,34 +494,6 @@
                 <div class="form-group">
                   <label class="form-label-bold" for="spon_histDetails">Details</label>
                   <textarea type="text" class="form-control" id="spon_histDetails" name="spon_histDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Does the company hit an internal risk profiles?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Does the company hit an internal risk profiles?</legend>
-
-              <label for="risk_profileYes" class="block-label" data-target="risk_profile-details">
-                <input type="radio" name="risk_profile" value="true" id="risk_profileYes">
-                Yes
-              </label>
-
-              <label for="risk_profileNo" class="block-label">
-                <input type="radio" name="risk_profile" value="false" id="risk_profileNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="risk_profile-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="risk_profileDetails">Details</label>
-                  <textarea type="text" class="form-control" id="risk_profileDetails" name="risk_profileDetails" rows="6"></textarea>
                 </div>
               </div>
 
@@ -568,10 +540,10 @@
               <th>Passport number</th>
               <td>152505696</td>
             </tr>
-            <tr>
+            <!-- <tr>
               <th>Job title</th>
               <td>Company director</td>
-            </tr>
+            </tr> -->
             <!-- <tr>
               <th>Work address</th>
               <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" title="Search on Google Maps" target="_blank" rel="external">123 West Street<br>Sheffield<br>S1 2AB</a></td>
@@ -586,7 +558,7 @@
             </tr>
           </table>
 
-          <details role="group">
+          <!-- <details role="group">
 
             <summary role="button" aria-controls="details-content-0" aria-expanded="false">
               <span class="summary">Previous applications</span>
@@ -624,15 +596,15 @@
               </table>
             </div>
 
-          </details>
+          </details> -->
 
           <h4 class="heading-small">
-            Any PNC convictions?
+            Does the AO have any PNC or WI convictions, are they a disqualified director, or are they a banned user?
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Any PNC convictions?</legend>
+              <legend class="visuallyhidden">Does the AO have any PNC or WI convictions, are they a disqualified director, or are they a banned user?</legend>
 
               <label for="pncYes" class="block-label" data-target="pnc-details">
                 <input type="radio" name="pnc" value="true" id="pncYes">
@@ -655,35 +627,8 @@
           </div>
 
           <h4 class="heading-small">
-            WI?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">WI?</legend>
-
-              <label for="wiYes" class="block-label" data-target="wi-details">
-                <input type="radio" name="wi" value="true" id="wiYes">
-                Yes
-              </label>
-
-              <label for="wiNo" class="block-label">
-                <input type="radio" name="wi" value="false" id="wiNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="wi-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="wiDetails">Details</label>
-                  <textarea type="text" class="form-control" id="wiDetails" name="wiDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
             Is there any evidence of previous non-compliance in the last 5 years?
+            <span class="form-hint">AO has been rejected or refused for this or another company.</span>
           </h4>
 
           <div class="form-group">
@@ -712,9 +657,9 @@
 
           <h4 class="heading-small">
             Does the AO have any insolvency issues?
-            <small>
-              <a href="https://www.insolvencydirect.bis.gov.uk/eiir/" target="_blank" rel="external">Search the IIR</a>
-            </small>
+            <span class="form-hint">
+              <a href="https://www.insolvencydirect.bis.gov.uk/eiir/" target="_blank" rel="external">Search the IIR</a> for details.
+            </span>
           </h4>
 
           <div class="form-group">
@@ -741,7 +686,7 @@
             </fieldset>
           </div>
 
-          <h4 class="heading-small">
+          <!-- <h4 class="heading-small">
             Banned user?
           </h4>
 
@@ -795,35 +740,7 @@
               </div>
 
             </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Secure email and phone number?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Secure email and phone number?</legend>
-
-              <label for="secure_contactYes" class="block-label" data-target="secure_contact-details">
-                <input type="radio" name="secure_contact" value="true" id="secure_contactYes">
-                Yes
-              </label>
-
-              <label for="secure_contactNo" class="block-label">
-                <input type="radio" name="secure_contact" value="false" id="secure_contactNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="secure_contact-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="secure_contactDetails">Details</label>
-                  <textarea type="text" class="form-control" id="secure_contactDetails" name="secure_contactDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
+          </div> -->
 
           <div class="form-group">
             <a href="#0" class="button leftnavlinks" data-target="other-user">
@@ -849,13 +766,13 @@
               <th>Full name</th>
               <td>Gwendolyn Kensy</td>
             </tr>
-            <!-- <tr>
-              <th>DOB</th>
-              <td>03/03/1982</td>
-            </tr> -->
             <tr>
               <th>Nationality</th>
               <td>British</td>
+            </tr>
+            <tr>
+              <th>DOB</th>
+              <td>03/03/1982</td>
             </tr>
             <!-- <tr>
               <th>NI number</th>
@@ -865,10 +782,10 @@
               <th>Passport number</th>
               <td>838602872</td>
             </tr> -->
-            <tr>
+            <!-- <tr>
               <th>Job title</th>
               <td>HR manager</td>
-            </tr>
+            </tr> -->
             <tr>
               <th>Workplace address</th>
               <td><a href="http://maps.google.com/?q=1176 Nelson Street Bamber Bridge PR5 6FY" target="_blank" rel="external">1176 Nelson Street<br>Bamber Bridge<br>PR5 6FY</a></td>
@@ -883,7 +800,7 @@
             </tr>
           </table>
 
-          <details role="group">
+          <!-- <details role="group">
 
             <summary role="button" aria-controls="details-content-0" aria-expanded="false">
               <span class="summary">Previous applications</span>
@@ -921,15 +838,15 @@
               </table>
             </div>
 
-          </details>
+          </details> -->
 
           <h4 class="heading-small">
-            Any PNC convictions?
+            Does the user have any PNC or WI convictions, or are they a banned user?
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Any PNC convictions?</legend>
+              <legend class="visuallyhidden">Does the user have any PNC or WI convictions, or are they a banned user?</legend>
 
               <label for="other_pncYes" class="block-label" data-target="other_pnc-details">
                 <input type="radio" name="other_pnc" value="true" id="other_pncYes">
@@ -952,35 +869,8 @@
           </div>
 
           <h4 class="heading-small">
-            WI?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">WI?</legend>
-
-              <label for="other_wiYes" class="block-label" data-target="other_wi-details">
-                <input type="radio" name="other_wi" value="true" id="other_wiYes">
-                Yes
-              </label>
-
-              <label for="other_wiNo" class="block-label">
-                <input type="radio" name="other_wi" value="false" id="other_wiNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="other_wi-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="other_wiDetails">Details</label>
-                  <textarea type="text" class="form-control" id="other_wiDetails" name="other_wiDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
             Is there any evidence of previous non-compliance in the last 5 years?
+            <span class="form-hint">User has been rejected or refused for this or another company.</span>
           </h4>
 
           <div class="form-group">
@@ -1001,121 +891,6 @@
                 <div class="form-group">
                   <label class="form-label-bold" for="other_historyDetails">Details</label>
                   <textarea type="text" class="form-control" id="other_historyDetails" name="other_historyDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Does the AO have any insolvency issues?
-            <small>
-              <a href="https://www.insolvencydirect.bis.gov.uk/eiir/" target="_blank" rel="external">Search the IIR</a>
-            </small>
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Does the AO have any insolvency issues?</legend>
-
-              <label for="other_insolvencyYes" class="block-label" data-target="other_insolvency-details">
-                <input type="radio" name="other_insolvency" value="true" id="other_insolvencyYes">
-                Yes
-              </label>
-
-              <label for="other_insolvencyNo" class="block-label">
-                <input type="radio" name="other_insolvency" value="false" id="other_insolvencyNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="other_insolvency-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="other_insolvencyDetails">Details</label>
-                  <textarea type="text" class="form-control" id="other_insolvencyDetails" name="other_insolvencyDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Banned user?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Banned user?</legend>
-
-              <label for="banned_otherYes" class="block-label" data-target="banned_other-details">
-                <input type="radio" name="banned_other" value="true" id="banned_otherYes">
-                Yes
-              </label>
-
-              <label for="banned_otherNo" class="block-label">
-                <input type="radio" name="banned_other" value="false" id="banned_otherNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="banned_other-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="banned_otherDetails">Details</label>
-                  <textarea type="text" class="form-control" id="banned_otherDetails" name="banned_otherDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Disqualified director?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Disqualified director?</legend>
-
-              <label for="other_disqual_directorYes" class="block-label" data-target="other_disqual_director-details">
-                <input type="radio" name="other_disqual_director" value="true" id="other_disqual_directorYes">
-                Yes
-              </label>
-
-              <label for="other_disqual_directorNo" class="block-label">
-                <input type="radio" name="other_disqual_director" value="false" id="other_disqual_directorNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="other_disqual_director-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="other_disqual_directorDetails">Details</label>
-                  <textarea type="text" class="form-control" id="other_disqual_directorDetails" name="other_disqual_directorDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Secure email and phone number?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Secure email and phone number?</legend>
-
-              <label for="other_secure_contactYes" class="block-label" data-target="other_secure_contact-details">
-                <input type="radio" name="other_secure_contact" value="true" id="other_secure_contactYes">
-                Yes
-              </label>
-
-              <label for="other_secure_contactNo" class="block-label">
-                <input type="radio" name="other_secure_contact" value="false" id="other_secure_contactNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="other_secure_contact-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="other_secure_contactDetails">Details</label>
-                  <textarea type="text" class="form-control" id="other_secure_contactDetails" name="other_secure_contactDetails" rows="6"></textarea>
                 </div>
               </div>
 
@@ -1154,22 +929,14 @@
               <th>Full name</th>
               <td>Ford Pensinger</td>
             </tr>
-            <!-- <tr>
-              <th>DOB</th>
-              <td>23/08/1950</td>
-            </tr>
             <tr>
               <th>Nationality</th>
               <td>British</td>
             </tr>
             <tr>
-              <th>NI number</th>
-              <td>PC548323A</td>
+              <th>DOB</th>
+              <td>23/08/1950</td>
             </tr>
-            <tr>
-              <th>Passport number</th>
-              <td>958366300</td>
-            </tr> -->
             <tr>
               <th>Company name</th>
               <td>Reps r us</td>
@@ -1188,7 +955,7 @@
             </tr>
           </table>
 
-          <details role="group">
+          <!-- <details role="group">
 
             <summary role="button" aria-controls="details-content-0" aria-expanded="false">
               <span class="summary">Previous representations</span>
@@ -1226,15 +993,16 @@
               </table>
             </div>
 
-          </details>
+          </details> -->
 
           <h4 class="heading-small">
-            OISC/Law society registered?
+            Are the provided registration details correct?
+            <span class="form-hint">Check with the registered body that the company and individual are listed.</span>
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">OISC/Law society registered?</legend>
+              <legend class="visuallyhidden">Are the provided registration details correct?</legend>
 
               <label for="rep_oiscYes" class="block-label" data-target="rep_oisc-details">
                 <input type="radio" name="rep_oisc" value="true" id="rep_oiscYes">
@@ -1256,7 +1024,7 @@
             </fieldset>
           </div>
 
-          <h4 class="heading-small">
+          <!-- <h4 class="heading-small">
             Intel summary package?
           </h4>
 
@@ -1282,15 +1050,15 @@
               </div>
 
             </fieldset>
-          </div>
+          </div> -->
 
           <h4 class="heading-small">
-            Any PNC convictions?
+            Does the user have any PNC or WI convictions, or are they a banned user?
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Any PNC convictions?</legend>
+              <legend class="visuallyhidden">Does the user have any PNC or WI convictions, or are they a banned user?</legend>
 
               <label for="rep_pncYes" class="block-label" data-target="rep_pnc-details">
                 <input type="radio" name="rep_pnc" value="true" id="rep_pncYes">
@@ -1312,7 +1080,7 @@
             </fieldset>
           </div>
 
-          <h4 class="heading-small">
+          <!-- <h4 class="heading-small">
             WI?
           </h4>
 
@@ -1338,10 +1106,11 @@
               </div>
 
             </fieldset>
-          </div>
+          </div> -->
 
           <h4 class="heading-small">
             Is there any evidence of previous non-compliance in the last 5 years?
+            <span class="form-hint">User has been rejected or refused for this or another company.</span>
           </h4>
 
           <div class="form-group">
@@ -1368,38 +1137,7 @@
             </fieldset>
           </div>
 
-          <h4 class="heading-small">
-            Does the AO have any insolvency issues?
-            <small>
-              <a href="https://www.insolvencydirect.bis.gov.uk/eiir/" target="_blank" rel="external">Search the IIR</a>
-            </small>
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Does the AO have any insolvency issues?</legend>
-
-              <label for="rep_insolvencyYes" class="block-label" data-target="rep_insolvency-details">
-                <input type="radio" name="rep_insolvency" value="true" id="rep_insolvencyYes">
-                Yes
-              </label>
-
-              <label for="rep_insolvencyNo" class="block-label">
-                <input type="radio" name="rep_insolvency" value="false" id="rep_insolvencyNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="rep_insolvency-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="rep_insolvencyDetails">Details</label>
-                  <textarea type="text" class="form-control" id="rep_insolvencyDetails" name="rep_insolvencyDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
+          <!-- <h4 class="heading-small">
             Banned user?
           </h4>
 
@@ -1425,63 +1163,7 @@
               </div>
 
             </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Disqualified director?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Disqualified director?</legend>
-
-              <label for="rep_disqual_directorYes" class="block-label" data-target="rep_disqual_director-details">
-                <input type="radio" name="rep_disqual_director" value="true" id="rep_disqual_directorYes">
-                Yes
-              </label>
-
-              <label for="rep_disqual_directorNo" class="block-label">
-                <input type="radio" name="rep_disqual_director" value="false" id="rep_disqual_directorNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="rep_disqual_director-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="rep_disqual_directorDetails">Details</label>
-                  <textarea type="text" class="form-control" id="rep_disqual_directorDetails" name="rep_disqual_directorDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Secure email and phone number?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Secure email and phone number?</legend>
-
-              <label for="rep_secure_contactYes" class="block-label" data-target="rep_secure_contact-details">
-                <input type="radio" name="rep_secure_contact" value="true" id="rep_secure_contactYes">
-                Yes
-              </label>
-
-              <label for="rep_secure_contactNo" class="block-label">
-                <input type="radio" name="rep_secure_contact" value="false" id="rep_secure_contactNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="rep_secure_contact-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="rep_secure_contactDetails">Details</label>
-                  <textarea type="text" class="form-control" id="rep_secure_contactDetails" name="rep_secure_contactDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
+          </div> -->
 
           <div class="form-group">
             <a href="#0" class="button leftnavlinks" data-target="vacancy-details">
