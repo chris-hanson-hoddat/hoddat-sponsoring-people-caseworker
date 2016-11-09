@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Pre-caseworker checks
+  Fee checks
 {% endblock %}
 
 {% block content %}
@@ -16,7 +16,7 @@
 
     <div class="column-two-thirds">
       <h1 class="heading-xlarge" style="margin-bottom: 0;">
-        Pre-caseworker checks
+        Fee checks
       </h1>
 
       <div class="panel panel-border-wide">
@@ -27,11 +27,7 @@
         </h2>
       </div>
 
-      <form action="/application-precheck-confirm" method="get" class="form">
-
-        <h2 class="heading-large">
-          Fee check
-        </h2>
+      <form action="/security-checks" method="get" class="form">
 
         <table style="margin-bottom: 30px">
           <caption style="text-align: left">Submitted values</caption>
@@ -40,25 +36,25 @@
             <td>Small fee</td>
           </tr>
           <tr>
-            <th>Number of staff</th>
+            <th>Number of staff under 50</th>
             <td>42
               <!-- <br><span class="tag">Checked online</span> -->
             </td>
           </tr>
           <tr>
-            <th>Balance sheet under &pound;3.26m</th>
-            <td>No</td>
-          </tr>
-          <tr>
             <th>Turnover under &pound;6.5m</th>
-            <td>No</td>
-          </tr>
-          <tr>
-            <th>Charitable status</th>
             <td>Yes</td>
           </tr>
           <tr>
-            <th>Excluded from small companies' regime</th>
+            <th>Balance sheet under &pound;3.26m</th>
+            <td>No</td>
+          </tr>
+          <!-- tr>
+            <th>Charitable status</th>
+            <td>Yes</td>
+          </tr> -->
+          <tr>
+            <th>Provides banking, finance or insurance services</th>
             <td>No</td>
           </tr>
         </table>
@@ -123,14 +119,14 @@
 
 
         <div class="form-group">
-          <input type="submit" class="button" value="Submit">
+          <input type="submit" class="button" value="Continue">
         </div>
 
       </form>
 
     </div>
 
-    <div class="column-third">
+    <!-- <div class="column-third">
       <aside class="govuk-related-items" role="complementary">
 
         <h2 class="heading-medium" id="subsection-title">
@@ -156,7 +152,7 @@
 
         </table>
       </aside>
-    </div>
+    </div> -->
 
   </div>
 
