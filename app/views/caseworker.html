@@ -48,13 +48,7 @@
     <div class="column-one-third">
       <ul class="leftnav">
         <li>
-          <a href="#0" class="leftnavlinks offline-checks active" data-target="offline-checks">
-            Offline checks
-            <span class="tag tag--complete" style="display: none;">Complete</span>
-          </a>
-        </li>
-        <li>
-          <a href="#0" class="leftnavlinks business-details" data-target="business-details">
+          <a href="#0" class="leftnavlinks business-details active" data-target="business-details">
             Business details
             <span class="tag tag--complete" style="display: none;">Complete</span>
           </a>
@@ -95,107 +89,7 @@
 
     <div class="column-two-thirds">
 
-      <div id="offline-checks" class="leftnavcontent" style="display: block">
-        <form>
-
-          <h2 class="heading-large" style="margin-top: 0">
-            Offline checks
-          </h2>
-
-          <h4 class="heading-small">
-            Are there any issues in Athena?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Are there any issues in Athena?</legend>
-
-              <label for="athenaYes" class="block-label" data-target="athena-details">
-                <input type="radio" name="athena" value="true" id="athenaYes">
-                Yes
-              </label>
-
-              <label for="athenaNo" class="block-label">
-                <input type="radio" name="athena" value="false" id="athenaNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="athena-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="athenaDetails">Details</label>
-                  <textarea type="text" class="form-control" id="athenaDetails" name="athenaDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Are there any civil penalties listed against the company?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Are there any civil penalties listed against the company?</legend>
-
-              <label for="civil_penaltyYes" class="block-label" data-target="civil_penalty-details">
-                <input type="radio" name="civil_penalty" value="true" id="civil_penaltyYes">
-                Yes
-              </label>
-
-              <label for="civil_penaltyNo" class="block-label">
-                <input type="radio" name="civil_penalty" value="false" id="civil_penaltyNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="civil_penalty-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="civil_penaltyDetails">Details</label>
-                  <textarea type="text" class="form-control" id="civil_penaltyDetails" name="civil_penaltyDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Does the company hit any internal risk profiles?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Does the company hit an internal risk profiles?</legend>
-
-              <label for="risk_profileYes" class="block-label" data-target="risk_profile-details">
-                <input type="radio" name="risk_profile" value="true" id="risk_profileYes">
-                Yes
-              </label>
-
-              <label for="risk_profileNo" class="block-label">
-                <input type="radio" name="risk_profile" value="false" id="risk_profileNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="risk_profile-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="risk_profileDetails">Details</label>
-                  <textarea type="text" class="form-control" id="risk_profileDetails" name="risk_profileDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <div class="form-group">
-            <a href="#0" class="button leftnavlinks" data-target="ao-details">
-              Continue
-            </a>
-          </div>
-
-        </form>
-      </div>
-
-      <div id="business-details" class="leftnavcontent">
+      <div id="business-details" class="leftnavcontent" style="display: block">
         <form>
 
           <h2 class="heading-large" style="margin-top: 0">
@@ -500,6 +394,69 @@
             </fieldset>
           </div>
 
+          <h4 class="heading-small">
+            Are there any issues in Athena?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Are there any issues in Athena?</legend>
+
+              <label for="athenaYes" class="block-label" data-target="athena-details">
+                <input type="radio" name="athena" value="true" id="athenaYes">
+                Yes
+              </label>
+
+              <label for="athenaNo" class="block-label">
+                <input type="radio" name="athena" value="false" id="athenaNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="athena-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="athenaDetails">Details</label>
+                  <textarea type="text" class="form-control" id="athenaDetails" name="athenaDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Are there any civil penalties listed against the company?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Are there any civil penalties listed against the company?</legend>
+
+              <label for="civil_penaltyYes" class="block-label" data-target="civil_penalty-details">
+                <input type="radio" name="civil_penalty" value="true" id="civil_penaltyYes">
+                Yes
+              </label>
+
+              <label for="civil_penaltyNo" class="block-label">
+                <input type="radio" name="civil_penalty" value="false" id="civil_penaltyNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="civil_penalty-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="civil_penaltyDetails">Details</label>
+                  <textarea type="text" class="form-control" id="civil_penaltyDetails" name="civil_penaltyDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="comp-notes">
+              Any other notes or concerns
+            </label>
+            <textarea type="text" class="form-control" id="comp-notes" name="comp-notes" rows="6"></textarea>
+          </div>
+
           <div class="form-group">
             <a href="#0" class="button leftnavlinks" data-target="ao-details">
               Continue
@@ -743,6 +700,13 @@
           </div> -->
 
           <div class="form-group">
+            <label class="form-label-bold" for="ao-notes">
+              Any other notes or concerns
+            </label>
+            <textarea type="text" class="form-control" id="ao-notes" name="ao-notes" rows="6"></textarea>
+          </div>
+
+          <div class="form-group">
             <a href="#0" class="button leftnavlinks" data-target="other-user">
               Continue
             </a>
@@ -895,6 +859,13 @@
               </div>
 
             </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="otheruser-notes">
+              Any other notes or concerns
+            </label>
+            <textarea type="text" class="form-control" id="otheruser-notes" name="otheruser-notes" rows="6"></textarea>
           </div>
 
           <div class="form-group">
@@ -1166,6 +1137,13 @@
           </div> -->
 
           <div class="form-group">
+            <label class="form-label-bold" for="rep-notes">
+              Any other notes or concerns
+            </label>
+            <textarea type="text" class="form-control" id="rep-notes" name="rep-notes" rows="6"></textarea>
+          </div>
+
+          <div class="form-group">
             <a href="#0" class="button leftnavlinks" data-target="vacancy-details">
               Continue
             </a>
@@ -1187,15 +1165,15 @@
             </caption> -->
             <tr>
               <th>COS request</th>
-              <td>10</td>
+              <td>3</td>
             </tr>
             <tr>
               <th>Job title</th>
-              <td>Interaction designer</td>
+              <td>Business development manager</td>
             </tr>
             <tr>
               <th>Job description</th>
-              <td>Refine and shape user journeys and help remove complexity where it isn’t needed.  Design for diverse users and platforms and ensure usability and accessibility of the service. Help identify gaps in product understanding, help plan user research and analytics and help inform the design of user journeys.</td>
+              <td>Create and maintain a clear indirect channel strategy of how we will meet and exceed indirect channel sales targets. Meet and exceed sales and net add targets through new and existing customer, targeting,  development and engagement. Optimise indirect channel commercial performance by driving ARPU and reducing acquisition CPAs. Create and maintain an accurate prospect list and future volume forecast with proactive risks and opportunity management. Create and lead a highly motivated team of sales leads.</td>
             </tr>
             <tr>
               <th>Salary</th>
@@ -1210,6 +1188,34 @@
               <td>Exempt</td>
             </tr>
           </table>
+
+          <h4 class="heading-small">
+            Does the company hit any internal risk profiles?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the company hit an internal risk profiles?</legend>
+
+              <label for="risk_profileYes" class="block-label" data-target="risk_profile-details">
+                <input type="radio" name="risk_profile" value="true" id="risk_profileYes">
+                Yes
+              </label>
+
+              <label for="risk_profileNo" class="block-label">
+                <input type="radio" name="risk_profile" value="false" id="risk_profileNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="risk_profile-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="risk_profileDetails">Details</label>
+                  <textarea type="text" class="form-control" id="risk_profileDetails" name="risk_profileDetails" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
 
           <h4 class="heading-small">
             Approve COS allocation?
@@ -1247,7 +1253,7 @@
             </fieldset>
           </div>
 
-          <h4 class="heading-small">
+          <!-- <h4 class="heading-small">
             Approve vacancy?
           </h4>
 
@@ -1273,6 +1279,13 @@
               </div>
 
             </fieldset>
+          </div> -->
+
+          <div class="form-group">
+            <label class="form-label-bold" for="vacancy-notes">
+              Any other notes or concerns
+            </label>
+            <textarea type="text" class="form-control" id="vacancy-notes" name="vacancy-notes" rows="6"></textarea>
           </div>
 
           <div class="form-group">
