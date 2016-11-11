@@ -2,13 +2,13 @@
 /* global GOVUK */
 
 // Warn about using the kit in production
-if (
-  window.sessionStorage && window.sessionStorage.getItem('prototypeWarning') !== 'false' &&
-  window.console && window.console.info
-) {
-  window.console.info('GOV.UK Prototype Kit - do not use for production')
-  window.sessionStorage.setItem('prototypeWarning', true)
-}
+// if (
+//   window.sessionStorage && window.sessionStorage.getItem('prototypeWarning') !== 'false' &&
+//   window.console && window.console.info
+// ) {
+//   window.console.info('GOV.UK Prototype Kit - do not use for production')
+//   window.sessionStorage.setItem('prototypeWarning', true)
+// }
 
 $(document).ready(function () {
   // Use GOV.UK selection-buttons.js to set selected
@@ -107,6 +107,7 @@ $('.js-all-cases').click(function(e) {
 // Left hand tab navigation, e.g. caseworker screen
 $('.leftnavlinks').click(function(e) {
   e.preventDefault();
+  var current = $('.leftnavlinks.active').data('target');
   var target = $(this).data('target');
 
   $('.leftnavcontent').hide();
@@ -114,11 +115,39 @@ $('.leftnavlinks').click(function(e) {
   $('.leftnavlinks').removeClass('active');
   $('.'+target).addClass('active');
 
+  // If the continue button is selected
   if ( $(this).hasClass('button') ) {
     $('html,body').scrollTop(0);
     $('.'+target).parent().prev().find('.tag--complete').show();
-  }
-});
+
+    // remove all if this is a resubmit
+    $('.'+current+'-results').find('tr').remove();
+
+    // Store and display case details
+    // loop through any form input with class of .store...
+    $('#'+current+' .store').each(function (index, value) {
+      //store the name attribute (key) and the value entered (value)...
+      var thisKey = $(this).attr('name');
+      var thisVal = $(this).val();
+
+      if ( thisVal.length > 0 ) {
+        $('.results-title').removeClass('visuallyhidden');
+        $('.'+current+'-results')
+          .append(
+            '<tr><th>' + thisKey + '</th><td>' + thisVal + '</td></tr>'
+            )
+          .show();
+      }
+    });
+
+  } // /buttons
+}); // /left links
+
+
+
+
+
+
 
 // Set dates dynamically so they stay useful throughout prototyping
 $('.date').each(function() {
@@ -143,6 +172,3 @@ if ( document.location.href.indexOf('overview') > -1 ) {
 } else {
   $('.action').show();
 }
-
-
-

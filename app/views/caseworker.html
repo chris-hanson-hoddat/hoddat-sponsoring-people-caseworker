@@ -22,7 +22,7 @@
       <div class="panel panel-border-wide">
 
         <div class="grid-row">
-          <div class="column-two-thirds">
+          <div class="column-one-third">
             <!-- <h2 class="heading-medium" style="margin: 0;">
               {{ compName }}
             </h2> -->
@@ -31,9 +31,11 @@
               <li>Status: {{ status }}</li>
             </ul>
           </div>
-          <div class="column-one-third" style="text-align: right;">
+          <div class="column-two-thirds" style="text-align: right;">
             <a class="button overview" href="#0" style="display: none">Casework</a>
-            <a class="button action" onclick="window.location='/caseworker-action'+window.location.search;" style="display: none">Action case</a>
+            <a class="button-secondary action" onclick="window.location='/application-hold'+window.location.search;" style="display: none">Put on hold</a>
+            <!-- <a class="button-secondary action" onclick="window.location='/caseworker-action'+window.location.search;" style="display: none">Request visit</a> -->
+            <a href="#0" class="button-secondary action overview">Add note</a>
           </div>
 
         </div>
@@ -48,13 +50,7 @@
     <div class="column-one-third">
       <ul class="leftnav">
         <li>
-          <a href="#0" class="leftnavlinks offline-checks active" data-target="offline-checks">
-            Offline checks
-            <span class="tag tag--complete" style="display: none;">Complete</span>
-          </a>
-        </li>
-        <li>
-          <a href="#0" class="leftnavlinks business-details" data-target="business-details">
+          <a href="#0" class="leftnavlinks business-details active" data-target="business-details">
             Business details
             <span class="tag tag--complete" style="display: none;">Complete</span>
           </a>
@@ -95,108 +91,8 @@
 
     <div class="column-two-thirds">
 
-      <div id="offline-checks" class="leftnavcontent" style="display: block">
-        <form>
-
-          <h2 class="heading-large" style="margin-top: 0">
-            Offline checks
-          </h2>
-
-          <h4 class="heading-small">
-            Are there any issues in Athena?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Are there any issues in Athena?</legend>
-
-              <label for="athenaYes" class="block-label" data-target="athena-details">
-                <input type="radio" name="athena" value="true" id="athenaYes">
-                Yes
-              </label>
-
-              <label for="athenaNo" class="block-label">
-                <input type="radio" name="athena" value="false" id="athenaNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="athena-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="athenaDetails">Details</label>
-                  <textarea type="text" class="form-control" id="athenaDetails" name="athenaDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Are there any civil penalties listed against the company?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Are there any civil penalties listed against the company?</legend>
-
-              <label for="civil_penaltyYes" class="block-label" data-target="civil_penalty-details">
-                <input type="radio" name="civil_penalty" value="true" id="civil_penaltyYes">
-                Yes
-              </label>
-
-              <label for="civil_penaltyNo" class="block-label">
-                <input type="radio" name="civil_penalty" value="false" id="civil_penaltyNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="civil_penalty-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="civil_penaltyDetails">Details</label>
-                  <textarea type="text" class="form-control" id="civil_penaltyDetails" name="civil_penaltyDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <h4 class="heading-small">
-            Does the company hit any internal risk profiles?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Does the company hit an internal risk profiles?</legend>
-
-              <label for="risk_profileYes" class="block-label" data-target="risk_profile-details">
-                <input type="radio" name="risk_profile" value="true" id="risk_profileYes">
-                Yes
-              </label>
-
-              <label for="risk_profileNo" class="block-label">
-                <input type="radio" name="risk_profile" value="false" id="risk_profileNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="risk_profile-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="risk_profileDetails">Details</label>
-                  <textarea type="text" class="form-control" id="risk_profileDetails" name="risk_profileDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <div class="form-group">
-            <a href="#0" class="button leftnavlinks" data-target="ao-details">
-              Continue
-            </a>
-          </div>
-
-        </form>
-      </div>
-
-      <div id="business-details" class="leftnavcontent">
-        <form>
+      <div id="business-details" class="leftnavcontent" style="display: block">
+        <form class="form">
 
           <h2 class="heading-large" style="margin-top: 0">
             Business details
@@ -251,22 +147,6 @@
                 </details>
               </td>
             </tr>
-            <!-- <tr>
-              <th>Company director</th>
-              <td>Rod Runner</td>
-            </tr>
-            <tr>
-              <th>Second company director</th>
-              <td>William E. Coyote</td>
-            </tr> -->
-            <!-- <tr>
-              <th>Company type</th>
-              <td>Private limited company</td>
-            </tr> -->
-            <!-- <tr>
-              <th>Incorporated in the last 18 months</th>
-              <td>No</td>
-            </tr> -->
             <tr>
               <th>Nature of business (SIC)</th>
               <td>Manufacture of medical and dental instruments and supplies <small>(32500)</small></td>
@@ -275,143 +155,8 @@
               <th>Regulatory body and registration number</th>
               <td>Regulator name <small>(123456789)</small></td>
             </tr>
-            <!-- <tr>
-              <th>Charitable status</th>
-              <td>Registered charity</td>
-            </tr> -->
           </table>
 
-          <!-- <details role="group">
-
-            <summary role="button" aria-controls="details-content-0" aria-expanded="false">
-              <span class="summary">Previous applications</span>
-            </summary>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">ACME Corporation</h3>
-              <table>
-                <tr>
-                  <th>URN</th>
-                  <td><a href="#0">436092851J</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Rejected</td>
-                </tr>
-                <tr>
-                  <th>Rejection reason</th>
-                  <td>Required document not provided, application rejected and refunded.</td>
-                </tr>
-                <tr>
-                  <th>Rejection date</th>
-                  <td>12/10/2015.</td>
-                </tr>
-              </table>
-            </div>
-
-          </details> -->
-
-          <!-- <details role="group">
-
-            <summary role="button" aria-controls="details-content-0" aria-expanded="false">
-              <span class="summary">Likely previous applications</span>
-            </summary>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">ACME Inc.</h3>
-              <table>
-                <tr>
-                  <th>URN</th>
-                  <td><a href="#0">128889351B</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Refused</td>
-                </tr>
-                <tr>
-                  <th>Refusal reason</th>
-                  <td>Failed visit due to insufficient processes in place to monitor sponsored applicant.</td>
-
-                </tr>
-                <tr>
-                  <th>Refusal date</th>
-                  <td>12/08/2015.</td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">Smith and Co.</h3>
-              <table>
-                <tr>
-                  <th>URN</th>
-                  <td><a href="#0">238834351Z</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Refused</td>
-                </tr>
-                <tr>
-                  <th>Refusal reason</th>
-                  <td>Insufficient evidence of company trading, address listed did not appear to be a valid company.</td>
-                </tr>
-                <tr>
-                  <th>Refusal date</th>
-                  <td>12/08/2012.</td>
-                </tr>
-              </table>
-            </div>
-
-          </details> -->
-
-          <!-- <details role="group">
-
-            <summary role="button" aria-controls="details-content-0" aria-expanded="false">
-              <span class="summary">Other applications from the same postcode</span>
-            </summary>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">Bob&rsquo;s Bits</h3>
-              <table>
-                <tr>
-                  <th>URN</th>
-                  <td><a href="#0">288715309R</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Rejected</td>
-                </tr>
-                <tr>
-                  <th>Rejection reason</th>
-                  <td>Fee underpaid.</td>
-
-                </tr>
-                <tr>
-                  <th>Rejection date</th>
-                  <td>31/07/2015.</td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">Flying Pizza</h3>
-              <table>
-                <tr>
-                  <th>URN</th>
-                  <td><a href="#0">238834351Z</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Approved</td>
-                </tr>
-                <tr>
-                  <th>Approval date</th>
-                  <td>15/04/2010.</td>
-                </tr>
-              </table>
-            </div>
-
-          </details> -->
 
           <h4 class="heading-small">
             Are the details listed correct according to Companies House?
@@ -435,7 +180,7 @@
               <div class="panel panel-border-narrow js-hidden" id="company-details">
                 <div class="form-group">
                   <label class="form-label-bold" for="companyDetails">Details</label>
-                  <textarea type="text" class="form-control" id="companyDetails" name="companyDetails" rows="6"></textarea>
+                  <textarea type="text" class="form-control store" id="companyDetails" name="Companies House details" rows="6"></textarea>
                 </div>
               </div>
 
@@ -464,7 +209,7 @@
               <div class="panel panel-border-narrow js-hidden" id="sector_reg-details">
                 <div class="form-group">
                   <label class="form-label-bold" for="sector_regDetails">Details</label>
-                  <textarea type="text" class="form-control" id="sector_regDetails" name="sector_regDetails" rows="6"></textarea>
+                  <textarea type="text" class="form-control store" id="sector_regDetails" name="Regulatory registration" rows="6"></textarea>
                 </div>
               </div>
 
@@ -493,11 +238,74 @@
               <div class="panel panel-border-narrow js-hidden" id="spon_hist-details">
                 <div class="form-group">
                   <label class="form-label-bold" for="spon_histDetails">Details</label>
-                  <textarea type="text" class="form-control" id="spon_histDetails" name="spon_histDetails" rows="6"></textarea>
+                  <textarea type="text" class="form-control store" id="spon_histDetails" name="Company non-compliance" rows="6"></textarea>
                 </div>
               </div>
 
             </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Are there any issues in Athena?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Are there any issues in Athena?</legend>
+
+              <label for="athenaYes" class="block-label" data-target="athena-details">
+                <input type="radio" name="athena" value="true" id="athenaYes">
+                Yes
+              </label>
+
+              <label for="athenaNo" class="block-label">
+                <input type="radio" name="athena" value="false" id="athenaNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="athena-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="athenaDetails">Details</label>
+                  <textarea type="text" class="form-control store" id="athenaDetails" name="Athena" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Are there any civil penalties listed against the company?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Are there any civil penalties listed against the company?</legend>
+
+              <label for="civil_penaltyYes" class="block-label" data-target="civil_penalty-details">
+                <input type="radio" name="civil_penalty" value="true" id="civil_penaltyYes">
+                Yes
+              </label>
+
+              <label for="civil_penaltyNo" class="block-label">
+                <input type="radio" name="civil_penalty" value="false" id="civil_penaltyNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="civil_penalty-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="civil_penaltyDetails">Details</label>
+                  <textarea type="text" class="form-control store" id="civil_penaltyDetails" name="Civil penalties" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="comp-notes">
+              Any other notes or concerns
+            </label>
+            <textarea type="text" class="form-control store" id="comp-notes" name="Other" rows="6"></textarea>
           </div>
 
           <div class="form-group">
@@ -517,9 +325,6 @@
           </h2>
 
           <table style="margin-bottom: 30px">
-            <!-- <caption style="text-align: left">
-              AO&rsquo;s submitted details
-            </caption> -->
             <tr>
               <th>Full name</th>
               <td>Delice Junco</td>
@@ -532,22 +337,10 @@
               <th>DOB</th>
               <td>18/09/1942</td>
             </tr>
-            <!-- <tr>
-              <th>NI number</th>
-              <td>EL271653B</td>
-            </tr> -->
             <tr>
               <th>Passport number</th>
               <td>152505696</td>
             </tr>
-            <!-- <tr>
-              <th>Job title</th>
-              <td>Company director</td>
-            </tr> -->
-            <!-- <tr>
-              <th>Work address</th>
-              <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" title="Search on Google Maps" target="_blank" rel="external">123 West Street<br>Sheffield<br>S1 2AB</a></td>
-            </tr> -->
             <tr>
               <th>Contact number</th>
               <td>0114 2301234</td>
@@ -557,46 +350,6 @@
               <td><a href="mailto:djunco@acme.com">djunco@acme.com</a></td>
             </tr>
           </table>
-
-          <!-- <details role="group">
-
-            <summary role="button" aria-controls="details-content-0" aria-expanded="false">
-              <span class="summary">Previous applications</span>
-            </summary>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">Foo Bars ltd</h3>
-              <table>
-                <tr>
-                  <th>URN</th>
-                  <td><a href="#0">436092851J</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Approved</td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">Smith and Co.</h3>
-              <table>
-                <tr>
-                  <th>URN</th>
-                  <td><a href="#0">509972207F</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Refused</td>
-                </tr>
-                <tr>
-                  <th>Refusal reason</th>
-                  <td>Vacancy was deemed unnecessary.</td>
-                </tr>
-              </table>
-            </div>
-
-          </details> -->
 
           <h4 class="heading-small">
             Does the AO have any PNC or WI convictions, are they a disqualified director, or are they a banned user?
@@ -619,7 +372,7 @@
               <div class="panel panel-border-narrow js-hidden" id="pnc-details">
                 <div class="form-group">
                   <label class="form-label-bold" for="pncDetails">Details</label>
-                  <textarea type="text" class="form-control" id="pncDetails" name="pncDetails" rows="6"></textarea>
+                  <textarea type="text" class="form-control store" id="pncDetails" name="PNC, WICU, disqualified director or banned user" rows="6"></textarea>
                 </div>
               </div>
 
@@ -648,7 +401,7 @@
               <div class="panel panel-border-narrow js-hidden" id="history-details">
                 <div class="form-group">
                   <label class="form-label-bold" for="historyDetails">Details</label>
-                  <textarea type="text" class="form-control" id="historyDetails" name="historyDetails" rows="6"></textarea>
+                  <textarea type="text" class="form-control store" id="historyDetails" name="AO non-compliance" rows="6"></textarea>
                 </div>
               </div>
 
@@ -679,68 +432,19 @@
               <div class="panel panel-border-narrow js-hidden" id="insolvency-details">
                 <div class="form-group">
                   <label class="form-label-bold" for="insolvencyDetails">Details</label>
-                  <textarea type="text" class="form-control" id="insolvencyDetails" name="insolvencyDetails" rows="6"></textarea>
+                  <textarea type="text" class="form-control store" id="insolvencyDetails" name="Insolvency" rows="6"></textarea>
                 </div>
               </div>
 
             </fieldset>
           </div>
 
-          <!-- <h4 class="heading-small">
-            Banned user?
-          </h4>
-
           <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Banned user?</legend>
-
-              <label for="banned_aoYes" class="block-label" data-target="banned_ao-details">
-                <input type="radio" name="banned_ao" value="true" id="banned_aoYes">
-                Yes
-              </label>
-
-              <label for="banned_aoNo" class="block-label">
-                <input type="radio" name="banned_ao" value="false" id="banned_aoNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="banned_ao-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="banned_aoDetails">Details</label>
-                  <textarea type="text" class="form-control" id="banned_aoDetails" name="banned_aoDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
+            <label class="form-label-bold" for="ao-notes">
+              Any other notes or concerns
+            </label>
+            <textarea type="text" class="form-control store" id="ao-notes" name="Other" rows="6"></textarea>
           </div>
-
-          <h4 class="heading-small">
-            Disqualified director?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Disqualified director?</legend>
-
-              <label for="disqual_directorYes" class="block-label" data-target="disqual_director-details">
-                <input type="radio" name="disqual_director" value="true" id="disqual_directorYes">
-                Yes
-              </label>
-
-              <label for="disqual_directorNo" class="block-label">
-                <input type="radio" name="disqual_director" value="false" id="disqual_directorNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="disqual_director-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="disqual_directorDetails">Details</label>
-                  <textarea type="text" class="form-control" id="disqual_directorDetails" name="disqual_directorDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div> -->
 
           <div class="form-group">
             <a href="#0" class="button leftnavlinks" data-target="other-user">
@@ -759,9 +463,6 @@
           </h2>
 
           <table style="margin-bottom: 30px">
-            <!-- <caption style="text-align: left">
-              Other user&rsquo;s submitted details
-            </caption> -->
             <tr>
               <th>Full name</th>
               <td>Gwendolyn Kensy</td>
@@ -774,18 +475,6 @@
               <th>DOB</th>
               <td>03/03/1982</td>
             </tr>
-            <!-- <tr>
-              <th>NI number</th>
-              <td>KY191130C</td>
-            </tr> -->
-            <!-- <tr>
-              <th>Passport number</th>
-              <td>838602872</td>
-            </tr> -->
-            <!-- <tr>
-              <th>Job title</th>
-              <td>HR manager</td>
-            </tr> -->
             <tr>
               <th>Workplace address</th>
               <td><a href="http://maps.google.com/?q=1176 Nelson Street Bamber Bridge PR5 6FY" target="_blank" rel="external">1176 Nelson Street<br>Bamber Bridge<br>PR5 6FY</a></td>
@@ -799,46 +488,6 @@
               <td><a href="mailto:gkensy@acme.com">gkensy@acme.com</a></td>
             </tr>
           </table>
-
-          <!-- <details role="group">
-
-            <summary role="button" aria-controls="details-content-0" aria-expanded="false">
-              <span class="summary">Previous applications</span>
-            </summary>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">Foo Bars ltd</h3>
-              <table>
-                <tr>
-                  <th>URN</th>
-                  <td><a href="#0">436092851J</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Approved</td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">Smith and Co.</h3>
-              <table>
-                <tr>
-                  <th>URN</th>
-                  <td><a href="#0">509972207F</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Refused</td>
-                </tr>
-                <tr>
-                  <th>Refusal reason</th>
-                  <td>Vacancy was deemed unnecessary.</td>
-                </tr>
-              </table>
-            </div>
-
-          </details> -->
 
           <h4 class="heading-small">
             Does the user have any PNC or WI convictions, or are they a banned user?
@@ -861,7 +510,7 @@
               <div class="panel panel-border-narrow js-hidden" id="other_pnc-details">
                 <div class="form-group">
                   <label class="form-label-bold" for="other_pncDetails">Details</label>
-                  <textarea type="text" class="form-control" id="other_pncDetails" name="other_pncDetails" rows="6"></textarea>
+                  <textarea type="text" class="form-control store" id="other_pncDetails" name="PNC, WICU or banner user" rows="6"></textarea>
                 </div>
               </div>
 
@@ -890,11 +539,18 @@
               <div class="panel panel-border-narrow js-hidden" id="other_history-details">
                 <div class="form-group">
                   <label class="form-label-bold" for="other_historyDetails">Details</label>
-                  <textarea type="text" class="form-control" id="other_historyDetails" name="other_historyDetails" rows="6"></textarea>
+                  <textarea type="text" class="form-control store" id="other_historyDetails" name="User non-compliance" rows="6"></textarea>
                 </div>
               </div>
 
             </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="otheruser-notes">
+              Any other notes or concerns
+            </label>
+            <textarea type="text" class="form-controlstore" id="otheruser-notes" name="Other" rows="6"></textarea>
           </div>
 
           <div class="form-group">
@@ -914,9 +570,6 @@
           </h2>
 
           <table style="margin-bottom: 30px">
-            <!-- <caption style="text-align: left">
-              Representative&rsquo;s submitted details
-            </caption> -->
             <tr>
               <th>Access level</th>
               <td>System user</td>
@@ -955,46 +608,6 @@
             </tr>
           </table>
 
-          <!-- <details role="group">
-
-            <summary role="button" aria-controls="details-content-0" aria-expanded="false">
-              <span class="summary">Previous representations</span>
-            </summary>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">Foo Bars ltd</h3>
-              <table>
-                <tr>
-                  <th>URN</th>
-                  <td><a href="#0">436092851J</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Approved</td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-              <h3 class="heading-medium">Smith and Co.</h3>
-              <table>
-                <tr>
-                  <th>URN</th>
-                  <td><a href="#0">509972207F</a></td>
-                </tr>
-                <tr>
-                  <th>Outcome</th>
-                  <td>Refused</td>
-                </tr>
-                <tr>
-                  <th>Refusal reason</th>
-                  <td>Vacancy was deemed unnecessary.</td>
-                </tr>
-              </table>
-            </div>
-
-          </details> -->
-
           <h4 class="heading-small">
             Are the provided registration details correct?
             <span class="form-hint">Check with the registered body that the company and individual are listed.</span>
@@ -1017,40 +630,12 @@
               <div class="panel panel-border-narrow js-hidden" id="rep_oisc-details">
                 <div class="form-group">
                   <label class="form-label-bold" for="rep_oiscDetails">Details</label>
-                  <textarea type="text" class="form-control" id="rep_oiscDetails" name="rep_oiscDetails" rows="6"></textarea>
+                  <textarea type="text" class="form-control store" id="rep_oiscDetails" name="Registration" rows="6"></textarea>
                 </div>
               </div>
 
             </fieldset>
           </div>
-
-          <!-- <h4 class="heading-small">
-            Intel summary package?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Intel summary package?</legend>
-
-              <label for="rep_intelYes" class="block-label" data-target="rep_intel-details">
-                <input type="radio" name="rep_intel" value="true" id="rep_intelYes">
-                Yes
-              </label>
-
-              <label for="rep_intelNo" class="block-label">
-                <input type="radio" name="rep_intel" value="false" id="rep_intelNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="rep_intel-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="rep_intelDetails">Details</label>
-                  <textarea type="text" class="form-control" id="rep_intelDetails" name="rep_intelDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div> -->
 
           <h4 class="heading-small">
             Does the user have any PNC or WI convictions, or are they a banned user?
@@ -1073,40 +658,12 @@
               <div class="panel panel-border-narrow js-hidden" id="rep_pnc-details">
                 <div class="form-group">
                   <label class="form-label-bold" for="rep_pncDetails">Details</label>
-                  <textarea type="text" class="form-control" id="rep_pncDetails" name="rep_pncDetails" rows="6"></textarea>
+                  <textarea type="text" class="form-control store" id="rep_pncDetails" name="PNC, WICU or banned user" rows="6"></textarea>
                 </div>
               </div>
 
             </fieldset>
           </div>
-
-          <!-- <h4 class="heading-small">
-            WI?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">WI?</legend>
-
-              <label for="rep_wiYes" class="block-label" data-target="rep_wi-details">
-                <input type="radio" name="rep_wi" value="true" id="rep_wiYes">
-                Yes
-              </label>
-
-              <label for="rep_wiNo" class="block-label">
-                <input type="radio" name="rep_wi" value="false" id="rep_wiNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="rep_wi-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="rep_wiDetails">Details</label>
-                  <textarea type="text" class="form-control" id="rep_wiDetails" name="rep_wiDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div> -->
 
           <h4 class="heading-small">
             Is there any evidence of previous non-compliance in the last 5 years?
@@ -1130,40 +687,19 @@
               <div class="panel panel-border-narrow js-hidden" id="rep_history-details">
                 <div class="form-group">
                   <label class="form-label-bold" for="rep_historyDetails">Details</label>
-                  <textarea type="text" class="form-control" id="rep_historyDetails" name="rep_historyDetails" rows="6"></textarea>
+                  <textarea type="text" class="form-control store" id="rep_historyDetails" name="User non-compliance" rows="6"></textarea>
                 </div>
               </div>
 
             </fieldset>
           </div>
 
-          <!-- <h4 class="heading-small">
-            Banned user?
-          </h4>
-
           <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Banned user?</legend>
-
-              <label for="banned_repYes" class="block-label" data-target="banned_rep-details">
-                <input type="radio" name="banned_rep" value="true" id="banned_repYes">
-                Yes
-              </label>
-
-              <label for="banned_repNo" class="block-label">
-                <input type="radio" name="banned_rep" value="false" id="banned_repNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="banned_rep-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="banned_repDetails">Details</label>
-                  <textarea type="text" class="form-control" id="banned_repDetails" name="banned_repDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
-          </div> -->
+            <label class="form-label-bold" for="rep-notes">
+              Any other notes or concerns
+            </label>
+            <textarea type="text" class="form-control store" id="rep-notes" name="Other" rows="6"></textarea>
+          </div>
 
           <div class="form-group">
             <a href="#0" class="button leftnavlinks" data-target="vacancy-details">
@@ -1182,20 +718,17 @@
           </h2>
 
           <table style="margin-bottom: 30px">
-            <!-- <caption style="text-align: left">
-              Vacancy details submitted
-            </caption> -->
             <tr>
               <th>COS request</th>
-              <td>10</td>
+              <td>3</td>
             </tr>
             <tr>
               <th>Job title</th>
-              <td>Interaction designer</td>
+              <td>Business development manager</td>
             </tr>
             <tr>
               <th>Job description</th>
-              <td>Refine and shape user journeys and help remove complexity where it isn’t needed.  Design for diverse users and platforms and ensure usability and accessibility of the service. Help identify gaps in product understanding, help plan user research and analytics and help inform the design of user journeys.</td>
+              <td>Create and maintain a clear indirect channel strategy of how we will meet and exceed indirect channel sales targets. Meet and exceed sales and net add targets through new and existing customer, targeting,  development and engagement. Optimise indirect channel commercial performance by driving ARPU and reducing acquisition CPAs. Create and maintain an accurate prospect list and future volume forecast with proactive risks and opportunity management. Create and lead a highly motivated team of sales leads.</td>
             </tr>
             <tr>
               <th>Salary</th>
@@ -1210,6 +743,34 @@
               <td>Exempt</td>
             </tr>
           </table>
+
+          <h4 class="heading-small">
+            Does the company hit any internal risk profiles?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the company hit an internal risk profiles?</legend>
+
+              <label for="risk_profileYes" class="block-label" data-target="risk_profile-details">
+                <input type="radio" name="risk_profile" value="true" id="risk_profileYes">
+                Yes
+              </label>
+
+              <label for="risk_profileNo" class="block-label">
+                <input type="radio" name="risk_profile" value="false" id="risk_profileNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="risk_profile-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="risk_profileDetails">Details</label>
+                  <textarea type="text" class="form-control store" id="risk_profileDetails" name="Risk profile" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
 
           <h4 class="heading-small">
             Approve COS allocation?
@@ -1234,45 +795,24 @@
                   <label class="form-label-bold" for="cosNumber">New COS allocation</label>
                   <div class="form-date">
                     <div class="form-group form-group-year">
-                      <input class="form-control" id="cosNumber" name="cosNumber" type="number" pattern="[0-9]*" min="0">
+                      <input class="form-control store" id="cosNumber" name="New COS" type="number" pattern="[0-9]*" min="0">
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="form-label-bold" for="cosDetails">Reason for change</label>
-                  <textarea type="text" class="form-control" id="cosDetails" name="cosDetails" rows="6"></textarea>
+                  <textarea type="text" class="form-control store" id="cosDetails" name="Reason for change" rows="6"></textarea>
                 </div>
               </div>
 
             </fieldset>
           </div>
 
-          <h4 class="heading-small">
-            Approve vacancy?
-          </h4>
-
           <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Approve vacancy?</legend>
-
-              <label for="vacancyYes" class="block-label">
-                <input type="radio" name="vacancyapprove" value="true" id="vacancyYes">
-                Yes
-              </label>
-
-              <label for="vacancyNo" class="block-label" data-target="vacancyapprove-details">
-                <input type="radio" name="vacancyapprove" value="false" id="vacancyNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="vacancyapprove-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="vacancyDetails">Details</label>
-                  <textarea type="text" class="form-control" id="vacancyDetails" name="vacancyDetails" rows="6"></textarea>
-                </div>
-              </div>
-
-            </fieldset>
+            <label class="form-label-bold" for="vacancy-notes">
+              Any other notes or concerns
+            </label>
+            <textarea type="text" class="form-control store" id="vacancy-notes" name="Other" rows="6"></textarea>
           </div>
 
           <div class="form-group">
@@ -1285,74 +825,73 @@
       </div> <!-- /Vacancy details -->
 
       <div id="application-decision" class="leftnavcontent">
-        <form action="#0" method="get" class="form">
+        <form action="/application-refusal" method="get" class="form">
 
           <h2 class="heading-large" style="margin-top: 0">
             Application decision
           </h2>
 
-          <table style="margin-bottom: 30px">
+          <h4 class="heading-medium results-title visuallyhidden">
+            Your comments
+          </h4>
+
+          <table class="business-details-results" style="margin-bottom: 30px; display: none">
             <caption style="text-align: left">
               Business details
             </caption>
-            <tr>
-              <th>Companies House details</th>
-              <td>The company was not active on companies house</td>
-            </tr>
-            <tr>
-              <th>Sponsorship history</th>
-              <td>Refused under another company name, ACME inc.</td>
-            </tr>
           </table>
 
-          <table style="margin-bottom: 30px">
+          <table class="ao-details-results" style="margin-bottom: 30px; display: none">
             <caption style="text-align: left">
               AO details
             </caption>
-            <tr>
-              <th>Banned user</th>
-              <td>Listed on the banned user list.</td>
-            </tr>
-            <tr>
-              <th>Sponsorship history</th>
-              <td>Refused under another company name, ACME inc.</td>
-            </tr>
           </table>
 
-          <table style="margin-bottom: 30px">
+          <table class="other-user-results" style="margin-bottom: 30px; display: none">
+            <caption style="text-align: left">
+              Other user details
+            </caption>
+          </table>
+
+          <table class="rep-details-results" style="margin-bottom: 30px; display: none">
+            <caption style="text-align: left">
+              Representative details
+            </caption>
+          </table>
+
+          <table class="vacancy-details-results" style="margin-bottom: 30px; display: none">
             <caption style="text-align: left">
               Vacancy details
             </caption>
-            <tr>
-              <th>COS allocation</th>
-              <td>Reduced due to insufficient evidence of requirement</td>
-            </tr>
           </table>
 
-          <h4 class="heading-small">
-            Grant application?
+          <h4 class="heading-medium">
+            Overall decision
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
               <legend class="visuallyhidden">Grant application?</legend>
 
-              <label for="appYes" class="block-label">
-                <input type="radio" name="app" value="true" id="appYes">
-                Yes
+              <label for="decisionYes" class="block-label">
+                <input type="radio" name="decision" value="true" id="decisionYes">
+                Grant
               </label>
 
-              <label for="appNo" class="block-label" data-target="app-details">
-                <input type="radio" name="app" value="false" id="appNo">
-                No
+              <label for="decisionNo" class="block-label" data-target="decision-details">
+                <input type="radio" name="decision" value="false" id="decisionNo">
+                Refuse
               </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="app-details">
+              <div class="panel panel-border-narrow js-hidden" id="decision-details">
                 <div class="form-group">
-                  <label class="form-label-bold" for="appDetails">Reasons for refusal</label>
-                  <textarea type="text" class="form-control" id="appDetails" name="appDetails" rows="6"></textarea>
+                  <label class="form-label-bold" for="decisionDetails">Reasons for refusal</label>
+                  <textarea type="text" class="form-control" id="decisionDetails" name="decisionDetails" rows="6"></textarea>
                 </div>
               </div>
+
+              <input type="hidden" name="urn" value="{{urn}}" />
+              <input type="hidden" name="compName" value="{{compName}}" />
 
             </fieldset>
           </div>
