@@ -22,7 +22,7 @@
       <div class="panel panel-border-wide">
 
         <div class="grid-row">
-          <div class="column-two-thirds">
+          <div class="column-one-third">
             <!-- <h2 class="heading-medium" style="margin: 0;">
               {{ compName }}
             </h2> -->
@@ -31,9 +31,11 @@
               <li>Status: {{ status }}</li>
             </ul>
           </div>
-          <div class="column-one-third" style="text-align: right;">
+          <div class="column-two-thirds" style="text-align: right;">
             <a class="button overview" href="#0" style="display: none">Casework</a>
-            <a class="button action" onclick="window.location='/caseworker-action'+window.location.search;" style="display: none">Action case</a>
+            <a class="button-secondary action" onclick="window.location='/caseworker-action'+window.location.search;" style="display: none">Put on hold</a>
+            <a class="button-secondary action" onclick="window.location='/caseworker-action'+window.location.search;" style="display: none">Request visit</a>
+            <a class="button-secondary action overview" onclick="window.location='/caseworker-action'+window.location.search;" style="display: none">Add note</a>
           </div>
 
         </div>
@@ -1298,11 +1300,15 @@
       </div> <!-- /Vacancy details -->
 
       <div id="application-decision" class="leftnavcontent">
-        <form action="#0" method="get" class="form">
+        <form action="/application-refusal" method="get" class="form">
 
           <h2 class="heading-large" style="margin-top: 0">
             Application decision
           </h2>
+
+          <h4 class="heading-medium">
+            Your comments
+          </h4>
 
           <table style="margin-bottom: 30px">
             <caption style="text-align: left">
@@ -1342,30 +1348,33 @@
             </tr>
           </table>
 
-          <h4 class="heading-small">
-            Grant application?
+          <h4 class="heading-medium">
+            Overall decision
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
               <legend class="visuallyhidden">Grant application?</legend>
 
-              <label for="appYes" class="block-label">
-                <input type="radio" name="app" value="true" id="appYes">
-                Yes
+              <label for="decisionYes" class="block-label">
+                <input type="radio" name="decision" value="true" id="decisionYes">
+                Grant
               </label>
 
-              <label for="appNo" class="block-label" data-target="app-details">
-                <input type="radio" name="app" value="false" id="appNo">
-                No
+              <label for="decisionNo" class="block-label" data-target="decision-details">
+                <input type="radio" name="decision" value="false" id="decisionNo">
+                Refuse
               </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="app-details">
+              <div class="panel panel-border-narrow js-hidden" id="decision-details">
                 <div class="form-group">
-                  <label class="form-label-bold" for="appDetails">Reasons for refusal</label>
-                  <textarea type="text" class="form-control" id="appDetails" name="appDetails" rows="6"></textarea>
+                  <label class="form-label-bold" for="decisionDetails">Reasons for refusal</label>
+                  <textarea type="text" class="form-control" id="decisionDetails" name="decisionDetails" rows="6"></textarea>
                 </div>
               </div>
+
+              <input type="hidden" name="urn" value="{{urn}}" />
+              <input type="hidden" name="compName" value="{{compName}}" />
 
             </fieldset>
           </div>

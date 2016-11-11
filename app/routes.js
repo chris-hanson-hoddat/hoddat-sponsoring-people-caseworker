@@ -37,6 +37,18 @@ router.get('/caseworker-action', function (req, res) {
   res.render('caseworker-action', { 'compName': compName ,  'urn': urn, 'status': status })
 })
 
+router.get('/application-refusal', function (req, res) {
+  var compName = req.query.compName
+  var urn = req.query.urn
+  var decision = req.query.decision
+
+  if (decision == 'true') {
+    res.render('application-grant', { 'compName': compName ,  'urn': urn })
+  } else {
+    res.render('application-refusal', { 'compName': compName ,  'urn': urn })
+  }
+})
+
 // add your routes here
 
 // Documents check
