@@ -69,12 +69,12 @@
             <tr>
               <th>Companies House number</th>
               <td>
-                <a href="https://beta.companieshouse.gov.uk/company/06232576" title="View on Companies House" target="_blank" rel="external">06232576</a>
+                06232576
               </td>
             </tr>
             <tr>
-              <th>Primary address</th>
-              <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" title="Search on Google Maps" target="_blank" rel="external">123 West Street<br>Sheffield<br>S1 2AB</a></td>
+              <th>Trading address</th>
+              <td>123 West Street<br>Sheffield<br>S1 2AB</td>
             </tr>
             <tr>
               <td colspan="2">
@@ -88,17 +88,17 @@
                     <table>
                       <tr>
                         <td>
-                          <a href="http://maps.google.com/?q=164 Timperley Court Timperley Gardens Redhill RH1 2AU" title="Search on Google Maps" target="_blank" rel="external">164 Timperley Court<br>Redhill<br>RH1 2AU</a>
+                          164 Timperley Court<br>Redhill<br>RH1 2AU
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <a href="http://maps.google.com/?q=1107 Arnside Road Nottingham NG5 5HH" title="Search on Google Maps" target="_blank" rel="external">1107 Arnside Road<br>Nottingham<br>NG5 5HH</a>
+                          1107 Arnside Road<br>Nottingham<br>NG5 5HH
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <a href="http://maps.google.com/?q=1170 Armscroft Place Gloucester GL2 0SP" title="Search on Google Maps" target="_blank" rel="external">1170 Armscroft Place<br>Gloucester<br>GL2 0SP</a>
+                          1170 Armscroft Place<br>Gloucester<br>GL2 0SP
                         </td>
                       </tr>
                     </table>
@@ -229,7 +229,7 @@
             </tr> -->
             <tr>
               <th>Workplace address</th>
-              <td><a href="http://maps.google.com/?q=1176 Nelson Street Bamber Bridge PR5 6FY" target="_blank" rel="external">1176 Nelson Street<br>Bamber Bridge<br>PR5 6FY</a></td>
+              <td>1176 Nelson Street<br>Bamber Bridge<br>PR5 6FY</td>
             </tr>
             <tr>
               <th>Contact number</th>
@@ -281,7 +281,7 @@
             </tr>
             <tr>
               <th>Company address</th>
-              <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" target="_blank" rel="external">1195 Longwood Gate<br>Longwood<br>HD3 4US</a></td>
+              <td>1195 Longwood Gate<br>Longwood<br>HD3 4US</td>
             </tr>
             <tr>
               <th>Contact number</th>
@@ -339,9 +339,45 @@
       <div id="application-decision" class="leftnavcontent">
         <form action="#0" method="get" class="form">
 
-          <h2 class="heading-large" style="margin-top: 0">
+          <h2 class="heading-large">
             Application decision
           </h2>
+
+          <h4 class="heading-small">
+            Approve COS allocation?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Approve COS allocation?</legend>
+
+              <label for="cosYes" class="block-label">
+                <input type="radio" name="cosapprove" value="true" id="cosYes">
+                Yes
+              </label>
+
+              <label for="cosNo" class="block-label" data-target="cosapprove-details">
+                <input type="radio" name="cosapprove" value="false" id="cosNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="cosapprove-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="cosNumber">New COS allocation</label>
+                  <div class="form-date">
+                    <div class="form-group form-group-year">
+                      <input class="form-control store" id="cosNumber" name="New COS" type="number" pattern="[0-9]*" min="0">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label-bold" for="cosDetails">Reason for change</label>
+                  <textarea type="text" class="form-control store" id="cosDetails" name="Reason for change" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
 
           <h4 class="heading-small">
             Grant application?
@@ -353,12 +389,12 @@
 
               <label for="appYes" class="block-label">
                 <input type="radio" name="app" value="true" id="appYes">
-                Yes
+                Grant
               </label>
 
               <label for="appNo" class="block-label" data-target="app-details">
                 <input type="radio" name="app" value="false" id="appNo">
-                No
+                Refuse
               </label>
 
               <div class="panel panel-border-narrow js-hidden" id="app-details">
