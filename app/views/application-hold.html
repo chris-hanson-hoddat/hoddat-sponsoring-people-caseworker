@@ -38,7 +38,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <form action="#0" method="get" class="form">
+      <form action="/application-hold-confirm" method="get" class="form">
 
         <h2 class="heading-medium">
           Why would you like to put the case on hold?
@@ -48,9 +48,9 @@
           <fieldset>
             <legend class="visuallyhidden">Why would you like to put the case on hold?</legend>
 
-            <label for="hold1" class="block-label">
-              <input type="checkbox" name="actions" value="hold1" id="hold1">
-              Security check
+            <label for="hold3" class="block-label">
+              <input type="checkbox" name="actions" value="hold3" id="hold3">
+              Additional documents/information requested
             </label>
 
             <label for="hold2" class="block-label">
@@ -58,9 +58,14 @@
               Civil penalties enquiry
             </label>
 
-            <label for="hold3" class="block-label">
-              <input type="checkbox" name="actions" value="hold3" id="hold3">
-              Additional documents/information requested
+            <label for="hold12" class="block-label">
+              <input type="checkbox" name="actions" value="hold12" id="hold12">
+              Criminal investigation outstanding
+            </label>
+
+            <label for="hold10" class="block-label">
+              <input type="checkbox" name="actions" value="hold10" id="hold10">
+              Document verification
             </label>
 
             <label for="hold4" class="block-label">
@@ -73,29 +78,9 @@
               High profile, requires authorisation
             </label>
 
-            <label for="hold6" class="block-label">
-              <input type="checkbox" name="actions" value="hold6" id="hold6">
-              Policy advice required
-            </label>
-
-            <!-- <label for="hold7" class="block-label">
-              <input type="checkbox" name="actions" value="hold7" id="hold7">
-              Suspension and revocation action outstanding
-            </label> -->
-
-            <label for="hold8" class="block-label">
-              <input type="checkbox" name="actions" value="hold8" id="hold8">
-              Sponsor investigation team (SIT) – outstanding action
-            </label>
-
             <label for="hold9" class="block-label">
               <input type="checkbox" name="actions" value="hold9" id="hold9">
               HMRC data requested
-            </label>
-
-            <label for="hold10" class="block-label">
-              <input type="checkbox" name="actions" value="hold10" id="hold10">
-              Document verification
             </label>
 
             <label for="hold11" class="block-label">
@@ -103,10 +88,30 @@
               Litigation outstanding
             </label>
 
-            <label for="hold12" class="block-label">
-              <input type="checkbox" name="actions" value="hold12" id="hold12">
-              Criminal investigation outstanding
+            <label for="hold13" class="block-label">
+              <input type="checkbox" name="actions" value="hold13" id="hold13">
+              Out for visit
             </label>
+
+            <label for="hold6" class="block-label">
+              <input type="checkbox" name="actions" value="hold6" id="hold6">
+              Policy advice required
+            </label>
+
+            <label for="hold1" class="block-label">
+              <input type="checkbox" name="actions" value="hold1" id="hold1">
+              Security check
+            </label>
+
+            <label for="hold8" class="block-label">
+              <input type="checkbox" name="actions" value="hold8" id="hold8">
+              Sponsor investigation team (SIT) – outstanding action
+            </label>
+
+            <!-- <label for="hold7" class="block-label">
+              <input type="checkbox" name="actions" value="hold7" id="hold7">
+              Suspension and revocation action outstanding
+            </label> -->
 
           </fieldset>
         </div>
@@ -141,12 +146,15 @@
 
               <div class="form-group form-group-year">
                 <label for="hold-due-year">Year</label>
-                <input class="form-control" id="hold-due-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                <input class="form-control" id="hold-due-year" type="number" pattern="[0-9]*" min="0" >
               </div>
             </div>
 
           </fieldset>
         </div>
+
+        <input type="hidden" name="urn" value="{{urn}}" />
+        <input type="hidden" name="compName" value="{{compName}}" />
 
         <div class="form-group">
           <input type="submit" class="button" value="Continue">

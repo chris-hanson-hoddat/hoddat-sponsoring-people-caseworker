@@ -63,6 +63,7 @@
             <th>Status</th>
             <th class="all-cases-view">Owner</th>
             <th class="all-cases-view">Action</th>
+            <th class="my-cases-view">Due date</th>
           </tr>
         </thead>
         <tbody>
@@ -263,24 +264,27 @@
             <td>In progress</td>
             <td class="all-cases-view">Joe Bloggs</td>
             <td class="all-cases-view"><!-- <a class="button" href="/caseworker?compName=Soylent Corp&urn=603600002B&status=Ready" role="button">Casework</a> --></td>
+            <td class="my-cases-view"></td>
           </tr>
           <tr>
-            <td><a href="/caseworker?compName=Initech&urn=603600002B&status=On hold (internal)">603600002I</a></td>
+            <td><a href="/caseworker?compName=Initech&urn=603600002B&status=On hold">603600002I</a></td>
             <td class="my-cases-view">Initech</td>
             <!-- <td>01/01/2016</td> -->
             <td class="date" data-days="15">01/03/2016</td>
-            <td>On hold: internal</td>
+            <td>On hold</td>
             <td class="all-cases-view">Joe Bloggs</td>
             <td class="all-cases-view"><!-- <a class="button" href="/caseworker?compName=Initech&urn=603600002B&status=Ready" role="button">Casework</a> --></td>
+            <td class="date my-cases-view" data-days="2"></td>
           </tr>
           <tr>
-            <td><a href="/caseworker?compName=Weyland-Yutani Corporation&urn=603600002B&status=On hold (external)">603600002I</a></td>
+            <td><a href="/caseworker?compName=Weyland-Yutani Corporation&urn=603600002B&status=On hold">603600002I</a></td>
             <td class="my-cases-view">Weyland-Yutani Corporation</td>
             <!-- <td>01/01/2016</td> -->
             <td class="date" data-days="20">01/03/2016</td>
-            <td>On hold: external</td>
+            <td>On hold</td>
             <td class="all-cases-view">Joe Bloggs</td>
             <td class="all-cases-view"><!-- <a class="button" href="/caseworker?compName=Weyland-Yutani Corporation&urn=603600002B&status=Ready" role="button">Casework</a> --></td>
+            <td class="date my-cases-view" data-days="3"></td>
           </tr>
           <tr>
             <td><a href="/caseworker?compName=Umbrella Corporation&urn=603600002B&status=Out for visit">603600002J</a></td>
@@ -290,6 +294,7 @@
             <td>Out for visit</td>
             <td class="all-cases-view">Joe Bloggs</td>
             <td class="all-cases-view"><!-- <a class="button" href="/caseworker?compName=Umbrella Corporation&urn=603600002B&status=Ready" role="button">Casework</a> --></td>
+            <td class="date my-cases-view" data-days="10"></td>
           </tr>
           <tr>
             <td><a href="/caseworker?compName=Overseas Lawyers Co&urn=603600002Y&overview&status=Awaiting validation">603600002Y</a></td>
