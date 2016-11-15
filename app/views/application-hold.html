@@ -40,7 +40,7 @@
 
       <form action="#0" method="get" class="form">
 
-        <h2 class="heading-medium" style="margin-top: 0">
+        <h2 class="heading-medium">
           Why would you like to put the case on hold?
         </h2>
 
@@ -48,64 +48,102 @@
           <fieldset>
             <legend class="visuallyhidden">Why would you like to put the case on hold?</legend>
 
-            <label for="doc1" class="block-label">
-              <input type="radio" name="actions" value="doc1" id="doc1">
-              X checks (security checks expired) – automate
+            <label for="hold1" class="block-label">
+              <input type="checkbox" name="actions" value="hold1" id="hold1">
+              Security check
             </label>
 
-            <label for="doc1" class="block-label">
-              <input type="radio" name="actions" value="doc1" id="doc1">
-              Civil Penalties
-            </label>
-            <label for="doc1" class="block-label">
-              <input type="radio" name="actions" value="doc1" id="doc1">
-              Additional documents/information
+            <label for="hold2" class="block-label">
+              <input type="checkbox" name="actions" value="hold2" id="hold2">
+              Civil penalties enquiry
             </label>
 
-            <label for="doc1" class="block-label">
-              <input type="radio" name="actions" value="doc1" id="doc1">
+            <label for="hold3" class="block-label">
+              <input type="checkbox" name="actions" value="hold3" id="hold3">
+              Additional documents/information requested
+            </label>
+
+            <label for="hold4" class="block-label">
+              <input type="checkbox" name="actions" value="hold4" id="hold4">
               DWP referral
             </label>
 
-            <label for="doc1" class="block-label">
-              <input type="radio" name="actions" value="doc1" id="doc1">
-              High Profile – authorisation required
+            <label for="hold5" class="block-label">
+              <input type="checkbox" name="actions" value="hold5" id="hold5">
+              High profile, requires authorisation
             </label>
 
-            <label for="doc1" class="block-label">
-              <input type="radio" name="actions" value="doc1" id="doc1">
-              Policy advice
+            <label for="hold6" class="block-label">
+              <input type="checkbox" name="actions" value="hold6" id="hold6">
+              Policy advice required
             </label>
 
-            <label for="doc1" class="block-label">
-              <input type="radio" name="actions" value="doc1" id="doc1">
-              Suspension and Revocation Action Outstanding
+            <!-- <label for="hold7" class="block-label">
+              <input type="checkbox" name="actions" value="hold7" id="hold7">
+              Suspension and revocation action outstanding
+            </label> -->
+
+            <label for="hold8" class="block-label">
+              <input type="checkbox" name="actions" value="hold8" id="hold8">
+              Sponsor investigation team (SIT) – outstanding action
             </label>
 
-            <label for="doc1" class="block-label">
-              <input type="radio" name="actions" value="doc1" id="doc1">
-              SIT – outstanding action
+            <label for="hold9" class="block-label">
+              <input type="checkbox" name="actions" value="hold9" id="hold9">
+              HMRC data requested
             </label>
 
-            <label for="doc1" class="block-label">
-              <input type="radio" name="actions" value="doc1" id="doc1">
-              HRMC data request
-            </label>
-
-            <label for="doc1" class="block-label">
-              <input type="radio" name="actions" value="doc1" id="doc1">
+            <label for="hold10" class="block-label">
+              <input type="checkbox" name="actions" value="hold10" id="hold10">
               Document verification
             </label>
 
-            <label for="doc1" class="block-label">
-              <input type="radio" name="actions" value="doc1" id="doc1">
-              Litigation
+            <label for="hold11" class="block-label">
+              <input type="checkbox" name="actions" value="hold11" id="hold11">
+              Litigation outstanding
             </label>
 
-            <label for="doc2" class="block-label">
-              <input type="radio" name="actions" value="doc2" id="doc2">
-              Criminal Investigation
+            <label for="hold12" class="block-label">
+              <input type="checkbox" name="actions" value="hold12" id="hold12">
+              Criminal investigation outstanding
             </label>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="hold-notes">
+            Notes
+            <span class="form-hint">e.g. which additional documents have been requested</span>
+          </label>
+          <textarea type="text" class="form-control store" id="hold-notes" name="Notes" rows="6"></textarea>
+        </div>
+
+        <h2 class="heading-medium">
+          What date will this be due for review?
+          <span class="form-hint">e.g. 31/01/2017</span>
+        </h2>
+
+         <div class="form-group">
+          <fieldset>
+
+            <div class="form-date">
+
+              <div class="form-group form-group-day">
+                <label for="hold-due-day">Day</label>
+                <input class="form-control" id="hold-due-day" type="number" pattern="[0-9]*" min="0" max="31">
+              </div>
+
+              <div class="form-group form-group-month">
+                <label for="hold-due-month">Month</label>
+                <input class="form-control" id="hold-due-month" type="number" pattern="[0-9]*" min="0" max="12">
+              </div>
+
+              <div class="form-group form-group-year">
+                <label for="hold-due-year">Year</label>
+                <input class="form-control" id="hold-due-year" type="number" pattern="[0-9]*" min="0" max="2014">
+              </div>
+            </div>
 
           </fieldset>
         </div>
