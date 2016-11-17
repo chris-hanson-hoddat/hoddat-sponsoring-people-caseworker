@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Put case on hold
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+
+    <div class="column-full">
+      <a onclick="history.go(-1); return false;" href="#0" class="link-back">Back</a>
+    </div>
+
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge" style="margin-bottom: 0;">
+        Place application on hold
+      </h1>
+    </div>
+
+    <div class="column-two-thirds">
+      <div class="panel panel-border-wide">
+        <!-- <h2 class="heading-medium" style="margin-top: 0;">
+          {{ compName }}
+        </h2> -->
+        <ul class="list">
+          <li>Company name: {{ compName }}</li>
+          <li>URN: {{ urn }}</li>
+          <li>Status: {{ status }}</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/application-hold-confirm" method="get" class="form">
+
+        <div class="form-group">
+          <label class="form-label-bold" for="hold-notes">
+            Notes
+            <span class="form-hint">e.g. which additional documents have been requested</span>
+          </label>
+          <textarea type="text" class="form-control store" id="hold-notes" name="Notes" rows="6"></textarea>
+        </div>
+
+        <h2 class="heading-medium">
+          What date will this be due for review?
+          <span class="form-hint">e.g. 31/01/2017</span>
+        </h2>
+
+         <div class="form-group">
+          <fieldset>
+
+            <div class="form-date">
+
+              <div class="form-group form-group-day">
+                <label for="hold-due-day">Day</label>
+                <input class="form-control" id="hold-due-day" type="number" pattern="[0-9]*" min="0" max="31">
+              </div>
+
+              <div class="form-group form-group-month">
+                <label for="hold-due-month">Month</label>
+                <input class="form-control" id="hold-due-month" type="number" pattern="[0-9]*" min="0" max="12">
+              </div>
+
+              <div class="form-group form-group-year">
+                <label for="hold-due-year">Year</label>
+                <input class="form-control" id="hold-due-year" type="number" pattern="[0-9]*" min="0" >
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <input type="hidden" name="urn" value="{{urn}}" />
+        <input type="hidden" name="compName" value="{{compName}}" />
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

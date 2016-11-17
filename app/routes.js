@@ -37,6 +37,14 @@ router.get('/application-hold', function (req, res) {
   res.render('application-hold', { 'compName': compName ,  'urn': urn, 'status': status })
 })
 
+router.get('/application-hold-alpha', function (req, res) {
+  var compName = req.query.compName
+  var urn = req.query.urn
+  var status = req.query.status
+
+  res.render('application-hold-alpha', { 'compName': compName ,  'urn': urn, 'status': status })
+})
+
 router.get('/application-hold-confirm', function (req, res) {
   var compName = req.query.compName
   var urn = req.query.urn
