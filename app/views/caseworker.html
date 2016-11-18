@@ -68,6 +68,12 @@
           </a>
         </li>
         <li>
+          <a href="#0" class="leftnavlinks other-user-2" data-target="other-user-2">
+            Other user details
+            <span class="tag tag--complete" style="display: none;">Complete</span>
+          </a>
+        </li>
+        <li>
           <a href="#0" class="leftnavlinks rep-details" data-target="rep-details">
             Representative details
             <!-- <span class="tag tag--risk">Risk</span> -->
@@ -554,6 +560,113 @@
           </div>
 
           <div class="form-group">
+            <a href="#0" class="button leftnavlinks" data-target="other-user-2">
+              Continue
+            </a>
+          </div>
+
+        </form>
+      </div>
+
+      <div id="other-user-2" class="leftnavcontent">
+        <form>
+
+          <h2 class="heading-large" style="margin-top: 0">
+            Other user details
+          </h2>
+
+          <table style="margin-bottom: 30px">
+            <tr>
+              <th>Full name</th>
+              <td>Kate Riley</td>
+            </tr>
+            <tr>
+              <th>Nationality</th>
+              <td>British</td>
+            </tr>
+            <tr>
+              <th>DOB</th>
+              <td>14/11/1985</td>
+            </tr>
+            <tr>
+              <th>Workplace address</th>
+              <td><a href="http://maps.google.com/?q=1176 Nelson Street Bamber Bridge PR5 6FY" target="_blank" rel="external">1176 Nelson Street<br>Bamber Bridge<br>PR5 6FY</a></td>
+            </tr>
+            <tr>
+              <th>Contact number</th>
+              <td>07555830799</td>
+            </tr>
+            <tr>
+              <th>Email address</th>
+              <td><a href="mailto:kate.riley@acme.com">kate.riley@acme.com</a></td>
+            </tr>
+          </table>
+
+          <h4 class="heading-small">
+            Does the user have any PNC or WI convictions, or are they a banned user?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the user have any PNC or WI convictions, or are they a banned user?</legend>
+
+              <label for="other2_pncYes" class="block-label" data-target="other2_pnc-details">
+                <input type="radio" name="other2_pnc" value="true" id="other2_pncYes">
+                Yes
+              </label>
+
+              <label for="other2_pncNo" class="block-label">
+                <input type="radio" name="other2_pnc" value="false" id="other2_pncNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="other2_pnc-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="other2_pncDetails">Details</label>
+                  <textarea type="text" class="form-control store" id="other2_pncDetails" name="PNC, WICU or banner user" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Is there any evidence of previous non-compliance in the last 5 years?
+            <span class="form-hint">User has been rejected or refused for this or another company.</span>
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Is there any evidence of previous non-compliance in the last 5 years?</legend>
+
+              <label for="other2_historyYes" class="block-label" data-target="other2_history-details">
+                <input type="radio" name="other2_history" value="true" id="other2_historyYes">
+                Yes
+              </label>
+
+              <label for="other2_historyNo" class="block-label">
+                <input type="radio" name="other2_history" value="false" id="other2_historyNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="other2_history-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="other2_historyDetails">Details</label>
+                  <textarea type="text" class="form-control store" id="other2_historyDetails" name="User non-compliance" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="otheruser-notes">
+              Any other notes or concerns
+            </label>
+            <textarea type="text" class="form-controlstore" id="otheruser-notes" name="Other" rows="6"></textarea>
+          </div>
+
+          <div class="form-group">
             <a href="#0" class="button leftnavlinks" data-target="rep-details">
               Continue
             </a>
@@ -887,6 +1000,12 @@
           </table>
 
           <table class="other-user-results" style="margin-bottom: 30px; display: none">
+            <caption style="text-align: left">
+              Other user details
+            </caption>
+          </table>
+
+          <table class="other-user-2-results" style="margin-bottom: 30px; display: none">
             <caption style="text-align: left">
               Other user details
             </caption>
