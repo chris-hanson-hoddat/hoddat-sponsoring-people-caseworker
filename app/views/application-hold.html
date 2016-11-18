@@ -125,11 +125,25 @@
         </div>
 
         <h2 class="heading-medium">
-          What date will this be due for review?
-          <span class="form-hint">e.g. 31/01/2017</span>
+          How many days until this is due for review?
+          <!-- <span class="form-hint">e.g. 31/01/2017</span> -->
         </h2>
+        <div class="form-group">
+          <fieldset>
 
-         <div class="form-group">
+            <div class="form-date">
+
+              <div class="form-group form-group-year">
+                <label for="hold-due-year" class="visuallyhidden">How many days until this is due for review?</label>
+                <input class="form-control" id="hold-due-year" type="number" pattern="[0-9]*" min="0">
+              </div>
+
+            </div>
+
+          </fieldset>
+        </div>
+
+         <!-- <div class="form-group">
           <fieldset>
 
             <div class="form-date">
@@ -151,7 +165,9 @@
             </div>
 
           </fieldset>
-        </div>
+        </div> -->
+
+
 
         <input type="hidden" name="urn" value="{{urn}}" />
         <input type="hidden" name="compName" value="{{compName}}" />
