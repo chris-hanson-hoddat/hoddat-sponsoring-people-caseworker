@@ -27,7 +27,17 @@ $(document).ready(function () {
   showHideContent.init()
 })
 
+// caseworker stick content
+$("#js-stick").sticky({
+  zIndex:1,
+  widthFromWrapper: false
+});
 
+// $(".leftnav").sticky({
+//   zIndex:1,
+//   topSpacing: 120,
+//   widthFromWrapper: false
+// });
 
 
 // Make jQuery :contains Case-Insensitive
@@ -143,6 +153,17 @@ $('.leftnavlinks').click(function(e) {
   } // /buttons
 }); // /left links
 
+
+
+
+
+// Notes on caseworker page
+$('.js-add-note').click(function() {
+  $('.js-notes').toggle();
+  $(this).text(function(i, v){
+    return v === 'Add note' ? 'Cancel note' : 'Add note'
+  })
+});
 
 
 

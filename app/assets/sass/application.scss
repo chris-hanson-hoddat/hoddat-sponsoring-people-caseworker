@@ -80,6 +80,39 @@ table tr:hover {
   background-color: #f8f8f8;
 }
 
+
+
+
+// Sticky header in caseworker
+.is-sticky #js-stick {
+  border-bottom: 10px solid #005ea5;
+  background-color: white;
+}
+
+.is-sticky h1 {
+  font-size: 24px;
+  transition: font 0.3s ease;
+}
+
+
+
+
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline li {
+  display: inline-block;
+  padding: 6px;
+  margin-bottom: 0;
+}
+
+
+
+
+
 // Highlight tag
 // e.g. 'Recieved online' tag on docs screen
 .tag {

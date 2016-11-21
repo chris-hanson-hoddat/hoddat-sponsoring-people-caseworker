@@ -8,7 +8,7 @@
 
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
-  <div class="grid-row">
+  <div id="js-stick" class="grid-row">
 
     <!-- <div class="column-full">
       <a onclick="history.go(-1); return false;" href="#0" class="link-back">Back</a>
@@ -19,27 +19,47 @@
         {{ compName }}
       </h1>
 
-      <div class="panel panel-border-wide">
+      <div class="panel panel-border-wide" style="padding: 5px 15px;">
 
         <div class="grid-row">
-          <div class="column-one-third">
+          <div class="column-two-thirds">
             <!-- <h2 class="heading-medium" style="margin: 0;">
               {{ compName }}
             </h2> -->
-            <ul class="list">
+            <ul class="list list-inline">
               <li>URN: {{ urn }}</li>
               <li>Status: {{ status }}</li>
             </ul>
           </div>
-          <div class="column-two-thirds" style="text-align: right;">
+          <div class="column-one-third" style="text-align: right;">
             <a class="button overview" href="#0" style="display: none">Casework</a>
             <a class="button-secondary action" onclick="window.location='/application-hold'+window.location.search;" style="display: none">Put on hold</a>
             <!-- <a class="button-secondary action" onclick="window.location='/caseworker-action'+window.location.search;" style="display: none">Request visit</a> -->
-            <a href="#0" class="button-secondary action overview">Add note</a>
+            <a href="#0" class="button-secondary action overview js-add-note">Add note</a>
           </div>
 
         </div>
 
+      </div>
+
+      <div class="grid-row js-notes" style="display: none">
+        <div class="column-two-thirds">
+          <form action="" class="form">
+            <div class="form-group">
+              <label class="form-label-bold" for="comp-notes">
+                Add a note about this case
+              </label>
+              <textarea type="text" class="form-control store" id="comp-notes" name="Other" rows="6"></textarea>
+            </div>
+
+            <div class="form-group">
+              <a href="#0" class="button leftnavlinks" data-target="ao-details">
+                Save note
+              </a>
+            </div>
+
+          </form>
+        </div>
       </div>
 
     </div>
@@ -57,7 +77,7 @@
         </li>
         <li>
           <a href="#0" class="leftnavlinks ao-details" data-target="ao-details">
-            AO details
+            Authorising officer details
             <span class="tag tag--complete" style="display: none;">Complete</span>
           </a>
         </li>
@@ -75,7 +95,7 @@
         </li>
         <li>
           <a href="#0" class="leftnavlinks rep-details" data-target="rep-details">
-            Representative details
+            Immigration adviser details
             <!-- <span class="tag tag--risk">Risk</span> -->
             <span class="tag tag--complete" style="display: none;">Complete</span>
           </a>
@@ -109,7 +129,7 @@
               Business details submitted
             </caption> -->
             <tr>
-              <th>Company name</th>
+              <th>Organisation name</th>
               <td>{{ compName }}</td>
             </tr>
             <tr>
@@ -127,7 +147,7 @@
                 <details role="group" style="margin: 0; padding: 0; border: 0; ">
 
                   <summary role="button" aria-controls="details-content-address" aria-expanded="false">
-                    <span class="summary">Additional address</span>
+                    <span class="summary">Other address</span>
                   </summary>
 
                   <div class="panel panel-border-narrow" id="details-content-address" aria-hidden="true">
@@ -163,15 +183,14 @@
             </tr>
           </table>
 
-
           <h4 class="heading-small">
-            Are the details listed correct according to Companies House?
-            <span class="form-hint">Company is active, date of incorporation, and AO is listed.</span>
+            Is the organisation&rsquo;s information on Companies House the same as the details they&rsquo;ve provided?
+            <span class="form-hint">Organisation is active and date of incorporation is correct</span>
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Are the details listed correct according to Companies House?</legend>
+              <legend class="visuallyhidden">Is the organisation&rsquo;s information on Companies House the same as the details they&rsquo;ve provided?</legend>
 
               <label for="companyYes" class="block-label">
                 <input type="radio" name="company" value="true" id="companyYes">
@@ -194,13 +213,13 @@
           </div>
 
           <h4 class="heading-small">
-            Is the regulatory registration correct?
-            <span class="form-hint">Provided details are correct and/or any registrations missing.</span>
+            Is the organisation properly registered?
+            <span class="form-hint">Is the organisation registered with the regulatory bodies listed in business details? Is it regulated with all the bodies it needs to be?</span>
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Is the regulatory registration correct?</legend>
+              <legend class="visuallyhidden">Is the organisation properly registered?</legend>
 
               <label for="sector_regYes" class="block-label">
                 <input type="radio" name="sector_reg" value="true" id="sector_regYes">
@@ -224,7 +243,7 @@
 
           <h4 class="heading-small">
             Is there any evidence of previous non-compliance in the last 5 years?
-            <span class="form-hint">Against the current company name or any other previous registrations.</span>
+            <span class="form-hint">Against the current organisation name or any other previous registrations.</span>
           </h4>
 
           <div class="form-group">
@@ -252,12 +271,12 @@
           </div>
 
           <h4 class="heading-small">
-            Are there any intelligence check issues?
+            Is there any intelligence on this organisation?
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Are there any intelligence check issues?</legend>
+              <legend class="visuallyhidden">Is there any intelligence on this organisation?</legend>
 
               <label for="athenaYes" class="block-label" data-target="athena-details">
                 <input type="radio" name="athena" value="true" id="athenaYes">
@@ -327,7 +346,7 @@
         <form>
 
           <h2 class="heading-large" style="margin-top: 0">
-            AO details
+            Authorising officer details
           </h2>
 
           <table style="margin-bottom: 30px">
@@ -358,12 +377,12 @@
           </table>
 
           <h4 class="heading-small">
-            Does the AO have any PNC or WI convictions, are they a disqualified director, or are they a banned user?
+            Does the authorising officer have any PNC or WI convictions, are they a disqualified director, or are they a banned user?
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Does the AO have any PNC or WI convictions, are they a disqualified director, or are they a banned user?</legend>
+              <legend class="visuallyhidden">Does the authorising officer have any PNC or WI convictions, are they a disqualified director, or are they a banned user?</legend>
 
               <label for="pncYes" class="block-label" data-target="pnc-details">
                 <input type="radio" name="pnc" value="true" id="pncYes">
@@ -387,7 +406,7 @@
 
           <h4 class="heading-small">
             Is there any evidence of previous non-compliance in the last 5 years?
-            <span class="form-hint">AO has been rejected or refused for this or another company.</span>
+            <span class="form-hint">Authorising officer has been rejected or refused for this or another company.</span>
           </h4>
 
           <div class="form-group">
@@ -415,7 +434,7 @@
           </div>
 
           <h4 class="heading-small">
-            Does the AO have any insolvency issues?
+            Does the authorising officer have any insolvency issues?
             <span class="form-hint">
               <a href="https://www.insolvencydirect.bis.gov.uk/eiir/" target="_blank" rel="external">Search the IIR</a> for details.
             </span>
@@ -423,7 +442,7 @@
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Does the AO have any insolvency issues?</legend>
+              <legend class="visuallyhidden">Does the authorising officer have any insolvency issues?</legend>
 
               <label for="insolvencyYes" class="block-label" data-target="insolvency-details">
                 <input type="radio" name="insolvency" value="true" id="insolvencyYes">
@@ -590,7 +609,7 @@
             </tr>
             <tr>
               <th>Workplace address</th>
-              <td><a href="http://maps.google.com/?q=1176 Nelson Street Bamber Bridge PR5 6FY" target="_blank" rel="external">1176 Nelson Street<br>Bamber Bridge<br>PR5 6FY</a></td>
+              <td><a href="http://maps.google.com/?q=5 Burton Close Langport TA10 0AF" target="_blank" rel="external">5 Burton Close<br>Langport<br>TA10 0AF</a></td>
             </tr>
             <tr>
               <th>Contact number</th>
@@ -679,7 +698,7 @@
         <form>
 
           <h2 class="heading-large" style="margin-top: 0">
-            Representative details
+            Immigration adviser details
           </h2>
 
           <table style="margin-bottom: 30px">
@@ -704,11 +723,11 @@
               <td>23/08/1950</td>
             </tr>
             <tr>
-              <th>Company name</th>
+              <th>Organisation name</th>
               <td>Reps r us</td>
             </tr>
             <tr>
-              <th>Company address</th>
+              <th>Organisation address</th>
               <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" target="_blank" rel="external">1195 Longwood Gate<br>Longwood<br>HD3 4US</a></td>
             </tr>
             <tr>
@@ -723,7 +742,7 @@
 
           <h4 class="heading-small">
             Are the provided registration details correct?
-            <span class="form-hint">Check with the registered body that the company and individual are listed.</span>
+            <span class="form-hint">Check with the registered body that the organisation and individual are listed.</span>
           </h4>
 
           <div class="form-group">
@@ -830,144 +849,302 @@
             Vacancy details
           </h2>
 
-          <table style="margin-bottom: 30px;">
-            <tr>
-              <th>COS request</th>
-              <td>1</td>
-            </tr>
-            <tr>
-              <th>Job title</th>
-              <td>Business development manager</td>
-            </tr>
-            <tr>
-              <th>Salary</th>
-              <td>&pound;30,000</td>
-            </tr>
-            <tr>
-              <th>SOC code</th>
-              <td>2135<!--  - IT business analysts, architects and systems designers --></td>
-            </tr>
-            <tr>
-              <th>Jobcentre Plus reference</th>
-              <td>ABC123456</td>
-            </tr>
-            <tr>
-              <th>Number of applications</th>
-              <td>2</td>
-            </tr>
-            <tr>
-              <th>Number of applications from settled workers</th>
-              <td>1</td>
-            </tr>
-            <tr>
-              <th>Required qualifications</th>
-              <td>Master&rsquo;s degree in Business or Real Estate from leading internationally recognised school</td>
-            </tr>
-            <tr>
-              <th>Experience</th>
-              <td>2 years</td>
-            </tr>
-            <tr>
-              <th>NQF level</th>
-              <td>6</td>
-            </tr>
-            <tr>
-              <th>Duties</th>
-              <td>Research new business opportunities including both desktop and on-the-ground research.<br>
-              Prepare financial and business models and conduct financial appraisals and analyse prospective investments or partnerships.<br>
-              Locate business partners in the Middle East.<br>
-              Negotiate partnerships and work closely with senior management to ensure our business interests are aligned.</td>
-            </tr>
-            <tr>
-              <th>Reports to</th>
-              <td>Head of finance</td>
-            </tr>
-            <tr>
-              <th>Responsible for</th>
-              <td>Office assistant</td>
-            </tr>
-            <tr>
-              <th>Hours per week</th>
-              <td>38</td>
-            </tr>
-            <tr>
-              <th>Business need</th>
-              <td>We're expanding our business and require a development manager to oversee this.</td>
-            </tr>
-          </table>
+          <details role="group">
 
-          <h4 class="heading-small">
-            Does the company hit any internal risk profiles?
-          </h4>
+            <summary role="button" aria-controls="details-content-address" aria-expanded="false">
+              <span class="summary heading-medium">Business development manager (&times;1)</span>
+            </summary>
 
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Does the company hit an internal risk profiles?</legend>
+            <div class="panel panel-border-narrow" id="details-content-address" aria-hidden="true">
+              <table style="margin-bottom: 30px;">
+                <tr>
+                  <th>COS request</th>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <th>Job title</th>
+                  <td>Business development manager</td>
+                </tr>
+                <tr>
+                  <th>Salary</th>
+                  <td>&pound;30,000</td>
+                </tr>
+                <tr>
+                  <th>SOC code</th>
+                  <td>2135<!--  - IT business analysts, architects and systems designers --></td>
+                </tr>
+                <tr>
+                  <th>Jobcentre Plus reference</th>
+                  <td>ABC123456</td>
+                </tr>
+                <tr>
+                  <th>Number of applications</th>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th>Number of applications from settled workers</th>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <th>Qualifications needed</th>
+                  <td>Master&rsquo;s degree in Business or Real Estate from leading internationally recognised school</td>
+                </tr>
+                <tr>
+                  <th>Experience</th>
+                  <td>2 years</td>
+                </tr>
+                <tr>
+                  <th>NQF level</th>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <th>Duties</th>
+                  <td>Research new business opportunities including both desktop and on-the-ground research.<br>
+                  Prepare financial and business models and conduct financial appraisals and analyse prospective investments or partnerships.<br>
+                  Locate business partners in the Middle East.<br>
+                  Negotiate partnerships and work closely with senior management to ensure our business interests are aligned.</td>
+                </tr>
+                <tr>
+                  <th>Reports to</th>
+                  <td>Head of finance</td>
+                </tr>
+                <tr>
+                  <th>Responsible for</th>
+                  <td>Business development assistant</td>
+                </tr>
+                <tr>
+                  <th>Hours per week</th>
+                  <td>38</td>
+                </tr>
+                <tr>
+                  <th>Business need</th>
+                  <td>We're expanding our business and require a development manager to oversee this.</td>
+                </tr>
+              </table>
 
-              <label for="risk_profileYes" class="block-label" data-target="risk_profile-details">
-                <input type="radio" name="risk_profile" value="true" id="risk_profileYes">
-                Yes
-              </label>
+              <h4 class="heading-small">
+                Does the organisation hit any internal risk profiles?
+              </h4>
 
-              <label for="risk_profileNo" class="block-label">
-                <input type="radio" name="risk_profile" value="false" id="risk_profileNo">
-                No
-              </label>
+              <div class="form-group">
+                <fieldset class="inline">
+                  <legend class="visuallyhidden">Does the organisation hit an internal risk profiles?</legend>
 
-              <div class="panel panel-border-narrow js-hidden" id="risk_profile-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="risk_profileDetails">Details</label>
-                  <textarea type="text" class="form-control store" id="risk_profileDetails" name="Risk profile" rows="6"></textarea>
-                </div>
-              </div>
+                  <label for="risk_profileYes" class="block-label" data-target="risk_profile-details">
+                    <input type="radio" name="risk_profile" value="true" id="risk_profileYes">
+                    Yes
+                  </label>
 
-            </fieldset>
-          </div>
+                  <label for="risk_profileNo" class="block-label">
+                    <input type="radio" name="risk_profile" value="false" id="risk_profileNo">
+                    No
+                  </label>
 
-          <h4 class="heading-small">
-            Approve COS allocation?
-          </h4>
-
-          <div class="form-group">
-            <fieldset class="inline">
-              <legend class="visuallyhidden">Approve COS allocation?</legend>
-
-              <label for="cosYes" class="block-label">
-                <input type="radio" name="cosapprove" value="true" id="cosYes">
-                Yes
-              </label>
-
-              <label for="cosNo" class="block-label" data-target="cosapprove-details">
-                <input type="radio" name="cosapprove" value="false" id="cosNo">
-                No
-              </label>
-
-              <div class="panel panel-border-narrow js-hidden" id="cosapprove-details">
-                <div class="form-group">
-                  <label class="form-label-bold" for="cosNumber">New COS allocation</label>
-                  <div class="form-date">
-                    <div class="form-group form-group-year">
-                      <input class="form-control store" id="cosNumber" name="New COS" type="number" pattern="[0-9]*" min="0">
+                  <div class="panel panel-border-narrow js-hidden" id="risk_profile-details">
+                    <div class="form-group">
+                      <label class="form-label-bold" for="risk_profileDetails">Details</label>
+                      <textarea type="text" class="form-control store" id="risk_profileDetails" name="Risk profile" rows="6"></textarea>
                     </div>
                   </div>
-                </div>
-                <div class="form-group">
-                  <label class="form-label-bold" for="cosDetails">Reason for change</label>
-                  <textarea type="text" class="form-control store" id="cosDetails" name="Reason for change" rows="6"></textarea>
-                </div>
+
+                </fieldset>
               </div>
 
-            </fieldset>
-          </div>
+              <h4 class="heading-small">
+                Approve COS allocation?
+              </h4>
 
-          <div class="form-group">
-            <label class="form-label-bold" for="vacancy-notes">
-              Any other notes or concerns
-            </label>
-            <textarea type="text" class="form-control store" id="vacancy-notes" name="Other" rows="6"></textarea>
-          </div>
+              <div class="form-group">
+                <fieldset class="inline">
+                  <legend class="visuallyhidden">Approve COS allocation?</legend>
 
-          <div class="form-group">
+                  <label for="cosYes" class="block-label">
+                    <input type="radio" name="cosapprove" value="true" id="cosYes">
+                    Yes
+                  </label>
+
+                  <label for="cosNo" class="block-label" data-target="cosapprove-details">
+                    <input type="radio" name="cosapprove" value="false" id="cosNo">
+                    No
+                  </label>
+
+                  <div class="panel panel-border-narrow js-hidden" id="cosapprove-details">
+                    <div class="form-group">
+                      <label class="form-label-bold" for="cosNumber">New COS allocation</label>
+                      <div class="form-date">
+                        <div class="form-group form-group-year">
+                          <input class="form-control store" id="cosNumber" name="New COS" type="number" pattern="[0-9]*" min="0">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label-bold" for="cosDetails">Reason for change</label>
+                      <textarea type="text" class="form-control store" id="cosDetails" name="Reason for change" rows="6"></textarea>
+                    </div>
+                  </div>
+
+                </fieldset>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label-bold" for="vacancy-notes">
+                  Any other notes or concerns
+                </label>
+                <textarea type="text" class="form-control store" id="vacancy-notes" name="Other" rows="6"></textarea>
+              </div>
+
+            </div>
+          </details>
+
+          <details role="group">
+
+            <summary role="button" aria-controls="details-content-address" aria-expanded="false">
+              <span class="summary heading-medium">Business development assistant (&times;2)</span>
+            </summary>
+
+            <div class="panel panel-border-narrow" id="details-content-address" aria-hidden="true">
+              <table style="margin-bottom: 30px;">
+                <tr>
+                  <th>COS request</th>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th>Job title</th>
+                  <td>Business development assistant</td>
+                </tr>
+                <tr>
+                  <th>Salary</th>
+                  <td>&pound;30,000</td>
+                </tr>
+                <tr>
+                  <th>SOC code</th>
+                  <td>2135<!--  - IT business analysts, architects and systems designers --></td>
+                </tr>
+                <tr>
+                  <th>Jobcentre Plus reference</th>
+                  <td>ABC123456</td>
+                </tr>
+                <tr>
+                  <th>Number of applications</th>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th>Number of applications from settled workers</th>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <th>Qualifications needed</th>
+                  <td>Master&rsquo;s degree in Business or Real Estate from leading internationally recognised school</td>
+                </tr>
+                <tr>
+                  <th>Experience</th>
+                  <td>2 years</td>
+                </tr>
+                <tr>
+                  <th>NQF level</th>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <th>Duties</th>
+                  <td>Research new business opportunities including both desktop and on-the-ground research.<br>
+                  Prepare financial and business models and conduct financial appraisals and analyse prospective investments or partnerships.<br>
+                  Locate business partners in the Middle East.<br>
+                  Negotiate partnerships and work closely with senior management to ensure our business interests are aligned.</td>
+                </tr>
+                <tr>
+                  <th>Reports to</th>
+                  <td>Business development manager</td>
+                </tr>
+                <tr>
+                  <th>Responsible for</th>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <th>Hours per week</th>
+                  <td>38</td>
+                </tr>
+                <tr>
+                  <th>Business need</th>
+                  <td>We're expanding our business and require development assistants to process this.</td>
+                </tr>
+              </table>
+
+              <h4 class="heading-small">
+                Does the organisation hit any internal risk profiles?
+              </h4>
+
+              <div class="form-group">
+                <fieldset class="inline">
+                  <legend class="visuallyhidden">Does the organisation hit an internal risk profiles?</legend>
+
+                  <label for="risk_profileYes" class="block-label" data-target="risk_profile-details">
+                    <input type="radio" name="risk_profile" value="true" id="risk_profileYes">
+                    Yes
+                  </label>
+
+                  <label for="risk_profileNo" class="block-label">
+                    <input type="radio" name="risk_profile" value="false" id="risk_profileNo">
+                    No
+                  </label>
+
+                  <div class="panel panel-border-narrow js-hidden" id="risk_profile-details">
+                    <div class="form-group">
+                      <label class="form-label-bold" for="risk_profileDetails">Details</label>
+                      <textarea type="text" class="form-control store" id="risk_profileDetails" name="Risk profile" rows="6"></textarea>
+                    </div>
+                  </div>
+
+                </fieldset>
+              </div>
+
+              <h4 class="heading-small">
+                Approve COS allocation?
+              </h4>
+
+              <div class="form-group">
+                <fieldset class="inline">
+                  <legend class="visuallyhidden">Approve COS allocation?</legend>
+
+                  <label for="cosYes" class="block-label">
+                    <input type="radio" name="cosapprove" value="true" id="cosYes">
+                    Yes
+                  </label>
+
+                  <label for="cosNo" class="block-label" data-target="cosapprove-details">
+                    <input type="radio" name="cosapprove" value="false" id="cosNo">
+                    No
+                  </label>
+
+                  <div class="panel panel-border-narrow js-hidden" id="cosapprove-details">
+                    <div class="form-group">
+                      <label class="form-label-bold" for="cosNumber">New COS allocation</label>
+                      <div class="form-date">
+                        <div class="form-group form-group-year">
+                          <input class="form-control store" id="cosNumber" name="New COS" type="number" pattern="[0-9]*" min="0">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label-bold" for="cosDetails">Reason for change</label>
+                      <textarea type="text" class="form-control store" id="cosDetails" name="Reason for change" rows="6"></textarea>
+                    </div>
+                  </div>
+
+                </fieldset>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label-bold" for="vacancy-notes">
+                  Any other notes or concerns
+                </label>
+                <textarea type="text" class="form-control store" id="vacancy-notes" name="Other" rows="6"></textarea>
+              </div>
+
+
+            </div>
+          </details>
+
+          <div class="form-group" style="margin-top: 30px">
             <a href="#0" class="button leftnavlinks" data-target="application-decision">
               Continue
             </a>
@@ -995,7 +1172,7 @@
 
           <table class="ao-details-results" style="margin-bottom: 30px; display: none">
             <caption style="text-align: left">
-              AO details
+              Authorising officer details
             </caption>
           </table>
 
@@ -1013,7 +1190,7 @@
 
           <table class="rep-details-results" style="margin-bottom: 30px; display: none">
             <caption style="text-align: left">
-              Representative details
+              Immigration adviser details
             </caption>
           </table>
 
