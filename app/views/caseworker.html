@@ -45,15 +45,16 @@
       <div class="grid-row js-notes" style="display: none">
         <div class="column-two-thirds">
           <form action="" class="form">
+
             <div class="form-group">
-              <label class="form-label-bold" for="comp-notes">
+              <label class="form-label-bold" for="case-note">
                 Add a note about this case
               </label>
-              <textarea type="text" class="form-control store" id="comp-notes" name="Other" rows="6"></textarea>
+              <textarea type="text" class="form-control" id="case-note" name="Case notes" rows="5"></textarea>
             </div>
 
             <div class="form-group">
-              <a href="#0" class="button leftnavlinks" data-target="ao-details">
+              <a href="#0" class="button js-save-note">
                 Save note
               </a>
             </div>
@@ -95,7 +96,7 @@
         </li>
         <li>
           <a href="#0" class="leftnavlinks rep-details" data-target="rep-details">
-            Immigration adviser details
+            Immigration adviser
             <!-- <span class="tag tag--risk">Risk</span> -->
             <span class="tag tag--complete" style="display: none;">Complete</span>
           </a>
@@ -110,6 +111,12 @@
           <a href="#0" class="leftnavlinks application-decision" data-target="application-decision">
             Application decision
             <span class="tag tag--complete" style="display: none;">Complete</span>
+          </a>
+        </li>
+        <li>
+          <hr style="margin:0">
+          <a href="#0" class="leftnavlinks case-notes" data-target="case-notes">
+            Case notes
           </a>
         </li>
       </ul>
@@ -1381,6 +1388,26 @@
 
         </form>
       </div> <!-- /Application decision -->
+
+      <div id="case-notes" class="leftnavcontent">
+
+        <h2 class="heading-large" style="margin-top: 0">
+          Case notes
+        </h2>
+
+        <table class="case-notes-results" style="margin-bottom: 30px;">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Date</th>
+              <th>Note</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+
+      </div> <!-- Case notes end -->
 
     </div> <!-- /Tab content - col-2/3 -->
 
