@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Management overview
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge" style="margin-bottom: 0;">
+        Management overview
+      </h1>
+
+      <h2 class="heading-medium">
+        Case overview in the last 7 days
+      </h2>
+    </div>
+
+  </div>
+
+  <div class="grid-row">
+
+    <div class="column-one-quarter">
+      <div class="data">
+        <span class="data-item bold-xxlarge">24</span>
+        <span class="data-item bold-xsmall">granted</span>
+      </div>
+    </div>
+
+    <div class="column-one-quarter">
+      <div class="data">
+        <span class="data-item bold-xxlarge">5</span>
+        <span class="data-item bold-xsmall">rejected</span>
+      </div>
+    </div>
+
+    <div class="column-one-quarter">
+      <div class="data">
+        <span class="data-item bold-xxlarge">6</span>
+        <span class="data-item bold-xsmall">refused</span>
+      </div>
+    </div>
+
+    <div class="column-one-quarter">
+      <div class="data">
+        <span class="data-item bold-xxlarge">12</span>
+        <span class="data-item bold-xsmall">currently on hold</span>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

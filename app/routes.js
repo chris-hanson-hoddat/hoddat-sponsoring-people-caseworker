@@ -11,6 +11,16 @@ router.get('/', function (req, res) {
 //   res.render('examples/template-data', { 'name': 'Foo' })
 // })
 
+router.get('/cases', function (req, res) {
+  var user = req.query.username
+
+  if (user == 'admin') {
+    res.redirect('/admin-dashboard')
+  } else {
+    res.render('cases')
+  }
+})
+
 router.get('/caseworker', function (req, res) {
   var compName = req.query.compName
   var urn = req.query.urn
