@@ -132,7 +132,7 @@
           </h2>
 
           <table style="margin-bottom: 30px">
-            <!-- <caption style="text-align: left">
+            <!-- <caption class="heading-medium" style="text-align: left">
               Business details submitted
             </caption> -->
             <tr>
@@ -528,27 +528,111 @@
           </table>
 
           <h4 class="heading-small">
-            Does the authorising officer have any PNC or WI convictions, are they a disqualified director, or are they a banned user?
+            Is the authorising officer disqualified from being a director?
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Does the authorising officer have any PNC or WI convictions, are they a disqualified director, or are they a banned user?</legend>
+              <legend class="visuallyhidden">Is the authorising officer disqualified from being a director?</legend>
 
-              <label for="pncYes" class="block-label" data-target="pnc-details">
-                <input type="radio" name="pnc" value="true" id="pncYes">
+              <label for="disqualDirYes" class="block-label" data-target="disqualDir-details">
+                <input type="radio" name="disqualDir" value="true" id="disqualDirYes">
                 Yes
               </label>
 
-              <label for="pncNo" class="block-label">
-                <input type="radio" name="pnc" value="false" id="pncNo">
+              <label for="disqualDirNo" class="block-label">
+                <input type="radio" name="disqualDir" value="false" id="disqualDirNo">
                 No
               </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="pnc-details">
+              <div class="panel panel-border-narrow js-hidden" id="disqualDir-details">
                 <div class="form-group">
-                  <label class="form-label-bold" for="pncDetails">Details</label>
-                  <textarea type="text" class="form-control store" id="pncDetails" name="PNC, WICU, disqualified director or banned user" rows="6"></textarea>
+                  <label class="form-label-bold" for="disqualDirDetails">Details</label>
+                  <textarea type="text" class="form-control store" id="disqualDirDetails" name="Disqualified director" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Does the PNC show that the authoring officer has unspent convictions?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the PNC show that the authoring officer has unspent convictions?</legend>
+
+              <label for="aoPNCYes" class="block-label" data-target="aoPNC-details">
+                <input type="radio" name="aoPNC" value="true" id="aoPNCYes">
+                Yes
+              </label>
+
+              <label for="aoPNCNo" class="block-label">
+                <input type="radio" name="aoPNC" value="false" id="aoPNCNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="aoPNC-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="aoPNCDetails">Details</label>
+                  <textarea type="text" class="form-control store" id="aoPNCDetails" name="PNC shows unspent convictions" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Does the authorising officer have a record on the warnings index?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the authorising officer have a record on the warnings index?</legend>
+
+              <label for="aoWIYes" class="block-label" data-target="aoWI-details">
+                <input type="radio" name="aoWI" value="true" id="aoWIYes">
+                Yes
+              </label>
+
+              <label for="aoWINo" class="block-label">
+                <input type="radio" name="aoWI" value="false" id="aoWINo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="aoWI-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="aoWIDetails">Details</label>
+                  <textarea type="text" class="form-control store" id="aoWIDetails" name="Warning index" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Is the authorising officer banned from holding a sponsor licence?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Is the authorising officer banned from holding a sponsor licence?</legend>
+
+              <label for="aoBannedYes" class="block-label" data-target="aoBanned-details">
+                <input type="radio" name="aoBanned" value="true" id="aoBannedYes">
+                Yes
+              </label>
+
+              <label for="aoBannedNo" class="block-label">
+                <input type="radio" name="aoBanned" value="false" id="aoBannedNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="aoBanned-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="aoBannedDetails">Details</label>
+                  <textarea type="text" class="form-control store" id="aoBannedDetails" name="Banned user" rows="6"></textarea>
                 </div>
               </div>
 
@@ -666,27 +750,83 @@
           </table>
 
           <h4 class="heading-small">
-            Does the user have any PNC or WI convictions, or are they a banned user?
+            Does the PNC show that the user has unspent convictions?
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Does the user have any PNC or WI convictions, or are they a banned user?</legend>
+              <legend class="visuallyhidden">Does the PNC show that the user has unspent convictions?</legend>
 
-              <label for="other_pncYes" class="block-label" data-target="other_pnc-details">
-                <input type="radio" name="other_pnc" value="true" id="other_pncYes">
+              <label for="otheruserPNCYes" class="block-label" data-target="otheruserPNC-details">
+                <input type="radio" name="otheruserPNC" value="true" id="otheruserPNCYes">
                 Yes
               </label>
 
-              <label for="other_pncNo" class="block-label">
-                <input type="radio" name="other_pnc" value="false" id="other_pncNo">
+              <label for="otheruserPNCNo" class="block-label">
+                <input type="radio" name="otheruserPNC" value="false" id="otheruserPNCNo">
                 No
               </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="other_pnc-details">
+              <div class="panel panel-border-narrow js-hidden" id="otheruserPNC-details">
                 <div class="form-group">
-                  <label class="form-label-bold" for="other_pncDetails">Details</label>
-                  <textarea type="text" class="form-control store" id="other_pncDetails" name="PNC, WICU or banner user" rows="6"></textarea>
+                  <label class="form-label-bold" for="otheruserPNCDetails">Details</label>
+                  <textarea type="text" class="form-control store" id="otheruserPNCDetails" name="PNC shows unspent convictions" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Does the user have a record on the warnings index?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the user have a record on the warnings index?</legend>
+
+              <label for="otheruserWIYes" class="block-label" data-target="otheruserWI-details">
+                <input type="radio" name="otheruserWI" value="true" id="otheruserWIYes">
+                Yes
+              </label>
+
+              <label for="otheruserWINo" class="block-label">
+                <input type="radio" name="otheruserWI" value="false" id="otheruserWINo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="otheruserWI-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="otheruserWIDetails">Details</label>
+                  <textarea type="text" class="form-control store" id="otheruserWIDetails" name="Warning index" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Is the user banned from holding a sponsor licence?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Is the user banned from holding a sponsor licence?</legend>
+
+              <label for="otheruserBannedYes" class="block-label" data-target="otheruserBanned-details">
+                <input type="radio" name="otheruserBanned" value="true" id="otheruserBannedYes">
+                Yes
+              </label>
+
+              <label for="otheruserBannedNo" class="block-label">
+                <input type="radio" name="otheruserBanned" value="false" id="otheruserBannedNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="otheruserBanned-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="otheruserBannedDetails">Details</label>
+                  <textarea type="text" class="form-control store" id="otheruserBannedDetails" name="Banned user" rows="6"></textarea>
                 </div>
               </div>
 
@@ -773,27 +913,83 @@
           </table>
 
           <h4 class="heading-small">
-            Does the user have any PNC or WI convictions, or are they a banned user?
+            Does the PNC show that the user has unspent convictions?
           </h4>
 
           <div class="form-group">
             <fieldset class="inline">
-              <legend class="visuallyhidden">Does the user have any PNC or WI convictions, or are they a banned user?</legend>
+              <legend class="visuallyhidden">Does the PNC show that the user has unspent convictions?</legend>
 
-              <label for="other2_pncYes" class="block-label" data-target="other2_pnc-details">
-                <input type="radio" name="other2_pnc" value="true" id="other2_pncYes">
+              <label for="otheruser2PNCYes" class="block-label" data-target="otheruser2PNC-details">
+                <input type="radio" name="otheruser2PNC" value="true" id="otheruser2PNCYes">
                 Yes
               </label>
 
-              <label for="other2_pncNo" class="block-label">
-                <input type="radio" name="other2_pnc" value="false" id="other2_pncNo">
+              <label for="otheruser2PNCNo" class="block-label">
+                <input type="radio" name="otheruser2PNC" value="false" id="otheruser2PNCNo">
                 No
               </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="other2_pnc-details">
+              <div class="panel panel-border-narrow js-hidden" id="otheruser2PNC-details">
                 <div class="form-group">
-                  <label class="form-label-bold" for="other2_pncDetails">Details</label>
-                  <textarea type="text" class="form-control store" id="other2_pncDetails" name="PNC, WICU or banner user" rows="6"></textarea>
+                  <label class="form-label-bold" for="otheruser2PNCDetails">Details</label>
+                  <textarea type="text" class="form-control store" id="otheruser2PNCDetails" name="PNC shows unspent convictions" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Does the user have a record on the warnings index?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Does the user have a record on the warnings index?</legend>
+
+              <label for="otheruser2WIYes" class="block-label" data-target="otheruser2WI-details">
+                <input type="radio" name="otheruser2WI" value="true" id="otheruser2WIYes">
+                Yes
+              </label>
+
+              <label for="otheruser2WINo" class="block-label">
+                <input type="radio" name="otheruser2WI" value="false" id="otheruser2WINo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="otheruser2WI-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="otheruser2WIDetails">Details</label>
+                  <textarea type="text" class="form-control store" id="otheruser2WIDetails" name="Warning index" rows="6"></textarea>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <h4 class="heading-small">
+            Is the user banned from holding a sponsor licence?
+          </h4>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <legend class="visuallyhidden">Is the user banned from holding a sponsor licence?</legend>
+
+              <label for="otheruserBannedYes" class="block-label" data-target="otheruserBanned-details">
+                <input type="radio" name="otheruserBanned" value="true" id="otheruserBannedYes">
+                Yes
+              </label>
+
+              <label for="otheruserBannedNo" class="block-label">
+                <input type="radio" name="otheruserBanned" value="false" id="otheruserBannedNo">
+                No
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="otheruserBanned-details">
+                <div class="form-group">
+                  <label class="form-label-bold" for="otheruserBannedDetails">Details</label>
+                  <textarea type="text" class="form-control store" id="otheruserBannedDetails" name="Banned user" rows="6"></textarea>
                 </div>
               </div>
 
@@ -1033,10 +1229,6 @@
                   <td>2</td>
                 </tr>
                 <tr>
-                  <th>Number of applications from settled workers</th>
-                  <td>1</td>
-                </tr>
-                <tr>
                   <th>Qualifications needed</th>
                   <td>Master&rsquo;s degree in Business or Real Estate from leading internationally recognised school</td>
                 </tr>
@@ -1054,14 +1246,6 @@
                   Prepare financial and business models and conduct financial appraisals and analyse prospective investments or partnerships.<br>
                   Locate business partners in the Middle East.<br>
                   Negotiate partnerships and work closely with senior management to ensure our business interests are aligned.</td>
-                </tr>
-                <tr>
-                  <th>Reports to</th>
-                  <td>Head of finance</td>
-                </tr>
-                <tr>
-                  <th>Responsible for</th>
-                  <td>Business development assistant</td>
                 </tr>
                 <tr>
                   <th>Hours per week</th>
@@ -1180,10 +1364,6 @@
                   <td>2</td>
                 </tr>
                 <tr>
-                  <th>Number of applications from settled workers</th>
-                  <td>1</td>
-                </tr>
-                <tr>
                   <th>Qualifications needed</th>
                   <td>Master&rsquo;s degree in Business or Real Estate from leading internationally recognised school</td>
                 </tr>
@@ -1201,14 +1381,6 @@
                   Prepare financial and business models and conduct financial appraisals and analyse prospective investments or partnerships.<br>
                   Locate business partners in the Middle East.<br>
                   Negotiate partnerships and work closely with senior management to ensure our business interests are aligned.</td>
-                </tr>
-                <tr>
-                  <th>Reports to</th>
-                  <td>Business development manager</td>
-                </tr>
-                <tr>
-                  <th>Responsible for</th>
-                  <td>N/A</td>
                 </tr>
                 <tr>
                   <th>Hours per week</th>
@@ -1311,42 +1483,38 @@
             Application decision
           </h2>
 
-          <h4 class="heading-medium results-title visuallyhidden">
-            Your comments
-          </h4>
-
           <table class="business-details-results" style="margin-bottom: 30px; display: none">
-            <caption style="text-align: left">
+            <caption class="heading-medium" style="text-align: left">
               Business details
             </caption>
           </table>
 
           <table class="ao-details-results" style="margin-bottom: 30px; display: none">
-            <caption style="text-align: left">
+            <caption class="heading-medium" style="text-align: left">
               Authorising officer details
             </caption>
           </table>
 
           <table class="other-user-results" style="margin-bottom: 30px; display: none">
-            <caption style="text-align: left">
+            <caption class="heading-medium" style="text-align: left">
               Other user details
             </caption>
           </table>
 
           <table class="other-user-2-results" style="margin-bottom: 30px; display: none">
-            <caption style="text-align: left">
+            <caption class="heading-medium" style="text-align: left">
               Other user details
             </caption>
           </table>
 
           <table class="rep-details-results" style="margin-bottom: 30px; display: none">
-            <caption style="text-align: left">
+            <caption class="heading-medium" style="text-align: left">
               Immigration adviser details
             </caption>
           </table>
 
           <table class="vacancy-details-results" style="margin-bottom: 30px; display: none">
-            <caption style="text-align: left">
+            <caption class="heading-medium" style="text-align: left">
               Vacancy details
             </caption>
           </table>
