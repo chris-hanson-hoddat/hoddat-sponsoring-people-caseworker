@@ -27,6 +27,15 @@ $(document).ready(function () {
   showHideContent.init()
 })
 
+// Edit main logo/title
+$('#logo').html('<img src="/public/images/gov.uk_logotype_crown_invert_trans.png?0.19.0" width="36" height="32" alt=""> Sponsorship caseworker system');
+
+// Add global nav
+$('#global-header').after('<nav role="navigation" class="global-nav"><div class="nav-wrapper"><div class="header-proposition"><div class="content"><a href="#proposition-links" class="js-header-toggle menu">Menu</a><nav id="proposition-menu"><a href="/" id="proposition-name"></a><ul id="proposition-links"><li><a href="/cases">Current cases</a></li><li><a href="/completed-cases">Completed cases</a></li><li class="logout"><a href="/login">Sign out</a></li></ul></nav></div></div></div></nav>');
+
+
+
+
 // caseworker stick content
 $("#js-stick").sticky({
   zIndex:1,
