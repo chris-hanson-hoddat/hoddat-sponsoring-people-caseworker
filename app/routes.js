@@ -39,6 +39,15 @@ router.get('/caseworker-linear', function (req, res) {
   res.render('caseworker-linear', { 'compName': compName ,  'urn': urn, 'status': status })
 })
 
+router.get('/caseworker-linear-questions', function (req, res) {
+  var compName = req.query.compName
+  var urn = req.query.urn
+  var overview = req.query.overview
+  var status = req.query.status
+
+  res.render('caseworker-linear-questions', { 'compName': compName ,  'urn': urn, 'status': status })
+})
+
 router.get('/application-hold', function (req, res) {
   var compName = req.query.compName
   var urn = req.query.urn

@@ -8,7 +8,7 @@
 
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
-  <div id="js-stick" class="grid-row">
+  <div class="grid-row">
 
     <!-- <div class="column-full">
       <a onclick="history.go(-1); return false;" href="#0" class="link-back">Back</a>
@@ -34,8 +34,6 @@
           <div class="column-one-third" style="text-align: right;">
             <a class="button overview" href="#0" style="display: none">Casework</a>
             <a class="button-secondary action" onclick="window.location='/application-hold'+window.location.search;" style="display: none">Put on hold</a>
-            <!-- <a class="button-secondary action" onclick="window.location='/caseworker-action'+window.location.search;" style="display: none">Request visit</a> -->
-            <a href="#0" class="button-secondary action overview js-add-note">Add note</a>
           </div>
 
         </div>
@@ -68,61 +66,11 @@
 
   <div class="grid-row">
 
-    <div class="column-one-third">
-      <ul class="leftnav">
-        <li>
-          <a href="#0" class="leftnavlinks business-details active" data-target="business-details">
-            Business details
-            <span class="tag tag--complete" style="display: none;">Complete</span>
-          </a>
-        </li>
-        <li>
-          <a href="#0" class="leftnavlinks ao-details" data-target="ao-details">
-            Authorising officer details
-            <span class="tag tag--complete" style="display: none;">Complete</span>
-          </a>
-        </li>
-        <li>
-          <a href="#0" class="leftnavlinks other-user" data-target="other-user">
-            Other user details
-            <span class="tag tag--complete" style="display: none;">Complete</span>
-          </a>
-        </li>
-        <li>
-          <a href="#0" class="leftnavlinks other-user-2" data-target="other-user-2">
-            Other user details
-            <span class="tag tag--complete" style="display: none;">Complete</span>
-          </a>
-        </li>
-        <li>
-          <a href="#0" class="leftnavlinks rep-details" data-target="rep-details">
-            Immigration adviser
-            <!-- <span class="tag tag--risk">Risk</span> -->
-            <span class="tag tag--complete" style="display: none;">Complete</span>
-          </a>
-        </li>
-        <li>
-          <a href="#0" class="leftnavlinks vacancy-details" data-target="vacancy-details">
-            Vacancy details
-            <span class="tag tag--complete" style="display: none;">Complete</span>
-          </a>
-        </li>
-        <li>
-          <a href="#0" class="leftnavlinks application-decision" data-target="application-decision">
-            Application decision
-            <span class="tag tag--complete" style="display: none;">Complete</span>
-          </a>
-        </li>
-        <li>
-          <hr style="margin:0">
-          <a href="#0" class="leftnavlinks case-notes" data-target="case-notes">
-            Case notes
-          </a>
-        </li>
-      </ul>
-    </div> <!-- /Tab menu -->
-
     <div class="column-two-thirds">
+
+      <style type="text/css">
+        .leftnavcontent {display: block!important}
+      </style>
 
       <div id="business-details" class="leftnavcontent" style="display: block">
         <form class="form">
@@ -484,12 +432,6 @@
             <textarea type="text" class="form-control store" id="comp-notes" name="Other" rows="6"></textarea>
           </div>
 
-          <div class="form-group">
-            <a href="#0" class="button leftnavlinks" data-target="ao-details">
-              Continue
-            </a>
-          </div>
-
         </form>
       </div> <!-- /Business details -->
 
@@ -703,12 +645,6 @@
             <textarea type="text" class="form-control store" id="ao-notes" name="Other" rows="6"></textarea>
           </div>
 
-          <div class="form-group">
-            <a href="#0" class="button leftnavlinks" data-target="other-user">
-              Continue
-            </a>
-          </div>
-
         </form>
       </div> <!-- /AO details -->
 
@@ -864,12 +800,6 @@
               Any other notes or concerns
             </label>
             <textarea type="text" class="form-control store" id="otheruser-notes" name="Other" rows="6"></textarea>
-          </div>
-
-          <div class="form-group">
-            <a href="#0" class="button leftnavlinks" data-target="other-user-2">
-              Continue
-            </a>
           </div>
 
         </form>
@@ -1029,12 +959,6 @@
             <textarea type="text" class="form-control store" id="otheruser-notes" name="Other" rows="6"></textarea>
           </div>
 
-          <div class="form-group">
-            <a href="#0" class="button leftnavlinks" data-target="rep-details">
-              Continue
-            </a>
-          </div>
-
         </form>
       </div> <!-- /Other user -->
 
@@ -1175,12 +1099,6 @@
               Any other notes or concerns
             </label>
             <textarea type="text" class="form-control store" id="rep-notes" name="Other" rows="6"></textarea>
-          </div>
-
-          <div class="form-group">
-            <a href="#0" class="button leftnavlinks" data-target="vacancy-details">
-              Continue
-            </a>
           </div>
 
         </form>
@@ -1325,10 +1243,6 @@
             <tr>
               <th>Extra yearly COS request</th>
               <td>5</td>
-            </tr>
-            <tr>
-              <th>Reason</th>
-              <td>Business expansion, Needing specialist skills</td>
             </tr>
           </table>
 
@@ -1564,26 +1478,6 @@
 
         </form>
       </div> <!-- /Application decision -->
-
-      <div id="case-notes" class="leftnavcontent">
-
-        <h2 class="heading-large" style="margin-top: 0">
-          Case notes
-        </h2>
-
-        <table class="case-notes-results" style="margin-bottom: 30px;">
-          <thead>
-            <tr>
-              <th>Username</th>
-              <th>Date</th>
-              <th>Note</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-
-      </div> <!-- Case notes end -->
 
     </div> <!-- /Tab content - col-2/3 -->
 
