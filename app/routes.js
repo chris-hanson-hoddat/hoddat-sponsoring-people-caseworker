@@ -95,7 +95,7 @@ router.get('/documents-check', function (req, res) {
 
   if (doc1 == 'doc1' && doc2 == 'doc2' && doc3 == 'doc3') {
   // && doc4 == 'doc4' && doc5 == 'doc5')
-    res.redirect('/security-checks')
+    res.redirect('/fees')
   } else {
     res.render('documents-check')
   }
