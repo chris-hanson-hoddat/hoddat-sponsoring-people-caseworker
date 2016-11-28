@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Put case on hold
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+
+    <div class="column-full">
+      <a onclick="history.go(-1); return false;" href="#0" class="link-back">Back</a>
+    </div>
+
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge" style="margin-bottom: 0;">
+        {{ compName }}
+        <small style="font-size: 50%">URN{{ urn }}</small>
+      </h1>
+    </div>
+
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/application-hold-confirm" method="get" class="form">
+
+        <h2 class="heading-medium">
+          Do you want to retrieve the case or extend the hold?
+        </h2>
+
+        <div class="form-group">
+          <fieldset class="">
+
+            <label for="caseRetrieve" class="block-label" data-target="case-retrieve">
+              <input type="radio" name="retrieve" value="retrieve" id="caseRetrieve">
+              Retrieve case
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="case-retrieve">
+              <div class="form-group">
+                <label class="form-label-bold" for="retrieveOutcome">Outcome of hold</label>
+                <textarea type="text" class="form-control" id="retrieveOutcome" name="retrieveOutcome" rows="6"></textarea>
+              </div>
+            </div>
+
+
+
+            <label for="caseExtend" class="block-label" data-target="case-extend">
+              <input type="radio" name="retrieve" value="extend" id="caseExtend">
+              Extend hold
+            </label>
+
+
+            <div class="panel panel-border-narrow js-hidden" id="case-extend">
+
+              <div class="form-group">
+                <label class="form-label-bold" for="extend">Reason for extension</label>
+                <textarea type="text" class="form-control" id="extend" name="extend" rows="6"></textarea>
+              </div>
+
+              <h2 class="form-label-bold">
+                How many days until this is due for review?
+              </h2>
+
+              <div class="form-group">
+                <fieldset>
+
+                  <div class="form-date">
+
+                    <div class="form-group form-group-year">
+                      <label for="hold-due-year" class="visuallyhidden">How many days until this is due for review?</label>
+                      <input class="form-control" id="hold-due-year" type="number" pattern="[0-9]*" min="0">
+                    </div>
+
+                  </div>
+
+                </fieldset>
+              </div>
+
+            </div>
+
+          </fieldset>
+        </div>
+
+
+        <input type="hidden" name="urn" value="{{urn}}" />
+        <input type="hidden" name="compName" value="{{compName}}" />
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
