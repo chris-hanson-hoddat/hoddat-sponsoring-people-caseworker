@@ -68,7 +68,21 @@ router.get('/application-hold-confirm', function (req, res) {
   var compName = req.query.compName
   var urn = req.query.urn
 
-  res.render('application-hold-confirm', { 'compName': compName ,  'urn': urn })
+  var retrieve = req.query.retrieve
+
+  if (retrieve == 'retrieve') {
+    res.render('caseworker', { 'compName': compName ,  'urn': urn })
+  } else {
+    res.render('application-hold-confirm', { 'compName': compName ,  'urn': urn })
+  }
+})
+
+router.get('/application-retrieve', function (req, res) {
+  var compName = req.query.compName
+  var urn = req.query.urn
+  var status = req.query.status
+
+  res.render('application-retrieve', { 'compName': compName ,  'urn': urn, 'status': status })
 })
 
 router.get('/application-refusal', function (req, res) {

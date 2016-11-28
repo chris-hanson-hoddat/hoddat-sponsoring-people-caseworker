@@ -16,64 +16,23 @@
 
     <div class="column-two-thirds">
       <h1 class="heading-xlarge" style="margin-bottom: 0;">
-        Fee checks
+        Overseas Lawyers
+        <small style="font-size: 50%">URN603600002Y</small>
       </h1>
 
       <div class="panel panel-border-wide">
-        <h2 class="heading-medium" style="margin-top: 0">
-          Overseas Lawyers Co.
-          <br>
-          <small>URN603600002Y</small>
-        </h2>
+        <ul class="list">
+          <li>Fee paid: Small fee</li>
+          <li>Companies House number: <a href="https://beta.companieshouse.gov.uk/company/06232576" title="View on Companies House" target="_blank" rel="external">06232576</a></li>
+          <li>Number of staff: 42</li>
+        </ul>
       </div>
 
       <form action="/security-checks" method="get" class="form">
 
-        <table style="margin-bottom: 30px">
-          <caption style="text-align: left">Submitted values</caption>
-          <tr>
-            <th>Fee paid</th>
-            <td>Small fee</td>
-          </tr>
-          <tr>
-            <th>Number of staff under 50</th>
-            <td>42
-              <!-- <br><span class="tag">Checked online</span> -->
-            </td>
-          </tr>
-          <tr>
-            <th>Turnover under &pound;6.5m</th>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <th>Balance sheet under &pound;3.26m</th>
-            <td>No</td>
-          </tr>
-          <!-- tr>
-            <th>Charitable status</th>
-            <td>Yes</td>
-          </tr> -->
-          <tr>
-            <th>Provides banking, finance or insurance services</th>
-            <td>No</td>
-          </tr>
-        </table>
-<!--
-        <details role="group">
-
-          <summary role="button" aria-controls="details-content-1" aria-expanded="false">
-            <span class="summary">View documents</span>
-          </summary>
-
-          <div class="panel panel-border-narrow" id="details-content-1" aria-hidden="true">
-            <img src="documents.png">
-          </div>
-
-        </details> -->
-
-        <h3 class="heading-small">
+        <h2 class="heading-medium">
           Is the fee correct?
-        </h3>
+        </h2>
 
         <div class="form-group">
           <fieldset class="">
@@ -92,27 +51,15 @@
             <div class="panel panel-border-narrow js-hidden" id="fee-underpaid">
               <div class="form-group">
                 <label class="form-label-bold" for="feeIncorrect">Reason for underpayment</label>
-                <span class="form-hint">
+                <!-- <span class="form-hint">
                   For example, number of staff is actually 55 and balance sheet is £4m.
-                </span>
-                <span class="error-message">
+                </span> -->
+<!--                 <span class="error-message">
                   Enter a reason for underpayment
-                </span>
+                </span> -->
                 <textarea type="text" class="form-control" id="feeIncorrect" name="feeIncorrect" rows="6"></textarea>
               </div>
             </div>
-
-            <!-- <label for="overpaid" class="block-label" data-target="fee-overpaid">
-              <input type="radio" name="fee" value="true" id="overpaid">
-              No, they've overpaid
-            </label>
-
-            <div class="panel panel-border-narrow js-hidden" id="fee-overpaid">
-              <div class="form-group">
-                <label class="form-label-bold" for="fee-over-reasons">Reason for overpayment</label>
-                <textarea type="text" class="form-control" id="fee-over-reasons" name="fee-over-reasons" rows="6"></textarea>
-              </div>
-            </div> -->
 
           </fieldset>
         </div>
@@ -126,33 +73,34 @@
 
     </div>
 
-    <!-- <div class="column-third">
+    <div class="column-third">
       <aside class="govuk-related-items" role="complementary">
 
         <h2 class="heading-medium" id="subsection-title">
           Fee rules
         </h2>
 
-        <p>Small organisation's must meet two out of the following three criteria</p>
+        <p>Small organisations must meet two out of the following three criteria</p>
 
-        <table style="margin-bottom: 30px">
-          <caption class="visuallyhidden">Rules for small fee</caption>
-          <tr>
-            <th>Maximum number of staff</th>
-            <td>50</td>
-          </tr>
-          <tr>
-            <th>Maximum balance sheet</th>
-            <td>&pound;3.26 million</td>
-          </tr>
-          <tr>
-            <th>Maximum turnover</th>
-            <td>&pound;6.5 million</td>
-          </tr>
+        <ol class="list list-number">
+          <li style="list-style-type: decimal">Maximum members of staff of 50</li>
+          <li style="list-style-type: decimal">Maximum balance sheet of &pound;3.26 million</li>
+          <li style="list-style-type: decimal">Maximum turnover of &pound;6.5 million</li>
+          <p style="margin: 20px 0; font-weight: 700">and</p>
+          <li style="list-style-type: decimal">they must not provide banking, finance or insurance services</li>
+        </ol>
 
-        </table>
+        <div class="notice" style="margin: 30px 0">
+          <i class="icon icon-important">
+            <span class="visually-hidden">Warning</span>
+          </i>
+          <strong class="bold-small">
+            Organisations are excempt from these criteria if they have a charitable status.
+          </strong>
+        </div>
+
       </aside>
-    </div> -->
+    </div>
 
   </div>
 
