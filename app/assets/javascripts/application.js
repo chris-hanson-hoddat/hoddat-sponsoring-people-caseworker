@@ -179,7 +179,7 @@ $('.js-save-note').click(function() {
   $('.js-add-note').text(function(i, v){
     return v === 'Add note' ? 'Cancel note' : 'Add note'
   })
-  $('.case-notes-results tbody').append('<tr><td>Joe Bloggs</td><td>31/10/2016</td><td>' + $('#case-note').val() + '</td></tr>');
+  $('.case-notes-results tbody').prepend('<tr><td>Joe Bloggs</td><td>31/10/2016</td><td>New note added</td><td>' + $('#case-note').val() + '</td></tr>');
   $('#case-note').val('');
 });
 

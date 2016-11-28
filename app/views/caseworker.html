@@ -16,10 +16,6 @@
 
     <div class="column-full">
 
-
-
-
-
       <div style="margin-bottom: 30px;">
 
         <div class="grid-row">
@@ -27,7 +23,7 @@
           <div class="column-two-thirds">
             <h1 class="heading-xlarge" style="margin-bottom: 0;">
               {{ compName }}
-              <small style="font-size: 50%">URN: {{ urn }}</small>
+              <small style="font-size: 50%">URN{{ urn }}</small>
             </h1>
           </div>
 
@@ -1576,10 +1572,39 @@
             <tr>
               <th>Username</th>
               <th>Date</th>
+              <th>Action</th>
               <th>Note</th>
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td>Joe Bloggs</td>
+              <td>16/10/2016</td>
+              <td>Retrieved from hold</td>
+              <td>Passed visit.</td>
+            </tr>
+            <tr>
+              <td>Joe Bloggs</td>
+              <td>16/10/2016</td>
+              <td>Out for visit</td>
+              <td>Sent for visit because of insuffiecient evidence for requested role.</td>
+            </tr>
+            <tr>
+              <td>Jane Doe</td>
+              <td>11/10/2016</td>
+              <td>Fee check</td>
+              <td>Passed.</td>
+            </tr>
+            <tr>
+              <td>Jane Doe</td>
+              <td>11/10/2016</td>
+              <td>Document check</td>
+              <td>
+                Passed.
+                <br>
+                Additional documents: Sponsor has also supplied an insurance certificate.
+              </td>
+            </tr>
           </tbody>
         </table>
 
