@@ -31,6 +31,16 @@ $path: "/public/images/";
 
 .link-back { margin-bottom: 0 }
 
+legend {
+  margin-bottom: 0.3125em;
+}
+
+@media (min-width: 641px) {
+  legend {
+    margin-bottom: 0.26316em;
+  }
+}
+
 
 
 // Updates to global header
