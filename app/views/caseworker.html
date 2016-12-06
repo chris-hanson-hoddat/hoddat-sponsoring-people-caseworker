@@ -70,6 +70,7 @@
           <a href="#0" class="leftnavlinks business-details active" data-target="business-details">
             Organisation
             <span class="tag tag--complete" style="display: none;">Complete</span>
+            <span class="tag tag--risk" style="display: none;">Incomplete</span>
           </a>
         </li>
         <li>
@@ -122,6 +123,22 @@
 
       <div id="business-details" class="leftnavcontent" style="display: block">
         <form class="form">
+
+          <div class="error-summary error-example" role="group" aria-labelledby="error-summary-heading" tabindex="-1" style="margin-top: 0; display: none">
+
+            <h1 class="heading-medium error-summary-heading" id="error-summary-heading">There&rsquo;s been a problem</h1>
+            <p>Check the following</p>
+
+            <ul class="error-summary-list">
+              <li>
+                <a href="#formCH">Confirm if you have checked the sponsor details on Companies House</a>
+              </li>
+              <li>
+                <a href="#sector_reg-details">Provide details of how the prospective sponsor has failed to register with the appropriate regulatory authority</a>
+              </li>
+            </ul>
+
+          </div>
 
           <!-- <h2 class="heading-large" style="margin-top: 0">
             Business details
@@ -330,13 +347,16 @@
             </tr>
           </table>
 
-          <h4 class="form-label-bold">
-            Companies House
-          </h4>
+          <div class="form-group will-be-error" id="formCH">
 
-          <div class="form-group">
+            <h4 class="form-label-bold">
+              Companies House
+            </h4>
+
             <fieldset class="inline">
               <legend>Are there any differences in the information provided on companies house and that provided by the prospective sponsor?</legend>
+
+              <span class="error-message error-example" style="display: none">You must check the sponsor details on Companies House</span>
 
               <label for="companyYes" class="block-label" data-target="company-details">
                 <input type="radio" name="company" value="true" id="companyYes">
@@ -367,7 +387,7 @@
               <legend>Has the prospective sponsor failed to register with the appropriate regulatory authority?</legend>
 
               <label for="sector_regYes" class="block-label" data-target="sector_reg-details">
-                <input type="radio" name="sector_reg" value="true" id="sector_regYes">
+                <input type="radio" name="sector_reg" value="true" id="sector_regYes" class="error-will-be-checked">
                 Yes
               </label>
 
@@ -376,9 +396,10 @@
                 No
               </label>
 
-              <div class="panel panel-border-narrow js-hidden" id="sector_reg-details">
+              <div class="panel panel-border-narrow js-hidden will-be-error" id="sector_reg-details">
                 <div class="form-group">
                   <label class="form-label-bold" for="sector_regDetails">Details</label>
+                  <span class="error-message error-example" style="display: none">You must provide details of how the prospective sponsor has failed to register with the appropriate regulatory authority</span>
                   <textarea type="text" class="form-control store" id="sector_regDetails" name="Regulatory registration" rows="6"></textarea>
                 </div>
               </div>
@@ -1482,11 +1503,20 @@
       </div> <!-- /Vacancy details -->
 
       <div id="application-decision" class="leftnavcontent">
-        <form action="/application-refusal" method="get" class="form">
+        <form action="/application-refusal" method="get" class="form" id="form-decision">
 
-          <!-- <h2 class="heading-large" style="margin-top: 0">
-            Application decision
-          </h2> -->
+          <div class="error-summary error-example" role="group" aria-labelledby="error-summary-heading" tabindex="-1" style="margin-top: 0; display: none">
+
+            <h1 class="heading-medium error-summary-heading" id="error-summary-heading">There&rsquo;s been a problem</h1>
+            <p>Check the following</p>
+
+            <ul class="error-summary-list">
+              <li>
+                <a href="#0" class="error-link">Checks not complete on Organisation</a>
+              </li>
+            </ul>
+
+          </div>
 
           <table class="business-details-results" style="margin-bottom: 30px; display: none">
             <caption class="heading-medium" style="text-align: left; margin-top: 0">
