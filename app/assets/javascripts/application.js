@@ -129,13 +129,19 @@ $('.leftnavlinks').click(function(e) {
   var current = $('.leftnavlinks.active').data('target');
   var target = $(this).data('target');
 
-  $('.leftnavcontent').hide();
-  $('#'+target).show();
-  $('.leftnavlinks').removeClass('active');
-  $('.'+target).addClass('active');
-
   // If the continue button is selected
-  if ( $(this).hasClass('button') ) {
+  if ( ($(this).hasClass('button')) && ($('#comp-notes').val() == 'error') ) {
+    $('.error-example').show();
+    $('.error-will-be-checked').click();
+    $('.will-be-error').removeClass('will-be-error').addClass('error');
+    $('html,body').scrollTop(0);
+    $('.tag--risk').show();
+  }
+  else if ( ($(this).hasClass('button')) && ($('#comp-notes').val() != 'error') ) {
+    $('.leftnavcontent').hide();
+    $('#'+target).show();
+    $('.leftnavlinks').removeClass('active');
+    $('.'+target).addClass('active');
     $('html,body').scrollTop(0);
     $('.'+target).parent().prev().find('.tag--complete').show();
 
@@ -158,8 +164,15 @@ $('.leftnavlinks').click(function(e) {
           .show();
       }
     });
+  }
+  else {
+    $('.leftnavcontent').hide();
+    $('#'+target).show();
+    $('.leftnavlinks').removeClass('active');
+    $('.'+target).addClass('active');
+  }
 
-  } // /buttons
+
 }); // /left links
 
 
@@ -211,3 +224,26 @@ if ( document.location.href.indexOf('overview') > -1 ) {
 } else {
   $('.action').show();
 }
+
+
+
+
+// Decision validation
+
+$('#form-decision').submit(function(e) {
+  if ( $('#decisionDetails').val() == 'error' ) {
+    e.preventDefault();
+    $('.error-example').show();
+    $('.error-will-be-checked').click();
+    $('.will-be-error').removeClass('will-be-error').addClass('error');
+    $('html,body').scrollTop(0);
+    $('.tag--risk').show();
+  }
+});
+
+$('.error-link').click(function(e) {
+  $('.business-details').click();
+});
+
+
+

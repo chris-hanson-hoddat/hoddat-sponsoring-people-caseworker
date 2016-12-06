@@ -31,12 +31,12 @@ $path: "/public/images/";
 
 .link-back { margin-bottom: 0 }
 
-legend {
+legend, .error-message {
   margin-bottom: 0.3125em;
 }
 
 @media (min-width: 641px) {
-  legend {
+  legend, .error-message {
     margin-bottom: 0.26316em;
   }
 }
