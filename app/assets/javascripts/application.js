@@ -177,6 +177,47 @@ $('.leftnavlinks').click(function(e) {
 
 
 
+// Check if all fields are done, mark nav as complete
+$('form.check-fields').each(function() {
+  var form = $(this);
+  var current = $(this).data('current');
+
+  // this concept replaces the continue buttons so hide for now
+  form.find('.button').hide();
+
+  form.find(':radio').change(function() {
+      var names = {};
+      form.find(':radio').each(function() {
+          names[$(this).attr('name')] = true;
+      });
+      var count = 0;
+      $.each(names, function() {
+          count++;
+      });
+      if (form.find(':radio:checked').length === count) {
+          $('.'+current).find('.tag--complete').show();
+      }
+  });
+});
+
+// $('.form input:radio').each(function() {
+
+//    $(this).blur( function() {
+//        var complete = true;
+
+//        $('.form input:radio').each(function() {
+//          if ( !$(this':checked').val() ) {
+//              complete = false;
+//          }
+//        });
+
+//        if ( complete == true ) {
+//            console.log ('complete')
+//        }
+//    });
+
+//  });
+
 
 
 // Notes on caseworker page
