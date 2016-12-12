@@ -23,11 +23,15 @@
       <table style="margin-bottom: 30px">
         <tr>
           <th>On hold reasons</th>
-          <td>DWP referral, Document verification</td>
+          <td>
+            <ol class="list list-number" style="margin-bottom: 0">
+              <li>DWP referral</li>
+              <li>Document verification</li>
+            </ol>
         </tr>
         <tr>
-          <th>Date put on hold</th>
-          <td class="date" data-days="-10"></td>
+          <th>Hold review date</th>
+          <td class="date" data-days="3"></td>
         </tr>
         <tr>
           <th>Hold notes</th>
@@ -43,21 +47,21 @@
 
       <form action="/application-hold-confirm" method="get" class="form">
 
-        <h2 class="heading-medium" style="margin-top: 0">
+        <!-- <h2 class="heading-medium" style="margin-top: 0">
           Do you want to continue caseworking?
-        </h2>
+        </h2> -->
 
         <div class="form-group">
           <fieldset class="">
 
             <label for="caseRetrieve" class="block-label" data-target="case-retrieve">
               <input type="radio" name="retrieve" value="retrieve" id="caseRetrieve">
-              Retrieve case
+              Take off hold and continue caseworking
             </label>
 
             <div class="panel panel-border-narrow js-hidden" id="case-retrieve">
               <div class="form-group">
-                <label class="form-label-bold" for="retrieveOutcome">Outcome of hold</label>
+                <label class="form-label-bold" for="retrieveOutcome">Outcome of on hold reasons</label>
                 <textarea type="text" class="form-control" id="retrieveOutcome" name="retrieveOutcome" rows="6"></textarea>
               </div>
             </div>
@@ -78,19 +82,28 @@
               </div>
 
               <h2 class="form-label-bold">
-                How many days until this is due for review?
+                What date do you want to extend to?
               </h2>
 
-              <div class="form-group">
+               <div class="form-group">
                 <fieldset>
 
                   <div class="form-date">
 
-                    <div class="form-group form-group-year">
-                      <label for="hold-due-year" class="visuallyhidden">How many days until this is due for review?</label>
-                      <input class="form-control" id="hold-due-year" type="number" pattern="[0-9]*" min="0">
+                    <div class="form-group form-group-day">
+                      <label for="hold-due-day">Day</label>
+                      <input class="form-control" id="hold-due-day" type="number" pattern="[0-9]*" min="0" max="31">
                     </div>
 
+                    <div class="form-group form-group-month">
+                      <label for="hold-due-month">Month</label>
+                      <input class="form-control" id="hold-due-month" type="number" pattern="[0-9]*" min="0" max="12">
+                    </div>
+
+                    <div class="form-group form-group-year">
+                      <label for="hold-due-year">Year</label>
+                      <input class="form-control" id="hold-due-year" type="number" pattern="[0-9]*" min="0" >
+                    </div>
                   </div>
 
                 </fieldset>
