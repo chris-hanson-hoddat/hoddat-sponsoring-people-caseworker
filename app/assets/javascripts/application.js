@@ -108,7 +108,7 @@ $('.js-all-cases').click(function(e) {
   $('.all-cases-view').show();
   $('.my-cases-view').hide();
 
-  var search = '603';
+  var search = '';
 
   $('.cases tbody tr').each(function() {
     $(this).hide();
