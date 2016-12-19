@@ -23,7 +23,7 @@
           <div class="column-two-thirds">
             <h1 class="heading-large" style="margin: 0;">
               {{ compName }}
-              <small style="font-size: 50%">URN{{ urn }}</small>
+              <small style="font-size: 50%">{{ urn }}</small>
             </h1>
           </div>
 
@@ -149,11 +149,11 @@
               Business details submitted
             </caption> -->
             <tr>
-              <th>Organisation name</th>
+              <th>Trading name</th>
               <td>{{ compName }}</td>
             </tr>
             <tr>
-              <th>Companies House number</th>
+              <th>Company number</th>
               <td>
                 <a href="https://beta.companieshouse.gov.uk/company/06232576" title="View on Companies House" target="_blank" rel="external">06232576</a>
               </td>
@@ -337,10 +337,10 @@
                 </details>
               </td>
             </tr>
-            <tr>
+            <!-- <tr>
               <th>Nature of business (SIC)</th>
               <td>Manufacture of medical and dental instruments and supplies <small>(32500)</small></td>
-            </tr>
+            </tr> -->
             <tr>
               <th>Regulatory body and registration number</th>
               <td>Regulator name <small>(123456789)</small></td>
@@ -532,11 +532,11 @@
               <td>152505696</td>
             </tr>
             <tr>
-              <th>Contact number</th>
+              <th>Telephone</th>
               <td>0114 2301234</td>
             </tr>
             <tr>
-              <th>Email address</th>
+              <th>Email</th>
               <td><a href="mailto:djunco@acme.com">djunco@acme.com</a></td>
             </tr>
           </table>
@@ -746,15 +746,15 @@
               <td>03/03/1982</td>
             </tr>
             <tr>
-              <th>Workplace address</th>
+              <th>Work address</th>
               <td><a href="http://maps.google.com/?q=1176 Nelson Street Bamber Bridge PR5 6FY" target="_blank" rel="external">1176 Nelson Street<br>Bamber Bridge<br>PR5 6FY</a></td>
             </tr>
             <tr>
-              <th>Contact number</th>
-              <td>07413836999</td>
+              <th>Telephone</th>
+              <td>07413 836 999</td>
             </tr>
             <tr>
-              <th>Email address</th>
+              <th>Email</th>
               <td><a href="mailto:gkensy@acme.com">gkensy@acme.com</a></td>
             </tr>
           </table>
@@ -908,15 +908,15 @@
               <td>14/11/1985</td>
             </tr>
             <tr>
-              <th>Workplace address</th>
+              <th>Work address</th>
               <td><a href="http://maps.google.com/?q=5 Burton Close Langport TA10 0AF" target="_blank" rel="external">5 Burton Close<br>Langport<br>TA10 0AF</a></td>
             </tr>
             <tr>
-              <th>Contact number</th>
-              <td>07555830799</td>
+              <th>Telephone</th>
+              <td>07555 830 799</td>
             </tr>
             <tr>
-              <th>Email address</th>
+              <th>Email</th>
               <td><a href="mailto:kate.riley@acme.com">kate.riley@acme.com</a></td>
             </tr>
           </table>
@@ -1086,11 +1086,11 @@
               <td><a href="http://maps.google.com/?q=123 West Street Sheffield S1 2AB" target="_blank" rel="external">1195 Longwood Gate<br>Longwood<br>HD3 4US</a></td>
             </tr>
             <tr>
-              <th>Contact number</th>
+              <th>Telephone</th>
               <td>045 9474 1658</td>
             </tr>
             <tr>
-              <th>Email address</th>
+              <th>Email</th>
               <td><a href="mailto:djunco@acme.com">f.pensinger@reps.com</a></td>
             </tr>
           </table>
@@ -1261,39 +1261,28 @@
           <details role="group">
 
             <summary role="button" aria-controls="details-content-address" aria-expanded="false">
-              <span class="summary heading-medium">Business development manager (2 COS)</span>
+              <span class="summary heading-medium">IT business analysts, architects and systems designers (2 COS)</span>
             </summary>
 
             <div class="panel panel-border-narrow" id="details-content-address" aria-hidden="true">
               <table style="margin-bottom: 30px;">
+                <caption class="heading-medium" style="text-align: left">Job details</caption>
+                <tr>
+                  <th>SOC code</th>
+                  <td>2135</td>
+                </tr>
                 <tr>
                   <th>COS request</th>
                   <td>2</td>
                 </tr>
                 <tr>
-                  <th>Job title</th>
-                  <td>Business development manager</td>
-                </tr>
-                <tr>
                   <th>Salary</th>
-                  <td>&pound;30,000</td>
+                  <td>&pound;25,000</td>
                 </tr>
                 <tr>
-                  <th>SOC code</th>
-                  <td>2135<!--  - IT business analysts, architects and systems designers --></td>
+                  <th>Hours per week</th>
+                  <td>38</td>
                 </tr>
-                <tr>
-                  <th>Jobcentre Plus reference</th>
-                  <td>ABC123456</td>
-                </tr>
-                <tr>
-                  <th>Number of applications</th>
-                  <td>2</td>
-                </tr>
-                <!-- <tr>
-                  <th>Qualifications needed</th>
-                  <td>Master&rsquo;s degree in Business or Real Estate from leading internationally recognised school</td>
-                </tr> -->
                 <tr>
                   <th>Minimum experience and qualifications</th>
                   <td>A business management degree, working in a management position and running sales teams</td>
@@ -1306,16 +1295,46 @@
                   Negotiate partnerships and work closely with senior management to ensure our business interests are aligned.</td>
                 </tr>
                 <tr>
-                  <th>NQF level</th>
-                  <td>6</td>
-                </tr>
-                <tr>
-                  <th>Hours per week</th>
-                  <td>38</td>
-                </tr>
-                <tr>
                   <th>Business need</th>
                   <td>We're expanding our business and require a development manager to oversee this.</td>
+                </tr>
+              </table>
+              <table style="margin-bottom: 30px;">
+                <caption class="heading-medium" style="text-align: left">Advertisement details</caption>
+                <tr>
+                  <th>Jobcentre Plus reference</th>
+                  <td>ABC123456</td>
+                </tr>
+                <tr>
+                  <th>Number of applications</th>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th>Reasons unsuccessful</th>
+                  <td>We need someone who can speak Japanese and none of the applicants could.</td>
+                </tr>
+              </table>
+              <table style="margin-bottom: 30px;">
+                <caption class="heading-medium" style="text-align: left">Applicant details</caption>
+                <tr>
+                  <th>Full name</th>
+                  <td>Nori Wakaizumi</td>
+                </tr>
+                <tr>
+                  <th>Nationality</th>
+                  <td>Japanese</td>
+                </tr>
+                <tr>
+                  <th>DOB</th>
+                  <td>27/02/1971</td>
+                </tr>
+                <tr>
+                  <th>Passport number</th>
+                  <td>QJ9603419</td>
+                </tr>
+                <tr>
+                  <th>Leave status</th>
+                  <td></td>
                 </tr>
               </table>
 
@@ -1325,39 +1344,27 @@
           <details role="group">
 
             <summary role="button" aria-controls="details-content-address" aria-expanded="false">
-              <span class="summary heading-medium">Business development assistant (1 COS)</span>
+              <span class="summary heading-medium">IT project and programme managers (1 COS)</span>
             </summary>
 
             <div class="panel panel-border-narrow" id="details-content-address" aria-hidden="true">
               <table style="margin-bottom: 30px;">
                 <tr>
+                  <th>SOC code</th>
+                  <td>2134</td>
+                </tr>
+                <tr>
                   <th>COS request</th>
                   <td>1</td>
                 </tr>
                 <tr>
-                  <th>Job title</th>
-                  <td>Business development assistant</td>
-                </tr>
-                <tr>
                   <th>Salary</th>
-                  <td>&pound;30,000</td>
+                  <td>&pound;35,000</td>
                 </tr>
                 <tr>
-                  <th>SOC code</th>
-                  <td>2135<!--  - IT business analysts, architects and systems designers --></td>
+                  <th>Hours per week</th>
+                  <td>38</td>
                 </tr>
-                <tr>
-                  <th>Jobcentre Plus reference</th>
-                  <td>ABC123456</td>
-                </tr>
-                <tr>
-                  <th>Number of applications</th>
-                  <td>2</td>
-                </tr>
-                <!-- <tr>
-                  <th>Qualifications needed</th>
-                  <td>Master&rsquo;s degree in Business or Real Estate from leading internationally recognised school</td>
-                </tr> -->
                 <tr>
                   <th>Minimum experience and qualifications</th>
                   <td>A business management degree, working in a management position and running sales teams</td>
@@ -1370,12 +1377,12 @@
                   Negotiate partnerships and work closely with senior management to ensure our business interests are aligned.</td>
                 </tr>
                 <tr>
-                  <th>NQF level</th>
-                  <td>6</td>
+                  <th>Jobcentre Plus reference</th>
+                  <td>ABC123456</td>
                 </tr>
                 <tr>
-                  <th>Hours per week</th>
-                  <td>38</td>
+                  <th>Number of applications</th>
+                  <td>2</td>
                 </tr>
                 <tr>
                   <th>Business need</th>
