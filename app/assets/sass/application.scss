@@ -27,6 +27,23 @@ $path: "/public/images/";
   }
 }
 
+
+.column-three-quarters {
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media (min-width: 641px) {
+  .column-three-quarters {
+    float: left;
+    width: 75%;
+  }
+}
+
+
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 .link-back { margin-bottom: 0 }
@@ -50,14 +67,18 @@ legend, .error-message {
       width: 100%!important;
   }
 }
+#global-header-bar {
+    background-color: $govuk-blue;//home-office-websafe
+    display: none
+}
 
 
 
 
 // New global navigation
-.global-nav {
-  background-color: $panel-colour;
-}
+// .global-nav {
+//   background-color: $panel-colour;
+// }
   .global-nav:after {
     content: "";
     display: block;
@@ -66,20 +87,21 @@ legend, .error-message {
 
 
 .global-nav .nav-wrapper {
-  background-color: $panel-colour;
-  max-width: 990px;
+  //background-color: $panel-colour;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 8px 0;
+  //padding: 10px 0;
+  border-bottom: 1px solid $border-colour;
 }
   @media (min-width: 641px) {
     .global-nav .nav-wrapper {
-      padding: 8px 15px;
       position: relative;
     }
     .logout {
       position: absolute;
-      right: 15px;
-      top: 8px;
+      right: 0;
+      top: 0;
+      margin: 0!important;
     }
   }
   .nav-wrapper:after {
@@ -99,9 +121,9 @@ legend, .error-message {
     }
   }
 
-.header-proposition .content {
-  margin: 0 15px;
-}
+// .header-proposition .content {
+//   margin: 0 15px;
+// }
 
 
 .header-proposition a.menu {
@@ -175,8 +197,17 @@ legend, .error-message {
       .header-proposition #proposition-links li {
         display: block;
         width: auto;
-        padding: 0 15px 0 0;
+        padding: 10px 5px 5px;
+        margin: 0 15px 0 0;
         border-bottom: 0;
+
+        &.active {
+          border-bottom: 5px solid $govuk-blue;//home-office-websafe
+        }
+
+        &.active a {
+          color: $govuk-blue!important;//home-office-websafe
+        }
       }
         .header-proposition #proposition-link li.clear-child,
         .header-proposition #proposition-links li.clear-child {
@@ -352,10 +383,11 @@ ul.leftnav {
     }
 }
 /* Change background color of links on hover */
-ul.leftnav li a:focus, .active, ul.leftnav li a.active:hover {
-    background-color: #005EA5;
+ul.leftnav li a:focus, ul.leftnav .active, ul.leftnav li a.active:hover {
+    background-color: $govuk-blue;//home-office-websafe
     color: #fff !important;
     outline: 0;
+    //font-weight:700;
 }
 .leftnavcontent {
     display: none;
@@ -435,4 +467,11 @@ details {
 .opening-hours th, .opening-hours td {
   padding: 0;
   border: 0;
+}
+
+
+
+.overdue {
+  color: #b10e1e;
+  font-weight: 700;
 }
