@@ -31,7 +31,7 @@ $(document).ready(function () {
 $('#logo').html('<img src="/public/images/gov.uk_logotype_crown_invert_trans.png?0.19.0" width="36" height="32" alt=""> Sponsorship caseworking');
 
 // Add global nav
-$('#global-header').after('<nav role="navigation" class="global-nav"><div class="nav-wrapper"><div class="header-proposition"><div class="content"><a href="#proposition-links" class="js-header-toggle menu">Menu</a><nav id="proposition-menu"><a href="/" id="proposition-name"></a><ul id="proposition-links"><li><a href="/cases">Current cases</a></li><li><a href="/completed-cases">Completed cases</a></li><li class="logout"><a href="/login">Sign out</a></li></ul></nav></div></div></div></nav>');
+$('#global-header-bar').after('<nav role="navigation" class="global-nav"><div class="nav-wrapper"><div class="header-proposition"><div class="content"><a href="#proposition-links" class="js-header-toggle menu">Menu</a><nav id="proposition-menu"><a href="/" id="proposition-name"></a><ul id="proposition-links"><li class="active"><a href="/cases">Current cases</a></li><li><a href="/completed-cases">Completed cases</a></li><li class="logout"><a href="/login">Sign out</a></li></ul></nav></div></div></div></nav>');
 
 
 
@@ -76,6 +76,20 @@ $('.js-case-search').click(function(e) {
   });
 
   $('.cases tbody tr td:contains("' + search + '")')
+    .parent('tr')
+    .show();
+});
+
+// User search function
+$('.js-user-search').click(function(e) {
+  e.preventDefault();
+  var search = $('.js-user-search-query').val();
+
+  $('.users tbody tr').each(function() {
+    $(this).hide();
+  });
+
+  $('.users tbody tr td:contains("' + search + '")')
     .parent('tr')
     .show();
 });
@@ -284,6 +298,36 @@ $('#form-decision').submit(function(e) {
 
 $('.error-link').click(function(e) {
   $('.business-details').click();
+});
+
+
+
+
+// Show/hide password
+(function ($) {
+    $.toggleShowPassword = function (options) {
+        var settings = $.extend({
+            field: "#password",
+            control: "#toggle_show_password",
+        }, options);
+
+        var control = $(settings.control);
+        var field = $(settings.field)
+
+        control.bind('click', function () {
+            if (control.is(':checked')) {
+                field.attr('type', 'text');
+            } else {
+                field.attr('type', 'password');
+            }
+        })
+    };
+}(jQuery));
+
+//Here how to call above plugin from everywhere in your application document body
+$.toggleShowPassword({
+    field: '#password',
+    control: '#showpassword'
 });
 
 
