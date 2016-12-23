@@ -289,10 +289,10 @@ $('#form-decision').submit(function(e) {
   if ( $('#decisionDetails').val() == 'error' ) {
     e.preventDefault();
     $('.error-example').show();
-    $('.error-will-be-checked').click();
-    $('.will-be-error').removeClass('will-be-error').addClass('error');
+    //$('.error-will-be-checked').click();
+    //$('.will-be-error').removeClass('will-be-error').addClass('error');
     $('html,body').scrollTop(0);
-    $('.tag--risk').show();
+    //$('.tag--risk').show();
   }
 });
 
